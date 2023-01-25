@@ -1,0 +1,15 @@
+apiVersion: skaffold/v4beta2
+kind: Config
+metadata:
+  name: library-management
+build:
+  artifacts:
+  - image: apetrovic6/books-service
+    context: Books
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      auto: true
+manifests:
+  rawYaml:
+  - K8S/books-depl.yml
