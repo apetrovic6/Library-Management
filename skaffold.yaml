@@ -9,7 +9,16 @@ build:
     docker:
       dockerfile: Dockerfile
     sync:
-      auto: true
+      infer:
+        - "*.cs"
+  - image: apetrovic6/gateway-service
+    context: Gateway
+    docker: 
+      dockerfile: Dockerfile
+    sync:
+      infer:
+        -  "*.cs"
 manifests:
   rawYaml:
   - K8S/books-depl.yml
+  - K8S/gateway-depl.yml

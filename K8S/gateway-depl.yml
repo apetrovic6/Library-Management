@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-deployment
+  labels:
+    app: gateway-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-service
+  template:
+    metadata:
+      labels:
+        app: gateway-service
+    spec:
+      containers:
+        - name: gateway-service
+          image: apetrovic6/gateway-service
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway-loadbalancer-service
+spec:
+  type: NodePort
+  selector:
+    app: gateway-service
+  ports:
+    - name: gateway
+      protocol: TCP
+      port: 80
+      targetPort: 80
