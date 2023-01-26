@@ -7,12 +7,7 @@ package books;
 service Books {
   rpc GetBooks (GetBooksRequest) returns (GetBooksResponse);
   rpc CreateBook (CreateBookRequest) returns (CreateBookResponse);
-}
-
-message GetBooksRequest{}
-
-message GetBooksResponse {
-  repeated  BookModel books = 1;
+  rpc DeleteBook (DeleteBookRequest) returns (DeleteBookResponse);
 }
 
 message BookModel{
@@ -21,6 +16,11 @@ message BookModel{
   int32 stock = 3;
 }
 
+message GetBooksRequest{}
+
+message GetBooksResponse {
+  repeated  BookModel books = 1;
+}
 
 message CreateBookRequest {
   string name = 1;
@@ -28,5 +28,13 @@ message CreateBookRequest {
 }
 
 message CreateBookResponse {
+  BookModel book = 1;
+}
+
+message DeleteBookRequest {
+  int32 id = 1;
+}
+
+message DeleteBookResponse {
   BookModel book = 1;
 }

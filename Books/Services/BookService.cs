@@ -40,4 +40,18 @@ public class BookService : Books.BooksBase
         
         return response;
     }
+
+    public override async Task<DeleteBookResponse> DeleteBook(DeleteBookRequest request, ServerCallContext context)
+    {
+        var bookToDelete = await _context.Books.Where(b => b.Id == request.Id).FirstOrDefaultAsync();
+
+        if (bookToDelete == null) return null;
+
+         _context.Books.Remove(bookToDelete);
+         await _context.SaveChangesAsync();
+         
+         var response = new DeleteBookResponse { Book = new BookModel {Id = bookToDelete.Id, Name = bookToDelete.Name, Stock = bookToDelete.Stock }};
+         
+         return response;
+    }
 }
