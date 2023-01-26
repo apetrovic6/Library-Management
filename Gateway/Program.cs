@@ -26,15 +26,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapGet("/", async () =>
-{
-    // return "asda";
-    var channel = GrpcChannel.ForAddress("http://books-clusterip-service");
-    var client = new Greeter.GreeterClient(channel);
-    var reply = await client.SayHelloAsync(new HelloRequest{ Name = "manjo"});
-    Console.WriteLine(reply);
-    return  reply;
-});
 
 app.MapGraphQL();
 
