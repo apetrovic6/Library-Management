@@ -29,7 +29,7 @@ spec:
                   name: books-db-cred
                   key: password
             - name: POSTGRES_DB
-              value: books
+              value: Books
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: books-pg-db
@@ -41,7 +41,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: books-db-clusterip-srv
+  name: books-db-clusterip-service
 spec:
   type: ClusterIP
   selector:
@@ -62,5 +62,5 @@ spec:
     app: books-db
   ports:
     - protocol: TCP
-      port: 6666
+      port: 5432
       targetPort: 5432
