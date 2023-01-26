@@ -33,6 +33,9 @@ namespace Books.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("Stock")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.ToTable("Books");
