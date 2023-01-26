@@ -23,4 +23,14 @@ public class Query
         
         return reply;
     }
+
+    public async Task<CreateBookResponse> CreateBook(string name, int stock)
+    {
+        var channel = GrpcChannel.ForAddress("http://books-clusterip-service");
+        var client = new Books.Books.BooksClient(channel);
+        var request = new CreateBookRequest {Name = name, Stock = stock};
+        CreateBookResponse reply = client.CreateBook(request);
+
+        return reply;
+    }
 }

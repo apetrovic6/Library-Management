@@ -6,6 +6,7 @@ package books;
 
 service Books {
   rpc GetBooks (GetBooksRequest) returns (GetBooksResponse);
+  rpc CreateBook (CreateBookRequest) returns (CreateBookResponse);
 }
 
 message GetBooksRequest{}
@@ -20,3 +21,12 @@ message BookModel{
   int32 stock = 3;
 }
 
+
+message CreateBookRequest {
+  string name = 1;
+  int32 stock = 2;
+}
+
+message CreateBookResponse {
+  BookModel book = 1;
+}
