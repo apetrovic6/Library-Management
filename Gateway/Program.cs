@@ -1,5 +1,5 @@
 using Books;
-
+using Gateway.GraphQL;
 using Grpc.Net.Client;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddGraphQLServer()
+    .AddQueryType<Query>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,7 +22,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
@@ -32,6 +35,8 @@ app.MapGet("/", async () =>
     Console.WriteLine(reply);
     return  reply;
 });
+
+app.MapGraphQL();
 
 // app.MapControllers();
 
