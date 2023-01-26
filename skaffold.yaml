@@ -20,5 +20,8 @@ build:
         -  "*.cs"
 manifests:
   rawYaml:
-  - K8S/books-depl.yml
   - K8S/gateway-depl.yml
+  - K8S/books-depl.yml
+  - K8S/books-db-secret.yml
+  - K8S/books-pvc.yml
+  - K8S/books-db-depl.yml
