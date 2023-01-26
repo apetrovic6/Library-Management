@@ -1,4 +1,5 @@
 using Gateway.GraphQL;
+using Gateway.GraphQL.Mutations;
 using HotChocolate.AspNetCore.Voyager;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +12,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services
     .AddGraphQLServer()
-    .AddQueryType<Query>();
+    .AddQueryType<Query>()
+    .AddMutationType<Mutations>();
 
 var app = builder.Build();
 
