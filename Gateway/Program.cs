@@ -1,16 +1,16 @@
-using Books;
 using Gateway.GraphQL;
-using Grpc.Net.Client;
+using HotChocolate.AspNetCore.Voyager;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddGraphQLServer()
+builder.Services
+    .AddGraphQLServer()
     .AddQueryType<Query>();
 
 var app = builder.Build();
@@ -23,12 +23,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
-
 app.MapGraphQL();
-
-// app.MapControllers();
+app.UseVoyager();
 
 app.Run();
