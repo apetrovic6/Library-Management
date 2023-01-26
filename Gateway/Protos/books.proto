@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Books";
+
+package books;
+
+service Books {
+  rpc GetBooks (GetBooksRequest) returns (GetBooksResponse);
+}
+
+message GetBooksRequest{}
+
+message GetBooksResponse {
+  repeated  BookModel books = 1;
+}
+
+message BookModel{
+  string name = 1;
+  int32 stock = 2;
+}
+
