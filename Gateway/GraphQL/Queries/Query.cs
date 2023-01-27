@@ -19,4 +19,11 @@ public class Query
         var client = new Books.Books.BooksClient(channel);
         return await client.GetBooksAsync(new GetBooksRequest());
     }
+
+    public async Task<GetBookByIdResponse> GetBookById(int id)
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
+        var client = new Books.Books.BooksClient(channel);
+        return await client.GetBookByIdAsync(new GetBookByIdRequest{ Id = id});
+    }
 }
