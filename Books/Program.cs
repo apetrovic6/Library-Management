@@ -18,6 +18,11 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 
+
+// Configure the HTTP request pipeline.
+app.MapGrpcService<GreeterService>();
+app.MapGrpcService<BookService>();
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
