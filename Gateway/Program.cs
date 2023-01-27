@@ -1,3 +1,4 @@
+using System.Reflection;
 using Gateway.GraphQL;
 using Gateway.GraphQL.Mutations;
 using HotChocolate.AspNetCore.Voyager;
@@ -9,6 +10,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services
     .AddGraphQLServer()
