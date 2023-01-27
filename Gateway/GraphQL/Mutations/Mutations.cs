@@ -1,4 +1,5 @@
-﻿using Books;
+﻿using AutoMapper;
+using Books;
 using Grpc.Net.Client;
 
 namespace Gateway.GraphQL.Mutations;
@@ -39,7 +40,6 @@ public class Mutations
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
         var request = new DeleteBookRequest { Id = id };
-        var reply = client.DeleteBook(request);
-        return reply;
+        return client.DeleteBook(request);
     }
 }
