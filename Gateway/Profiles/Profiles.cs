@@ -8,6 +8,7 @@ public class Profiles : Profile
 {
     public Profiles()
     {
+        CreateMap<GetBooksResponse, BookType>();
         CreateMap<DeleteBookResponse, BookType>();
     }
 }
