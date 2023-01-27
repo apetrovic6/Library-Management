@@ -41,6 +41,16 @@ public class BookService : Books.BooksBase
         return response;
     }
 
+    public async override Task<UpdateBookResponse> UpdateBook(UpdateBookRequest request, ServerCallContext context)
+    {
+        var book = await _context.Books.Where(book => book.Id == request.Id).FirstOrDefaultAsync();
+        
+        _context.Entry(book).CurrentValues.SetValues(request);
+        await _context.SaveChangesAsync();
+        
+        return _mapper.Map<UpdateBookResponse>(book);
+    }
+
     public override async Task<DeleteBookResponse> DeleteBook(DeleteBookRequest request, ServerCallContext context)
     {
         var bookToDelete = await _context.Books.Where(b => b.Id == request.Id).FirstOrDefaultAsync();
