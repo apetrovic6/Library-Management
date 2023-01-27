@@ -6,6 +6,7 @@ package books;
 
 service Books {
   rpc GetBooks (GetBooksRequest) returns (GetBooksResponse);
+  rpc GetBookById (GetBookByIdRequest) returns (GetBookByIdResponse);
   rpc CreateBook (CreateBookRequest) returns (CreateBookResponse);
   rpc UpdateBook (UpdateBookRequest) returns (UpdateBookResponse);
   rpc DeleteBook (DeleteBookRequest) returns (DeleteBookResponse);
@@ -26,6 +27,14 @@ message GetBooksResponse {
 message CreateBookRequest {
   string title = 1;
   int32 stock = 2;
+}
+
+message GetBookByIdRequest {
+  int32 id = 1;
+}
+
+message GetBookByIdResponse {
+  BookModel book = 1;
 }
 
 message CreateBookResponse {
