@@ -7,6 +7,7 @@ package books;
 service Books {
   rpc GetBooks (GetBooksRequest) returns (GetBooksResponse);
   rpc CreateBook (CreateBookRequest) returns (CreateBookResponse);
+  rpc UpdateBook (UpdateBookRequest) returns (UpdateBookResponse);
   rpc DeleteBook (DeleteBookRequest) returns (DeleteBookResponse);
 }
 
@@ -31,10 +32,22 @@ message CreateBookResponse {
   BookModel book = 1;
 }
 
+message UpdateBookRequest {
+  int32 id = 1;
+  string name = 2;
+  int32 stock = 3;
+}
+
+
+message UpdateBookResponse {
+  BookModel book = 1;
+}
+
 message DeleteBookRequest {
   int32 id = 1;
 }
 
 message DeleteBookResponse {
-  BookModel book = 1;
+  bool deleted = 1;
+  string message = 2;
 }
