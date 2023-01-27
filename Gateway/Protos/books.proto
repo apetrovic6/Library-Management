@@ -13,7 +13,7 @@ service Books {
 
 message BookModel{
   int32 id = 1;
-  string name = 2;
+  string title = 2;
   int32 stock = 3;
 }
 
@@ -24,7 +24,7 @@ message GetBooksResponse {
 }
 
 message CreateBookRequest {
-  string name = 1;
+  string title = 1;
   int32 stock = 2;
 }
 
@@ -34,7 +34,7 @@ message CreateBookResponse {
 
 message UpdateBookRequest {
   int32 id = 1;
-  string name = 2;
+  string title = 2;
   int32 stock = 3;
 }
 

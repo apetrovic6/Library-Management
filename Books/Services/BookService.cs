@@ -52,6 +52,6 @@ public class BookService : Books.BooksBase
         _context.Books.Remove(bookToDelete);
         var deleted = (await _context.SaveChangesAsync()) > 0;
          
-         return new DeleteBookResponse { Deleted = deleted, Message = $"Deleted Book: {bookToDelete.Name}"};
+         return new DeleteBookResponse { Deleted = deleted, Message = $"Deleted Book: {bookToDelete.Title}"};
     }
 }

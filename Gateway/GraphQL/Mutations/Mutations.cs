@@ -19,7 +19,7 @@ public class Mutations
     {
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-        var request = new CreateBookRequest {Name = name, Stock = stock};
+        var request = new CreateBookRequest {Title = name, Stock = stock};
         CreateBookResponse reply = client.CreateBook(request);
 
         return reply;
@@ -29,7 +29,7 @@ public class Mutations
     {
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-        var request = new UpdateBookRequest { Id = id, Name = name, Stock = stock};
+        var request = new UpdateBookRequest { Id = id, Title = name, Stock = stock};
         var reply = await client.UpdateBookAsync(request);
 
         return reply;
