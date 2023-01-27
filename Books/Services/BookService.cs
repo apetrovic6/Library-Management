@@ -2,56 +2,77 @@
 using Books.Data;
 using Books.Models;
 using Grpc.Core;
+using HotChocolate;
 using Microsoft.EntityFrameworkCore;
 
 namespace Books.Services;
 
 public class BookService : Books.BooksBase
 {
-    private readonly BooksDbContext _context;
+    private readonly IDbContextFactory<BooksDbContext> _contextFactory;
     private readonly IMapper _mapper;
 
-    public BookService(BooksDbContext context, IMapper mapper)
+    public BookService(IDbContextFactory<BooksDbContext> context, IMapper mapper)
     {
-        _context = context;
+        _contextFactory = context;
         _mapper = mapper;
     }
 
     public override async Task<GetBooksResponse> GetBooks(GetBooksRequest request, ServerCallContext context)
     {
-        var books = await _context.Books.ToListAsync();
+        await using var dbContext = await _contextFactory.CreateDbContextAsync();
+        var books = await dbContext.Books.ToListAsync();
+
+        await dbContext.DisposeAsync();
         return _mapper.Map<GetBooksResponse>(books);
+    }
+
+    public override async Task<GetBookByIdResponse> GetBookById(GetBookByIdRequest request, ServerCallContext context)
+    {
+        await using var dbContext = await _contextFactory.CreateDbContextAsync();
+        var book = await dbContext.Books.Where(b => b.Id == request.Id).FirstOrDefaultAsync();
+
+        await dbContext.DisposeAsync();
+        return _mapper.Map<GetBookByIdResponse>(book);
     }
 
     public override async Task<CreateBookResponse> CreateBook(CreateBookRequest request, ServerCallContext context)
     {
+        await using var dbContext = await _contextFactory.CreateDbContextAsync(); 
         var newBook = _mapper.Map<Book>(request);
+    
+        await dbContext.Books.AddAsync(newBook);
+        await dbContext.SaveChangesAsync();
 
-        await _context.Books.AddAsync(newBook);
-        await _context.SaveChangesAsync();
-
+        await dbContext.DisposeAsync();
         return _mapper.Map<CreateBookResponse>(newBook);
     }
-
-    public async override Task<UpdateBookResponse> UpdateBook(UpdateBookRequest request, ServerCallContext context)
+    
+    public override async Task<UpdateBookResponse> UpdateBook(UpdateBookRequest request, ServerCallContext context)
     {
-        var book = await _context.Books.Where(book => book.Id == request.Id).FirstOrDefaultAsync();
+        await using var dbContext = await _contextFactory.CreateDbContextAsync();
+        var book = await dbContext.Books.Where(book => book.Id == request.Id).FirstOrDefaultAsync();
         
-        _context.Entry(book).CurrentValues.SetValues(request);
-        await _context.SaveChangesAsync();
-        
+        dbContext.Entry(book).CurrentValues.SetValues(request);
+        await dbContext.SaveChangesAsync();
+
+        await dbContext.DisposeAsync();
         return _mapper.Map<UpdateBookResponse>(book);
     }
-
+    
     public override async Task<DeleteBookResponse> DeleteBook(DeleteBookRequest request, ServerCallContext context)
     {
-        var bookToDelete = await _context.Books.Where(b => b.Id == request.Id).FirstOrDefaultAsync();
+        await using var dbContext = await _contextFactory.CreateDbContextAsync();
+        var bookToDelete = await dbContext.Books.Where(b => b.Id == request.Id).FirstOrDefaultAsync();
         
         if (bookToDelete == null) return  new DeleteBookResponse { Deleted = false, Message = "Not Found"};
         
-        _context.Books.Remove(bookToDelete);
-        var deleted = (await _context.SaveChangesAsync()) > 0;
+        // if (bookToDelete == null) throw new GraphQLException(new Error("Book not found"));
+        
+        dbContext.Books.Remove(bookToDelete);
+        var deleted = (await dbContext.SaveChangesAsync()) > 0;
          
+        await dbContext.DisposeAsync();
          return new DeleteBookResponse { Deleted = deleted, Message = $"Deleted Book: {bookToDelete.Title}"};
     }
 }
