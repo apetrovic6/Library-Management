@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Books;
+using Gateway.GraphQL.Inputs;
 using Grpc.Net.Client;
 
 namespace Gateway.GraphQL.Mutations;
@@ -15,11 +16,11 @@ public class Mutations
         _mapper = mapper;
     }
 
-    public async Task<CreateBookResponse> CreateBook(string name, int stock)
+    public async Task<CreateBookResponse> CreateBook(BookInput bookInput)
     {
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-        var request = new CreateBookRequest {Title = name, Stock = stock};
+        var request = new CreateBookRequest {Title = bookInput.title, Stock = bookInput.stock};
         CreateBookResponse reply = client.CreateBook(request);
 
         return reply;
