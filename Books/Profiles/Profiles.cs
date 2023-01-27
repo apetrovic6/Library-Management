@@ -25,5 +25,10 @@ public class Profiles : Profile
                 src => src.MapFrom(
                     b => b
                 ));
+
+        CreateMap<Book, GetBookByIdResponse>()
+            .ForMember(dest => dest.Book, src => src.MapFrom(
+                b => b
+            ));
     }
 }
