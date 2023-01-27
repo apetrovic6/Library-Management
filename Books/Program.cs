@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc();
 
-builder.Services.AddDbContext<BooksDbContext>(opt =>
+builder.Services.AddPooledDbContextFactory<BooksDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
@@ -31,9 +31,13 @@ using (var scope = app.Services.CreateScope())
     await Task.Delay(5000);
     try
     {
-        var context = services.GetRequiredService<BooksDbContext>();
-        await context.Database.MigrateAsync();
-        await InitDB.Init(context,loggerFactory);
+        var contextFactory = services.GetRequiredService<IDbContextFactory<BooksDbContext>>();
+        
+        using(var context = contextFactory.CreateDbContext()){
+            await context.Database.MigrateAsync();
+            await InitDB.Init(context, loggerFactory);
+        }
+
     }
     catch (Exception e)
     {
