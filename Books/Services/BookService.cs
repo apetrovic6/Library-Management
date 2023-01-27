@@ -1,4 +1,5 @@
-﻿using Books.Data;
+﻿using AutoMapper;
+using Books.Data;
 using Books.Models;
 using Grpc.Core;
 using Microsoft.EntityFrameworkCore;
@@ -8,10 +9,12 @@ namespace Books.Services;
 public class BookService : Books.BooksBase
 {
     private readonly BooksDbContext _context;
+    private readonly IMapper _mapper;
 
-    public BookService(BooksDbContext context)
+    public BookService(BooksDbContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
     public override async Task<GetBooksResponse> GetBooks(GetBooksRequest request, ServerCallContext context)
