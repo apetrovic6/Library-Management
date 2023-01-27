@@ -28,11 +28,12 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 
+    await Task.Delay(5000);
     try
     {
         var context = services.GetRequiredService<BooksDbContext>();
         await context.Database.MigrateAsync();
-        // await StoreContextSeed.SeedAsync(context, loggerFactory);
+        await InitDB.Init(context,loggerFactory);
     }
     catch (Exception e)
     {
