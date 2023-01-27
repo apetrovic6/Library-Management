@@ -24,6 +24,16 @@ public class Mutations
         return reply;
     }
 
+    public async Task<UpdateBookResponse> UpdateBook(int id, string name, int stock)
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
+        var client = new Books.Books.BooksClient(channel);
+        var request = new UpdateBookRequest { Id = id, Name = name, Stock = stock};
+        var reply = await client.UpdateBookAsync(request);
+
+        return reply;
+    }
+    
     public async Task<DeleteBookResponse> DeleteBook(int id)
     {
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
