@@ -5,7 +5,14 @@ namespace Gateway.GraphQL;
 
 public class Query
 {
-    public async Task<HelloReply>  GetHello(string name)
+    private readonly IConfiguration _configuration;
+
+    public Query(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
+    public async Task<HelloReply> GetHello(string name)
     {
         var channel = GrpcChannel.ForAddress("http://books-clusterip-service");
         var client = new Greeter.GreeterClient(channel);
@@ -16,7 +23,7 @@ public class Query
 
     public async Task<GetBooksResponse> GetBooks()
     {
-        var channel = GrpcChannel.ForAddress("http://books-clusterip-service");
+        var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
         var reply = await client.GetBooksAsync(new GetBooksRequest());
         Console.WriteLine(reply.Books);
