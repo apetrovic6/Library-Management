@@ -2,7 +2,6 @@
 using Books.Data;
 using Books.Models;
 using Grpc.Core;
-using HotChocolate;
 using Microsoft.EntityFrameworkCore;
 
 namespace Books.Services;
