@@ -16,7 +16,8 @@ public class Query
         _mapper = mapper;
     }
     
-    public async Task<GetBooksResponse> GetBooks()
+    // [UsePaging(IncludeTotalCount = true, DefaultPageSize = 10, MaxPageSize = 20)]
+    public async Task<List<BookType>> GetBooks()
     {
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
