@@ -1,0 +1,21 @@
+﻿@page "/add-book"
+@using BooksGQL
+
+@inject BooksClient
+
+<MudText Typo="Typo.h1" GutterBottom="true" Class="my-5">Add Book</MudText>
+
+<EditForm>
+    <MudGrid>
+        <MudItem xs="12" md="6" lg="3" xl="1">
+            <MudTextField T="string" Label="Title" Required="true" HelperText="Book Title"/>
+            <MudTextField T="int" Label="Stock" Required="true" HelperText="Books in stock"/>
+        </MudItem>
+    </MudGrid>
+</EditForm>
+
+@code {
+private BooksClient client { get; set; }
+    
+
+}
