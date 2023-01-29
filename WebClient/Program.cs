@@ -7,5 +7,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddBooksClient()
+    .ConfigureHttpClient(client => client.BaseAddress = new Uri("https://acme.com/graphql"));
 
 await builder.Build().RunAsync();
