@@ -33,3 +33,4 @@ manifests:
   - K8S/books-pvc.yml
   - K8S/client-depl.yml
   - K8S/books-db-depl.yml
+  - K8S/ingress-srv.yml
