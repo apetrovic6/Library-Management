@@ -22,6 +22,19 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: gateway-clusterip-service
+spec:
+  type: ClusterIP
+  selector:
+    app: gateway-service
+  ports:
+    - name: gateway-service-port
+      port: 80
+      targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
   name: gateway-loadbalancer-service
 spec:
   type: NodePort
