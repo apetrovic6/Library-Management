@@ -1,0 +1,28 @@
+﻿@page "/books"
+@inherits BooksBase
+
+
+<MudText Typo="Typo.h1" Class="my-5">Books</MudText>
+
+<MudGrid Spacing="5"  Justify="Justify.FlexStart">
+    @{
+        if (fetchedBooks?.Books?.Count > 0)
+        {
+            @foreach (var book in fetchedBooks?.Books)
+            {
+                <MudItem xs="12" sm="6" md="4" lg="3" xl="2" >
+                    <MudCard Elevation="2" Class="d-flex align-center justify-center">
+                        <MudCardContent>
+                            <MudCardHeader >
+                                <CardHeaderContent>
+                                    <MudText Align="Align.Start" Typo="Typo.h6">@book.Title</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader >
+                            <MudText Align="Align.End" Typo="Typo.body2">In Stock: @book.Stock pc</MudText>
+                        </MudCardContent>
+                    </MudCard>
+                 </MudItem>
+            }
+        }
+    }
+</MudGrid>
