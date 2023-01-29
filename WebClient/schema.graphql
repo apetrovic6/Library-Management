@@ -1,0 +1,54 @@
+﻿schema {
+  query: Query
+  mutation: Mutations
+}
+
+type Query {
+  books: [BookType!]!
+  bookById(id: Int!): GetBookByIdResponse!
+}
+
+type Mutations {
+  createBook(name: String! stock: Int!): CreateBookResponse!
+  updateBook(id: Int! name: String! stock: Int!): UpdateBookResponse!
+  deleteBook(id: Int!): DeleteBookResponse!
+}
+
+type GetBookByIdResponse {
+  clone: GetBookByIdResponse
+  calculateSize: Int!
+  book: BookModel
+}
+
+type BookType {
+  id: Int!
+  title: String!
+  stock: Int!
+}
+
+type CreateBookResponse {
+  clone: CreateBookResponse
+  calculateSize: Int!
+  book: BookModel
+}
+
+type UpdateBookResponse {
+  clone: UpdateBookResponse
+  calculateSize: Int!
+  book: BookModel
+}
+
+type DeleteBookResponse {
+  clone: DeleteBookResponse
+  calculateSize: Int!
+  deleted: Boolean!
+  message: String
+}
+
+type BookModel {
+  clone: BookModel
+  calculateSize: Int!
+  id: Int!
+  title: String
+  stock: Int!
+}
