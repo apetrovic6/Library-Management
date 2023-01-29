@@ -1,0 +1,9 @@
+mutation CreateBook($name: String!, $stock: Int!){
+  createBook (name: $name, stock: $stock) {
+    book {
+      id
+      title
+      stock
+    }
+  }
+}
