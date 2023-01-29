@@ -18,10 +18,18 @@ build:
     sync:
       infer:
         -  "*.cs"
+  - image: apetrovic6/client-service
+    context: WebClient
+    docker: 
+      dockerfile: Dockerfile
+    sync:
+      infer:
+        - "*.cs"
 manifests:
   rawYaml:
   - K8S/gateway-depl.yml
   - K8S/books-depl.yml
   - K8S/books-db-secret.yml
   - K8S/books-pvc.yml
+  - K8S/client-depl.yml
   - K8S/books-db-depl.yml
