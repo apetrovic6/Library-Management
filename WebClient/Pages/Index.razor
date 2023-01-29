@@ -11,25 +11,3 @@ Welcome to your new app.
 <SurveyPrompt Title="How is Blazor working for you?"/>
 
 
-@{
-    if (Books?.Books?.Count > 0)
-    {
-        @foreach (var book in Books.Books)
-        {
-            <h4>@book.Title</h4>
-        }
-    }
-}
-
-@code {
-
-    private IGetBooksResult? Books { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        var result = await BooksClient.GetBooks.ExecuteAsync();
-
-        Books = result.Data;
-    }
-
-}
