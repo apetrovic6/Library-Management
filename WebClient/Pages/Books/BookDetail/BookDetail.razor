@@ -1,0 +1,21 @@
+﻿@page "/book/{bookId:int}"
+@inherits BookDetailBase
+
+<div class="d-flex">
+    <MudText Typo="Typo.h3" GutterBottom="true" Class="mt-2">@Book?.Title</MudText>
+        <MudSpacer />
+    <MudButton @onclick="@(e => GoToEditPage(Book))" Size="Size.Medium" Variant="Variant.Filled" Color="Color.Secondary" Class="mt-2" Style="width: 100px; height: 50px;">Edit</MudButton>
+</div>
+<MudText Typo="Typo.subtitle1">@Book?.Author</MudText>
+<MudGrid Spacing="5" Class="mt-5">
+    <MudItem xs="12" lg="6" Class="align-center justify-center mud-width-full">
+        <MudText>@Book?.Title</MudText>
+        <MudText GutterBottom="true">@Book?.Author</MudText>
+        <MudText>Language: @Book?.Language</MudText>
+        <MudText>Country of Origin: @Book?.Country</MudText>
+        <MudText>Published: @Book?.Year</MudText>
+    </MudItem>
+    <MudItem xs="12" lg="6" Class="justify-center mud-width-full">
+        <MudImage Fluid="true" Src="@Book?.Imagelink" Alt="@Book?.Title" Elevation="25" Class="rounded-lg"/>
+    </MudItem>
+</MudGrid>
