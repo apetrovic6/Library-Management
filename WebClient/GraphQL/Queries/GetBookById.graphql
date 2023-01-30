@@ -1,0 +1,14 @@
+query GetBookById($id: Int!) {
+    bookById(id: $id) {
+        book {
+          id
+          title
+          author
+          year
+          country
+          language
+          imagelink
+          stock
+        }
+    }
+}
