@@ -552,7 +552,7 @@
   {
     "author": "Giacomo Leopardi",
     "country": "Italy",
-    "imageLink": "images/poems-giacomo-leopardi.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/419vPrv4BmL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Italian",
     "link": "\n",
     "pages": 184,
@@ -562,7 +562,7 @@
   {
     "author": "Doris Lessing",
     "country": "United Kingdom",
-    "imageLink": "images/the-golden-notebook.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51tT+YIxbkL._SY346_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Golden_Notebook\n",
     "pages": 688,
@@ -572,7 +572,7 @@
   {
     "author": "Astrid Lindgren",
     "country": "Sweden",
-    "imageLink": "images/pippi-longstocking.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51goEZnH9xL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Swedish",
     "link": "https://en.wikipedia.org/wiki/Pippi_Longstocking\n",
     "pages": 160,
@@ -582,7 +582,7 @@
   {
     "author": "Lu Xun",
     "country": "China",
-    "imageLink": "images/diary-of-a-madman.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51sv4OiSwEL._SX311_BO1,204,203,200_.jpg",
     "language": "Chinese",
     "link": "https://en.wikipedia.org/wiki/A_Madman%27s_Diary\n",
     "pages": 389,
@@ -592,7 +592,7 @@
   {
     "author": "Naguib Mahfouz",
     "country": "Egypt",
-    "imageLink": "images/children-of-gebelawi.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51RhHhLv9rL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/Children_of_Gebelawi\n",
     "pages": 355,
@@ -602,7 +602,7 @@
   {
     "author": "Thomas Mann",
     "country": "Germany",
-    "imageLink": "images/buddenbrooks.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51lLxFR8tFL.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Buddenbrooks\n",
     "pages": 736,
@@ -612,52 +612,57 @@
   {
     "author": "Thomas Mann",
     "country": "Germany",
-    "imageLink": "images/the-magic-mountain.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51aLixbcs-L.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Magic_Mountain\n",
     "pages": 720,
     "title": "The Magic Mountain",
-    "year": 1924
+    "year": 1924,
+    "description": "It was The Magic Mountain (Der Zauberberg) that confirmed Thomas Mann as a Nobel prizewinner for literature and rightly so, for it is undoubtedly one of the great novels of the 20th century. Its unusual story - it opens with a young man visiting a friend in a tuberculosis sanatorium in the Swiss Alps - was originally started by Mann in 1912 but was not completed until 1924. Then, it was instantly recognised as a masterpiece and led to Mann’s Nobel Prize in 1929. Hans Castorp is, on the face of it, an ordinary man in his early 20s, on course to start a career in ship engineering in his home town of Hamburg, when he decides to travel to the Berghof Santatorium in Davos. The year is 1912, and an oblivious world is on the brink of war. Castorp’s friend Joachim Ziemssen is taking the cure, and a three-week visit seems a perfect break before work begins. But when Castorp arrives he is surprised to find an established community of patients, some of whom have been there for years, and little by little, he gets drawn into the closeted life and the individual personalities of the residents. Among them are Hofrat Behrens, the principal doctor, the curiously attractive Clavdia Chauchat and two intellectuals: Ludovico Settembrini and Leo Naphta with their strongly contrasted personalities and differing political, ethical, artistic and spiritual ideals. Hans Castorp’s stay is extended, once, twice and still further, as he appears to develop symptoms which suggest that his health, once so robust, would benefit from the treatments and the mountain air. As time passes, it becomes clear that the young man, with a particular interest in shipbuilding and not much else, finds his outlook and knowledge broadened by his mountain companions, his intellect stretched and his emotional experience deepened and enriched. Hans Castorp is changing, day by day, month by month, year by year, sometimes imperceptibly, sometimes with a sudden advance, as he encounters the varied range of sparkling characters, their comedies and tragedies, their aspirations and their defeats. The Magic Mountain is a classic bildungsroman, an educational journey of growth - a genre that began with an earlier novel in the German tradition: Goethe’s Wilhelm Meister’s Apprenticeship. It is presented here in the acclaimed modern translation by John E. Woods and is told by David Rintoul with his particular understanding for Thomas Mann as displayed in his widely praised Ukemi recording of Buddenbrooks."
   },
   {
     "author": "Herman Melville",
     "country": "United States",
-    "imageLink": "images/moby-dick.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51j7zrSt+VL.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Moby-Dick\n",
     "pages": 378,
     "title": "Moby Dick",
-    "year": 1851
+    "year": 1851,
+    "description": "Call me Ishmael. Thus starts the greatest American novel. Melville said himself that he wanted to write a mighty book about a mighty theme and so he did. It is a story of one man's obsessive revenge-journey against the white whale, Moby-Dick, who injured him in an earlier meeting. Woven into the story of the last journey of The Pequod is a mesh of philosophy, rumination, religion, history, and a mass of information about whaling through the ages."
   },
   {
     "author": "Michel de Montaigne",
     "country": "France",
-    "imageLink": "images/essais.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61sdaAI0fgL.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Essays_(Montaigne)\n",
     "pages": 404,
     "title": "Essays",
-    "year": 1595
+    "year": 1595,
+    "description": "A faithful translation is rare; a translation which preserves intact the original text is very rare; a perfect translation of Montaigne appears impossible. Yet Donald Frame has realized this feat. One does not seem to be reading a translation, so smooth and easy is the style; at each moment, one seems to be listening to Montaigne himself - the freshness of his ideas, the unexpected choice of words. Frame has kept everything.” (Andre Maurois, The New York Times Book Review)"
   },
   {
     "author": "Elsa Morante",
     "country": "Italy",
-    "imageLink": "images/history.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51u3deduWeL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/History_(novel)\n",
     "pages": 600,
     "title": "History",
-    "year": 1974
+    "year": 1974,
+    "description": "History was written nearly thirty years after Elsa Morante and Alberto Moravia spent a year in hiding among remote farming villages in the mountains south of Rome. There she witnessed the full impact of the war and first formed the ambition to write an account of what history - the great political events driven by men of power, wealth, and ambition - does when it reaches the realm of ordinary people struggling for life and bread. The central character in this powerful and unforgiving novel is Ida Mancuso, a schoolteacher whose husband has died and whose feckless teenage son treats the war as his playground. A German soldier on his way to North Africa rapes her, falls in love with her, and leaves her pregnant with a boy whose survival becomes Ida's passion. Around these two other characters come and go, each caught up by the war which is like a river in flood. We catch glimpses of bombing raids, street crimes, a cattle car from which human cries emerge, an Italian soldier succumbing to frostbite on the Russian front, the dumb endurance of peasants who have lived their whole lives with nothing and now must get by with less than nothing. \"One of the few novels in any language that renders the full horror of Hitler's war, the war that never gets into the books . . .\"-- Alfred Kazan, Esquire\"A storyteller who spellbinds.\"-- Stephen Spender, The New York Review of Books\"A marvel of a novel . . . all the pleasures that fiction can offer.\"-- Doris Grumbach, Saturday Review"
   },
   {
     "author": "Toni Morrison",
     "country": "United States",
-    "imageLink": "images/beloved.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41Rdzbiqh7L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Beloved_(novel)\n",
     "pages": 321,
     "title": "Beloved",
-    "year": 1987
+    "year": 1987,
+    "description": "PULITZER PRIZE WINNER • NEW YORK TIMES BESTSELLER • Filled with bitter poetry and suspense as taut as a rope, a spellbinding novel that transforms history into a story as powerful as Exodus and as intimate as a lullaby. With a new afterword by the author. This \"brutally powerful, mesmerizing story” (People) is an unflinchingly look into the abyss of slavery, from the acclaimed Nobel Prize winner Sethe was born a slave and escaped to Ohio, but eighteen years later she is still not free. Sethe has too many memories of Sweet Home, the beautiful farm where so many hideous things happened. And Sethe’s new home is haunted by the ghost of her baby, who died nameless and whose tombstone is engraved with a single word: Beloved. “A masterwork.... Wonderful.... I can’t imagine American literature without it.” —John Leonard, Los Angeles Times"
   },
   {
     "author": "Murasaki Shikibu",
