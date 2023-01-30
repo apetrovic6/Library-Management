@@ -11,5 +11,18 @@ public class Book
     public string Title { get; set; }
     
     [Required]
+    public string Author { get; set; }
+    
+    [Required]
+    public int Year { get; set; }
+    
+    [Required]
+    public string Country { get; set; }
+    
+    public string Language { get; set; }
+    
+    public string ImageLink { get; set; }
+    
+    [Required]
     public int Stock { get; set; }
 }
