@@ -18,7 +18,17 @@ public static class InitDB
         logger.LogInformation("--> Transforming Data");
         foreach (var book in data)
         {
-            var bookToAdd = new Book() { Title = book.title, Stock = Random.Shared.Next(0, 100)};
+            var bookToAdd = new Book()
+            {
+                Title = book.title, 
+                Stock = Random.Shared.Next(0, 100),
+                Author = book.author,
+                Country = book.country,
+                Language = book.language,
+                Year = book.year,
+                ImageLink = book.imageLink
+                
+            };
             books.Add(bookToAdd);
         }
 
