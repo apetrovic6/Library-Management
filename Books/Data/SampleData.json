@@ -2,7 +2,7 @@
   {
     "author": "Chinua Achebe",
     "country": "Nigeria",
-    "imageLink": "images/things-fall-apart.jpg",
+    "imageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/ThingsFallApart.jpg/220px-ThingsFallApart.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
     "pages": 209,
@@ -12,7 +12,7 @@
   {
     "author": "Hans Christian Andersen",
     "country": "Denmark",
-    "imageLink": "images/fairy-tales.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/519fawxn4sL._SX401_BO1,204,203,200_.jpg",
     "language": "Danish",
     "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
     "pages": 784,
@@ -22,7 +22,7 @@
   {
     "author": "Dante Alighieri",
     "country": "Italy",
-    "imageLink": "images/the-divine-comedy.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/31nCuk0puCL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
     "pages": 928,
@@ -32,7 +32,7 @@
   {
     "author": "Unknown",
     "country": "Sumer and Akkadian Empire",
-    "imageLink": "images/the-epic-of-gilgamesh.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/519bItbGMhS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Akkadian",
     "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
     "pages": 160,
@@ -42,7 +42,7 @@
   {
     "author": "Unknown",
     "country": "Achaemenid Empire",
-    "imageLink": "images/the-book-of-job.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41OGBeBObFL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Hebrew",
     "link": "https://en.wikipedia.org/wiki/Book_of_Job\n",
     "pages": 176,
@@ -52,7 +52,7 @@
   {
     "author": "Unknown",
     "country": "India/Iran/Iraq/Egypt/Tajikistan",
-    "imageLink": "images/one-thousand-and-one-nights.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51u8-Vm+21L._SY344_BO1,204,203,200_.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\n",
     "pages": 288,
@@ -62,7 +62,7 @@
   {
     "author": "Unknown",
     "country": "Iceland",
-    "imageLink": "images/njals-saga.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51Qo4Nt2j3L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Old Norse",
     "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\n",
     "pages": 384,
@@ -72,7 +72,7 @@
   {
     "author": "Jane Austen",
     "country": "United Kingdom",
-    "imageLink": "images/pride-and-prejudice.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51s2Sl4NIxL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Pride_and_Prejudice\n",
     "pages": 226,
@@ -82,7 +82,7 @@
   {
     "author": "Honoré de Balzac",
     "country": "France",
-    "imageLink": "images/le-pere-goriot.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/31+geAMW-fL._SY344_BO1,204,203,200_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Le_P%C3%A8re_Goriot\n",
     "pages": 443,
@@ -92,7 +92,7 @@
   {
     "author": "Samuel Beckett",
     "country": "Republic of Ireland",
-    "imageLink": "images/molloy-malone-dies-the-unnamable.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41iVTpxPWoL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "French, English",
     "link": "https://en.wikipedia.org/wiki/Molloy_(novel)\n",
     "pages": 256,
@@ -102,7 +102,7 @@
   {
     "author": "Giovanni Boccaccio",
     "country": "Italy",
-    "imageLink": "images/the-decameron.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51EqIi+d0cL._SY344_BO1,204,203,200_.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/The_Decameron\n",
     "pages": 1024,
@@ -112,7 +112,7 @@
   {
     "author": "Jorge Luis Borges",
     "country": "Argentina",
-    "imageLink": "images/ficciones.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41gNyjqK1CL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Ficciones\n",
     "pages": 224,
@@ -122,7 +122,7 @@
   {
     "author": "Emily Brontë",
     "country": "United Kingdom",
-    "imageLink": "images/wuthering-heights.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41dAOQBWAUL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Wuthering_Heights\n",
     "pages": 342,
@@ -132,7 +132,7 @@
   {
     "author": "Albert Camus",
     "country": "Algeria, French Empire",
-    "imageLink": "images/l-etranger.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/415mp78I25L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/The_Stranger_(novel)\n",
     "pages": 185,
@@ -142,7 +142,7 @@
   {
     "author": "Paul Celan",
     "country": "Romania, France",
-    "imageLink": "images/poems-paul-celan.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51LpfbxsXYL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "German",
     "link": "\n",
     "pages": 320,
@@ -152,7 +152,7 @@
   {
     "author": "Louis-Ferdinand Céline",
     "country": "France",
-    "imageLink": "images/voyage-au-bout-de-la-nuit.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41zZqgi4Y2L._SX322_BO1,204,203,200_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night\n",
     "pages": 505,
@@ -162,7 +162,7 @@
   {
     "author": "Miguel de Cervantes",
     "country": "Spain",
-    "imageLink": "images/don-quijote-de-la-mancha.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51DXSjCTI6L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Don_Quixote\n",
     "pages": 1056,
@@ -172,7 +172,7 @@
   {
     "author": "Geoffrey Chaucer",
     "country": "England",
-    "imageLink": "images/the-canterbury-tales.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51ftjMTkTpL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Canterbury_Tales\n",
     "pages": 544,
@@ -182,7 +182,7 @@
   {
     "author": "Anton Chekhov",
     "country": "Russia",
-    "imageLink": "images/stories-of-anton-chekhov.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51Oq8JfXh4L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/List_of_short_stories_by_Anton_Chekhov\n",
     "pages": 194,
@@ -192,7 +192,7 @@
   {
     "author": "Joseph Conrad",
     "country": "United Kingdom",
-    "imageLink": "images/nostromo.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41NVi93eYbL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Nostromo\n",
     "pages": 320,
@@ -202,7 +202,7 @@
   {
     "author": "Charles Dickens",
     "country": "United Kingdom",
-    "imageLink": "images/great-expectations.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51xOUuZO2FL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Great_Expectations\n",
     "pages": 194,
@@ -212,7 +212,7 @@
   {
     "author": "Denis Diderot",
     "country": "France",
-    "imageLink": "images/jacques-the-fatalist.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51Pl6gjjlrL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Jacques_the_Fatalist\n",
     "pages": 596,
@@ -222,7 +222,7 @@
   {
     "author": "Alfred Döblin",
     "country": "Germany",
-    "imageLink": "images/berlin-alexanderplatz.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51J-fP2UAQL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz\n",
     "pages": 600,
@@ -232,7 +232,7 @@
   {
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
-    "imageLink": "images/crime-and-punishment.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41WYXBA5mrL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Crime_and_Punishment\n",
     "pages": 551,
@@ -242,7 +242,7 @@
   {
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
-    "imageLink": "images/the-idiot.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41K1QqtKyNL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Idiot\n",
     "pages": 656,
@@ -252,7 +252,7 @@
   {
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
-    "imageLink": "images/the-possessed.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41ekg0h-MFL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Demons_(Dostoyevsky_novel)\n",
     "pages": 768,
@@ -262,7 +262,7 @@
   {
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
-    "imageLink": "images/the-brothers-karamazov.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41DZOKR27iS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Brothers_Karamazov\n",
     "pages": 824,
@@ -272,7 +272,7 @@
   {
     "author": "George Eliot",
     "country": "United Kingdom",
-    "imageLink": "images/middlemarch.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/418BkTpmEGL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Middlemarch\n",
     "pages": 800,
@@ -282,7 +282,7 @@
   {
     "author": "Ralph Ellison",
     "country": "United States",
-    "imageLink": "images/invisible-man.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51NIZqFLvJL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Invisible_Man\n",
     "pages": 581,
@@ -292,7 +292,7 @@
   {
     "author": "Euripides",
     "country": "Greece",
-    "imageLink": "images/medea.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41ZZFyt-MsL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Medea_(play)\n",
     "pages": 104,
@@ -302,7 +302,7 @@
   {
     "author": "William Faulkner",
     "country": "United States",
-    "imageLink": "images/absalom-absalom.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51dmeZHowXL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Absalom,_Absalom!\n",
     "pages": 313,
@@ -312,7 +312,7 @@
   {
     "author": "William Faulkner",
     "country": "United States",
-    "imageLink": "images/the-sound-and-the-fury.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51mRf52qTeL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Sound_and_the_Fury\n",
     "pages": 326,
@@ -322,7 +322,7 @@
   {
     "author": "Gustave Flaubert",
     "country": "France",
-    "imageLink": "images/madame-bovary.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51pBOnZagyL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Madame_Bovary\n",
     "pages": 528,
@@ -332,7 +332,7 @@
   {
     "author": "Gustave Flaubert",
     "country": "France",
-    "imageLink": "images/l-education-sentimentale.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/514MBUwUIKL._SY346_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Sentimental_Education\n",
     "pages": 606,
@@ -342,7 +342,7 @@
   {
     "author": "Federico García Lorca",
     "country": "Spain",
-    "imageLink": "images/gypsy-ballads.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51HZw0ChaOL._SX311_BO1,204,203,200_.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Gypsy_Ballads\n",
     "pages": 218,
@@ -352,7 +352,7 @@
   {
     "author": "Gabriel García Márquez",
     "country": "Colombia",
-    "imageLink": "images/one-hundred-years-of-solitude.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51Zr6Pd32ML._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude\n",
     "pages": 417,
@@ -362,7 +362,7 @@
   {
     "author": "Gabriel García Márquez",
     "country": "Colombia",
-    "imageLink": "images/love-in-the-time-of-cholera.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41+HorgT4YL._SY344_BO1,204,203,200_.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Love_in_the_Time_of_Cholera\n",
     "pages": 368,
@@ -372,7 +372,7 @@
   {
     "author": "Johann Wolfgang von Goethe",
     "country": "Saxe-Weimar",
-    "imageLink": "images/faust.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51lTO7vqfdL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Goethe%27s_Faust\n",
     "pages": 158,
@@ -382,7 +382,7 @@
   {
     "author": "Nikolai Gogol",
     "country": "Russia",
-    "imageLink": "images/dead-souls.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51Mffb02deL._SY346_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Dead_Souls\n",
     "pages": 432,
@@ -392,7 +392,7 @@
   {
     "author": "Günter Grass",
     "country": "Germany",
-    "imageLink": "images/the-tin-drum.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41AkvnETSrL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Tin_Drum\n",
     "pages": 600,
@@ -402,7 +402,7 @@
   {
     "author": "João Guimarães Rosa",
     "country": "Brazil",
-    "imageLink": "images/the-devil-to-pay-in-the-backlands.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/01RmK+J4pJL._BO1,204,203,200_.gif",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/The_Devil_to_Pay_in_the_Backlands\n",
     "pages": 494,
@@ -412,7 +412,7 @@
   {
     "author": "Knut Hamsun",
     "country": "Norway",
-    "imageLink": "images/hunger.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41LEg2d1j4L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Norwegian",
     "link": "https://en.wikipedia.org/wiki/Hunger_(Hamsun_novel)\n",
     "pages": 176,
@@ -422,7 +422,7 @@
   {
     "author": "Ernest Hemingway",
     "country": "United States",
-    "imageLink": "images/the-old-man-and-the-sea.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/417keYD3gkL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea\n",
     "pages": 128,
@@ -432,7 +432,7 @@
   {
     "author": "Homer",
     "country": "Greece",
-    "imageLink": "images/the-iliad-of-homer.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41+IcE1BGXL._SY344_BO1,204,203,200_.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Iliad\n",
     "pages": 608,
@@ -442,7 +442,7 @@
   {
     "author": "Homer",
     "country": "Greece",
-    "imageLink": "images/the-odyssey-of-homer.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51KsJ47uP4L._SX342_BO1,204,203,200_.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Odyssey\n",
     "pages": 374,
@@ -452,7 +452,7 @@
   {
     "author": "Henrik Ibsen",
     "country": "Norway",
-    "imageLink": "images/a-Dolls-house.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41heWzaw03L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Norwegian",
     "link": "https://en.wikipedia.org/wiki/A_Doll%27s_House\n",
     "pages": 68,
@@ -462,7 +462,7 @@
   {
     "author": "James Joyce",
     "country": "Irish Free State",
-    "imageLink": "images/ulysses.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/415Fz96JUYL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Ulysses_(novel)\n",
     "pages": 228,
@@ -472,7 +472,7 @@
   {
     "author": "Franz Kafka",
     "country": "Czechoslovakia",
-    "imageLink": "images/stories-of-franz-kafka.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41ik+DauvfL._SY344_BO1,204,203,200_.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Franz_Kafka_bibliography#Short_stories\n",
     "pages": 488,
@@ -482,7 +482,7 @@
   {
     "author": "Franz Kafka",
     "country": "Czechoslovakia",
-    "imageLink": "images/the-trial.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51z6huzmB9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Trial\n",
     "pages": 160,
@@ -492,7 +492,7 @@
   {
     "author": "Franz Kafka",
     "country": "Czechoslovakia",
-    "imageLink": "images/the-castle.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41Lwv6uYiHL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Castle_(novel)\n",
     "pages": 352,
@@ -502,7 +502,7 @@
   {
     "author": "Kālidāsa",
     "country": "India",
-    "imageLink": "images/the-recognition-of-shakuntala.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51tCu6k9vvL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Abhij%C3%B1%C4%81na%C5%9B%C4%81kuntalam\n",
     "pages": 147,
@@ -512,7 +512,7 @@
   {
     "author": "Yasunari Kawabata",
     "country": "Japan",
-    "imageLink": "images/the-sound-of-the-mountain.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51v+yZgSrcL._SY344_BO1,204,203,200_.jpg",
     "language": "Japanese",
     "link": "https://en.wikipedia.org/wiki/The_Sound_of_the_Mountain\n",
     "pages": 288,
@@ -522,7 +522,7 @@
   {
     "author": "Nikos Kazantzakis",
     "country": "Greece",
-    "imageLink": "images/zorba-the-greek.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41uBj0nOcKL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Zorba_the_Greek\n",
     "pages": 368,
@@ -532,7 +532,7 @@
   {
     "author": "D. H. Lawrence",
     "country": "United Kingdom",
-    "imageLink": "images/sons-and-lovers.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41chB20mv8L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Sons_and_Lovers\n",
     "pages": 432,
@@ -542,7 +542,7 @@
   {
     "author": "Halldór Laxness",
     "country": "Iceland",
-    "imageLink": "images/independent-people.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51ZHMtQbXBL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Icelandic",
     "link": "https://en.wikipedia.org/wiki/Independent_People\n",
     "pages": 470,
