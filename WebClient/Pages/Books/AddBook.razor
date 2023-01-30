@@ -1,7 +1,7 @@
 ﻿@page "/add-book"
 @using BooksGQL
 @using StrawberryShake
-@inject IDialogService DialogService
+@inject ISnackbar Snackbar
 @inject BooksClient client
 
 <MudText Typo="Typo.h1" GutterBottom="true" Class="my-5">Add Book</MudText>
@@ -29,21 +29,11 @@
         var a = await client.CreateBook.ExecuteAsync(model);
         if (a.IsSuccessResult())
         {
-            var options = new MessageBoxOptions()
-            {
-                Title = "Book Created",
-                Message = $"Book {a.Data.CreateBook.Book.Title} created Successfully",
-            };
-            await DialogService.ShowMessageBox(messageBoxOptions: options);
+            Snackbar.Add($"Book {a.Data.CreateBook.Book.Title} Successfully Created", Severity.Success);
         }
         else
         {
-            var options = new MessageBoxOptions()
-            {
-                Title = "Error",
-                Message = a.Errors[0].Message
-            };
-            await DialogService.ShowMessageBox(messageBoxOptions: options);
+            Snackbar.Add($"Error: {a.Errors[0].Message}", Severity.Error);
         }
     }
 
