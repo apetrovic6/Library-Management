@@ -6,19 +6,21 @@
 
 <MudGrid Spacing="5"  Justify="Justify.FlexStart">
     @{
-        if (fetchedBooks?.Books?.Count > 0)
+        if (FetchedBooks?.Books?.Count > 0)
         {
-            @foreach (var book in fetchedBooks?.Books)
+            @foreach (var book in FetchedBooks?.Books)
             {
-                <MudItem xs="12" sm="6" md="4" lg="3" xl="2" >
-                    <MudCard Elevation="2" Class="d-flex align-center justify-center">
+                <MudItem xs="12" sm="6" md="4" lg="3" xl="2" @onclick="@(e => NavigateToBook(book.Id))">
+                    <MudCard Elevation="1">
                         <MudCardContent>
+                            <MudCardMedia Image="@book.ImageLink" Height="400" Title="@book.Title"/>
                             <MudCardHeader >
                                 <CardHeaderContent>
                                     <MudText Align="Align.Start" Typo="Typo.h6">@book.Title</MudText>
+                                    <MudText Typo="Typo.body1">@book.Author</MudText>
                                 </CardHeaderContent>
                             </MudCardHeader >
-                            <MudText Align="Align.End" Typo="Typo.body2">In Stock: @book.Stock pc</MudText>
+                            <MudText Align="Align.Right" Typo="Typo.body2">In Stock: @book?.Stock pc</MudText>
                         </MudCardContent>
                     </MudCard>
                  </MudItem>
