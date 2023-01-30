@@ -1,21 +1,55 @@
 ﻿@page "/add-book"
 @using BooksGQL
-
-@inject BooksClient
+@using System.ComponentModel.DataAnnotations
+@using StrawberryShake
+@inject IDialogService DialogService
+@inject BooksClient client
 
 <MudText Typo="Typo.h1" GutterBottom="true" Class="my-5">Add Book</MudText>
 
-<EditForm>
-    <MudGrid>
-        <MudItem xs="12" md="6" lg="3" xl="1">
-            <MudTextField T="string" Label="Title" Required="true" HelperText="Book Title"/>
-            <MudTextField T="int" Label="Stock" Required="true" HelperText="Books in stock"/>
-        </MudItem>
-    </MudGrid>
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>
+    
+    <MudTextField T="string" Label="Title" HelperText="Book Title" @bind-value="model.Title" For="@(() => model.Title)" />
+    <MudTextField T="int" Label="Stock"  HelperText="Books in stock" @bind-value="model.Stock" For="@(() => model.Stock)"/>
+    <MudCardActions>
+        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Add new Book</MudButton>
+    </MudCardActions>
 </EditForm>
 
 @code {
-private BooksClient client { get; set; }
-    
+    private BookCreateDto model = new();
+
+    public class BookCreateDto
+    {
+        [Required(ErrorMessage = "Title is required")]
+        public string Title { get; set; }
+
+        [Required(ErrorMessage = "Stock is required")]
+        public int Stock { get; set; }
+    }
+
+    private async void OnValidSubmit(EditContext context)
+    {
+        var a = await client.CreateBook.ExecuteAsync(model.Title, model.Stock);
+        if (a.IsSuccessResult())
+        {
+            var options = new MessageBoxOptions()
+            {
+                Title = "Book Created",
+                Message = $"Book {a.Data.CreateBook.Book.Title} created Successfully",
+            };
+            await DialogService.ShowMessageBox(messageBoxOptions: options);
+        }
+        else
+        {
+            var options = new MessageBoxOptions()
+            {
+                Title = "Error",
+                Message = a.Errors[0].Message
+            };
+            await DialogService.ShowMessageBox(messageBoxOptions: options);
+        }
+    }
 
 }
