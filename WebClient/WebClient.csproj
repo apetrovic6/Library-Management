@@ -21,12 +21,37 @@
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+      <Content Remove="Generated\**" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Update="Pages\Books\BooksBase.razor.cs">
         <DependentUpon>Books.razor</DependentUpon>
       </Compile>
+      <Compile Update="Pages\Books\BookDetailBase.razor.cs">
+        <DependentUpon>BookDetail.razor</DependentUpon>
+      </Compile>
+      <Compile Remove="Generated\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <GraphQL Remove="Generated\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <GraphQLConfig Remove="Generated\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Generated\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Remove="Generated\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Generated\**" />
     </ItemGroup>
 
 </Project>
