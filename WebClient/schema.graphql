@@ -9,8 +9,8 @@ type Query {
 }
 
 type Mutations {
-  createBook(name: String! stock: Int!): CreateBookResponse!
-  updateBook(id: Int! name: String! stock: Int!): UpdateBookResponse!
+  createBook(bookInput: CreateBookInput!): CreateBookResponse!
+  updateBook(id: Int! title: String! stock: Int!): UpdateBookResponse!
   deleteBook(id: Int!): DeleteBookResponse!
 }
 
@@ -23,6 +23,11 @@ type GetBookByIdResponse {
 type BookType {
   id: Int!
   title: String!
+  author: String!
+  year: Int!
+  country: String!
+  language: String!
+  imageLink: String!
   stock: Int!
 }
 
@@ -30,6 +35,16 @@ type CreateBookResponse {
   clone: CreateBookResponse
   calculateSize: Int!
   book: BookModel
+}
+
+input CreateBookInput {
+  title: String!
+  author: String!
+  year: Int!
+  country: String!
+  language: String!
+  imageLink: String!
+  stock: Int!
 }
 
 type UpdateBookResponse {
@@ -50,5 +65,10 @@ type BookModel {
   calculateSize: Int!
   id: Int!
   title: String
+  author: String
+  year: Int!
+  country: String
+  language: String
+  imagelink: String
   stock: Int!
 }
