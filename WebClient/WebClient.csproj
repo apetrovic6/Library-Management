@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Pages\Books\BooksBase.cs">
+      <Compile Update="Pages\Books\BooksBase.razor.cs">
         <DependentUpon>Books.razor</DependentUpon>
       </Compile>
     </ItemGroup>
