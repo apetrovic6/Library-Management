@@ -15,7 +15,12 @@ service Books {
 message BookModel{
   int32 id = 1;
   string title = 2;
-  int32 stock = 3;
+  string author =3;
+  int32 year = 4;
+  string country = 5;
+  string language = 6;
+  string imagelink = 7;
+  int32 stock = 8;
 }
 
 message GetBooksRequest{}
@@ -25,8 +30,13 @@ message GetBooksResponse {
 }
 
 message CreateBookRequest {
-  string title = 1;
-  int32 stock = 2;
+  string title = 2;
+  string author =3;
+  int32 year = 4;
+  string country = 5;
+  string language = 6;
+  string imagelink = 7;
+  int32 stock = 8;
 }
 
 message GetBookByIdRequest {
