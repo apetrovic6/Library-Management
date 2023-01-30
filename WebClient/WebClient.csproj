@@ -28,9 +28,6 @@
       <Compile Update="Pages\Books\BooksBase.razor.cs">
         <DependentUpon>Books.razor</DependentUpon>
       </Compile>
-      <Compile Update="Pages\Books\BookDetailBase.razor.cs">
-        <DependentUpon>BookDetail.razor</DependentUpon>
-      </Compile>
       <Compile Remove="Generated\**" />
     </ItemGroup>
 
