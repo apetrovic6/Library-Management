@@ -1,9 +1,7 @@
-mutation CreateBook($name: String!, $stock: Int!){
-  createBook (name: $name, stock: $stock) {
+mutation CreateBook($bookInput: CreateBookInput!) {
+  createBook (bookInput: $bookInput) {
     book {
-      id
       title
-      stock
     }
   }
 }
