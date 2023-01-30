@@ -1,6 +1,5 @@
 ﻿@page "/add-book"
 @using BooksGQL
-@using System.ComponentModel.DataAnnotations
 @using StrawberryShake
 @inject IDialogService DialogService
 @inject BooksClient client
@@ -9,29 +8,25 @@
 
 <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator/>
-    
-    <MudTextField T="string" Label="Title" HelperText="Book Title" @bind-value="model.Title" For="@(() => model.Title)" />
-    <MudTextField T="int" Label="Stock"  HelperText="Books in stock" @bind-value="model.Stock" For="@(() => model.Stock)"/>
+
+    <MudTextField T="string" Label="Title" HelperText="Book Title" @bind-value="model.Title" For="@(() => model.Title)"/>
+    <MudTextField T="string" Label="Author" HelperText="Author Name" @bind-value="model.Author" For="@(() => model.Author)"/>
+    <MudTextField T="int" Label="Year" HelperText="Year published" @bind-value="model.Year" For="@(() => model.Year)"/>
+    <MudTextField T="string" Label="Country" HelperText="Country of origin" @bind-value="model.Country" For="@(() => model.Country)"/>
+    <MudTextField T="string" Label="Language" HelperText="Books language" @bind-value="model.Language" For="@(() => model.Language)"/>
+    <MudTextField T="int" Label="Stock" HelperText="Books in stock" @bind-value="model.Stock" For="@(() => model.Stock)"/>
+    <MudTextField T="string" Label="Imagelink" HelperText="Cover image" @bind-value="model.ImageLink" For="@(() => model.ImageLink)"/>
     <MudCardActions>
         <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Add new Book</MudButton>
     </MudCardActions>
 </EditForm>
 
 @code {
-    private BookCreateDto model = new();
-
-    public class BookCreateDto
-    {
-        [Required(ErrorMessage = "Title is required")]
-        public string Title { get; set; }
-
-        [Required(ErrorMessage = "Stock is required")]
-        public int Stock { get; set; }
-    }
+    private CreateBookInput model = new();
 
     private async void OnValidSubmit(EditContext context)
     {
-        var a = await client.CreateBook.ExecuteAsync(model.Title, model.Stock);
+        var a = await client.CreateBook.ExecuteAsync(model);
         if (a.IsSuccessResult())
         {
             var options = new MessageBoxOptions()
