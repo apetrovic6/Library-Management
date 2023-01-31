@@ -1,10 +1,10 @@
 ﻿@page "/add-book"
 @using BooksGQL
-@using StrawberryShake
 @using WebClient.DTO
 @using AutoMapper
+@using WebClient.Services.Interfaces
 @inject ISnackbar Snackbar
-@inject BooksClient client
+@inject IGenericService<Book> _bookService
 @inject IMapper mapper
 @inject NavigationManager Navigation
 
@@ -30,15 +30,16 @@
 
     private async void OnValidSubmit(EditContext context)
     {
-        var res = await client.CreateBook.ExecuteAsync(mapper.Map<CreateBookInput>(model));
-        if (res.IsSuccessResult())
+        var bookInput = mapper.Map<CreateBookInput>(model);
+        var (book, errors, isSuccess) = await _bookService.Create(bookInput);
+        if (isSuccess)
         {
-            Snackbar.Add($"Book {res.Data.CreateBook.Book.Title} Successfully Created", Severity.Success);
-            Navigation.NavigateTo($"/book/{res?.Data?.CreateBook?.Book?.Id}");
+            Snackbar.Add($"Book {book.Title} Successfully Created", Severity.Success);
+            Navigation.NavigateTo($"/book/{book?.Id}");
         }
         else
         {
-            foreach (var e in res.Errors)
+            foreach (var e in errors)
             {
                 Snackbar.Add($"Error: {e.Message}", Severity.Error);
             }
