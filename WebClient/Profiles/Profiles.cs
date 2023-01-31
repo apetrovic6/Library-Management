@@ -8,7 +8,10 @@ public class Profiles : Profile
 {
     public Profiles()
     {
-        CreateMap<AddBookDto, CreateBookInput>();
+        CreateMap<CreateBookDto, CreateBookInput>();
         CreateMap<UpdateBookDto, UpdateBookInput>();
+        CreateMap<IGetBooks_Books, Book>();
+        CreateMap<IGetBookById_BookById_Book, Book>();
+        CreateMap<ICreateBook_CreateBook_Book, Book>();
     }
 }
