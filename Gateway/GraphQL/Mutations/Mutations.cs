@@ -24,13 +24,13 @@ public class Mutations
         return await client.CreateBookAsync(request);
     }
 
-    public async Task<UpdateBookResponse> UpdateBook(int id, string title, int stock)
+    public async Task<UpdateBookResponse> UpdateBook(int id, UpdateBookInput bookInput)
     {
         bookInput.Id = id;
         
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-        var request = new UpdateBookRequest { Id = id, Title = title, Stock = stock};
+        var request = _mapper.Map<UpdateBookRequest>(bookInput);
         return await client.UpdateBookAsync(request);
     }
     
