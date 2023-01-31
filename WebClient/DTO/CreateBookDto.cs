@@ -2,7 +2,7 @@
 
 namespace WebClient.DTO;
 
-public class AddBookDto
+public class CreateBookDto
 {
     [Required] 
     public string Title { get; set; }
