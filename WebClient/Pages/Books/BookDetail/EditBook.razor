@@ -1,8 +1,24 @@
 @page "/book/{bookId:int}/edit"
-<h3>EditBook @bookId</h3>
+@inherits EditBookBase
 
-@code {
- 
-    [Parameter]
-    public int bookId { get; set; }
-}
+<div class="d-flex">
+    <MudText Typo="Typo.h3" GutterBottom="true" Class="mt-2">@Book?.Title</MudText>
+    <MudSpacer />
+    <div class="mx-5">
+    <MudButton @onclick="@(e => GoToEditPage(Book))" Size="Size.Medium" Variant="Variant.Filled" Color="Color.Secondary" Class="mt-2" Style="width: 100px; height: 50px;">Update</MudButton>
+        <MudButton @onclick="@(e => GoToEditPage(Book))" Size="Size.Medium" Variant="Variant.Filled" Color="Color.Secondary" Class="mt-2" Style="width: 100px; height: 50px;">Cancel</MudButton>
+        </div>
+</div>
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>
+    <MudTextField T="string" Label="Title" HelperText="Book Title" @bind-value="model.Title" @bind-text="model.Title" For="@(() => model.Title)"/>
+    <MudTextField T="string" Label="Author" HelperText="Author Name"@bind-value="model.Author" @bind-text="model.Author" For="@(() => model.Author)"/>
+    <MudTextField T="int" Label="Year" HelperText="Year published" @bind-value="model.Year"For="@(() => model.Year)"/>
+    <MudTextField T="string" Label="Country" HelperText="Country of origin" @bind-value="model.Country" @bind-text="model.Country" For="@(() => model.Country)"/>
+    <MudTextField T="string" Label="Language" HelperText="Books language" @bind-value="model.Language" @bind-text="model.Language" For="@(() => model.Language)"/>
+    <MudTextField T="int" Label="Stock" HelperText="Books in stock" @bind-value="model.Stock" For="@(() => model.Stock)"/>
+    <MudTextField T="string" Label="Imagelink" HelperText="Cover image" @bind-value="model.ImageLink" @bind-text="model.ImageLink" For="@(() => model.ImageLink)"/>
+    <MudCardActions>
+        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Add new Book</MudButton>
+    </MudCardActions>
+</EditForm>
