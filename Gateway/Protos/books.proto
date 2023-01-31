@@ -30,13 +30,13 @@ message GetBooksResponse {
 }
 
 message CreateBookRequest {
-  string title = 2;
-  string author =3;
-  int32 year = 4;
-  string country = 5;
-  string language = 6;
-  string imagelink = 7;
-  int32 stock = 8;
+  string title = 1;
+  string author =2;
+  int32 year = 3;
+  string country = 4;
+  string language = 5;
+  string imagelink = 6;
+  int32 stock = 7;
 }
 
 message GetBookByIdRequest {
@@ -54,7 +54,12 @@ message CreateBookResponse {
 message UpdateBookRequest {
   int32 id = 1;
   string title = 2;
-  int32 stock = 3;
+  string author =3;
+  int32 year = 4;
+  string country = 5;
+  string language = 6;
+  string imagelink = 7;
+  int32 stock = 8;
 }
 
 
