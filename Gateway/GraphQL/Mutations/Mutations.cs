@@ -26,6 +26,8 @@ public class Mutations
 
     public async Task<UpdateBookResponse> UpdateBook(int id, string title, int stock)
     {
+        bookInput.Id = id;
+        
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
         var request = new UpdateBookRequest { Id = id, Title = title, Stock = stock};
