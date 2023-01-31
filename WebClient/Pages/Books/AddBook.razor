@@ -1,8 +1,12 @@
 ﻿@page "/add-book"
 @using BooksGQL
 @using StrawberryShake
+@using WebClient.DTO
+@using AutoMapper
 @inject ISnackbar Snackbar
 @inject BooksClient client
+@inject IMapper mapper
+@inject NavigationManager Navigation
 
 <MudText Typo="Typo.h1" GutterBottom="true" Class="my-5">Add Book</MudText>
 
@@ -22,19 +26,23 @@
 </EditForm>
 
 @code {
-    private CreateBookInput model = new();
+    private AddBookDto model = new();
 
     private async void OnValidSubmit(EditContext context)
     {
-        var a = await client.CreateBook.ExecuteAsync(model);
-        if (a.IsSuccessResult())
+        var res = await client.CreateBook.ExecuteAsync(mapper.Map<CreateBookInput>(model));
+        if (res.IsSuccessResult())
         {
-            Snackbar.Add($"Book {a.Data.CreateBook.Book.Title} Successfully Created", Severity.Success);
+            Snackbar.Add($"Book {res.Data.CreateBook.Book.Title} Successfully Created", Severity.Success);
+            Navigation.NavigateTo($"/book/{res?.Data?.CreateBook?.Book?.Id}");
         }
         else
         {
-            Snackbar.Add($"Error: {a.Errors[0].Message}", Severity.Error);
+            foreach (var e in res.Errors)
+            {
+                Snackbar.Add($"Error: {e.Message}", Severity.Error);
+            }
+            
         }
     }
-
 }
