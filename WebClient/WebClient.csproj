@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.2" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.2" PrivateAssets="all" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
@@ -29,6 +30,12 @@
         <DependentUpon>Books.razor</DependentUpon>
       </Compile>
       <Compile Remove="Generated\**" />
+      <Compile Update="Pages\Books\BookDetail\BookDetailBase.razor.cs">
+        <DependentUpon>BookDetail.razor</DependentUpon>
+      </Compile>
+      <Compile Update="Pages\Books\BookDetail\EditBookBase.razor.cs">
+        <DependentUpon>EditBook.razor</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
