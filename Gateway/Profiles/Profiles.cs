@@ -12,5 +12,6 @@ public class Profiles : Profile
         CreateMap<BookModel, BookType>();
         CreateMap<DeleteBookResponse, BookType>();
         CreateMap<CreateBookInput, CreateBookRequest>();
+        CreateMap<UpdateBookInput, UpdateBookRequest>();
     }
 }
