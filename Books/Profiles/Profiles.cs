@@ -7,7 +7,8 @@ public class Profiles : Profile
 {
     public Profiles()
     {
-        CreateMap<Book, BookModel>();
+        CreateMap<Book, BookModel>()
+            .ForMember(dest => dest.Description, opt => opt.NullSubstitute(""));
         CreateMap<List<Book>, GetBooksResponse>()
             .ForMember(dest => dest.Books,
                 src => src.MapFrom(

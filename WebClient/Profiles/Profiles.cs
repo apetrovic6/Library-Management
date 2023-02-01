@@ -11,7 +11,8 @@ public class Profiles : Profile
         CreateMap<CreateBookDto, CreateBookInput>();
         CreateMap<UpdateBookDto, UpdateBookInput>();
         CreateMap<UpdateBookInput, UpdateBookDto>();
-        CreateMap<Book, UpdateBookDto>();
+        CreateMap<Book, UpdateBookDto>()
+            .ForMember(dest => dest.Description, opt => opt.NullSubstitute(""));
         CreateMap<IGetBooks_Books, Book>();
         CreateMap<IGetBookById_BookById_Book, Book>();
         CreateMap<ICreateBook_CreateBook_Book, Book>();
