@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using StrawberryShake;
+using WebClient.Components;
 
 namespace WebClient.Pages.Books;
 
@@ -10,6 +11,7 @@ public class BookDetailBase : ComponentBase
     [Inject] private BooksClient client { get; set; }
     [Inject] private NavigationManager Navigation { get; set; }
     [Inject] private ISnackbar Snackbar { get; set; }
+    [Inject] private IDialogService _dialogService { get; set; }
     [Parameter] public int BookId { get; set; }
 
     protected List<BreadcrumbItem> _breadcrumbItems;
@@ -20,6 +22,18 @@ public class BookDetailBase : ComponentBase
         Navigation.NavigateTo($"/book/{Book?.Id}/edit");
     }
 
+    protected void ShowDeleteDialog()
+    {
+     
+            var parameters = new DialogParameters();
+            parameters.Add("ContentText", "Do you really want to delete these records? This process cannot be undone.");
+            parameters.Add("ButtonText", "Delete");
+            parameters.Add("Color", Color.Error);
+            parameters.Add("OnClickFunction", DeleteBook);
+
+            var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+            _dialogService.Show<DeleteConfirmDialog>("Delete", parameters, options);
+    }
     protected async void DeleteBook()
     {
         var res = await client.DeleteBook.ExecuteAsync(Book.Id);
