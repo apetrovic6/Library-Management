@@ -38,6 +38,10 @@ public class EditBookBase : ComponentBase
         }
     }
 
+    protected void CancelUpdate()
+    {
+        Navigation.NavigateTo($"/book/{BookId}");
+    }
     protected override async Task OnInitializedAsync()
     {
         var res = await _bookService.GetById(BookId);
