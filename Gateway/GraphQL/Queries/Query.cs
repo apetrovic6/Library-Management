@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Books;
+using Gateway.GraphQL.Inputs;
 using Gateway.GraphQL.Types;
 using Grpc.Net.Client;
 
@@ -15,14 +16,16 @@ public class Query
         _configuration = configuration;
         _mapper = mapper;
     }
-    
-    // [UsePaging(IncludeTotalCount = true, DefaultPageSize = 10, MaxPageSize = 20)]
-    public async Task<List<BookType>> GetBooks()
+
+    public async Task<List<BookType>> GetBooks(PagingInput paging)
     {
+        var pagingInfo = new PageInfo { Page = paging.Page, PageSize = paging.PageSize };
+        var bookRequest = new GetBooksRequest { Pageinfo = pagingInfo };
+        
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-        var booksRes = await client.GetBooksAsync(new GetBooksRequest());
-        var bookList = booksRes.Books.ToList();
+        var booksRes = await client.GetBooksAsync(bookRequest);
+        var bookList = booksRes.Data.ToList();
         
         return _mapper.Map<List<BookType>>(bookList);
     }
