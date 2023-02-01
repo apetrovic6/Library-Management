@@ -2,6 +2,7 @@
 using Books.Data;
 using Books.Models;
 using Grpc.Core;
+using HotChocolate;
 using Microsoft.EntityFrameworkCore;
 
 namespace Books.Services;
@@ -66,7 +67,7 @@ public class BookService : Books.BooksBase
         
         if (bookToDelete == null) return  new DeleteBookResponse { Deleted = false, Message = "Not Found"};
         
-        // if (bookToDelete == null) throw new GraphQLException(new Error("Book not found"));
+        if (bookToDelete == null) throw new GraphQLException(new Error("Book not found"));
         
         dbContext.Books.Remove(bookToDelete);
         var deleted = (await dbContext.SaveChangesAsync()) > 0;
