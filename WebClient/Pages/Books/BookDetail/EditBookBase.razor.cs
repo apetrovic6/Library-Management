@@ -18,7 +18,9 @@ public class EditBookBase : ComponentBase
 
     protected IGetBookById_BookById_Book? Book { get; set; }
 
-    protected void GoToEditPage(IGetBookById_BookById_Book? book)
+    protected List<BreadcrumbItem> _breadcrumbItems;
+    
+    protected void GoToEditPage()
     {
         Navigation.NavigateTo($"/book/{book?.Id}/edit");
     }
@@ -46,16 +48,11 @@ public class EditBookBase : ComponentBase
     {
         var res = await client.GetBookById.ExecuteAsync(BookId);
 
-        Book = res.Data?.BookById.Book;
-        model = new()
+        _breadcrumbItems = new()
         {
-            Title = Book.Title,
-            Author = Book.Author,
-            Year = Book.Year,
-            Country = Book.Country,
-            Language = Book.Language,
-            Stock = Book.Stock,
-            ImageLink = Book.Imagelink
+            new BreadcrumbItem("Books", href: "/books"),
+            new BreadcrumbItem(Book?.Title, href: $"/book/{BookId}"),
+            new BreadcrumbItem($"Update {Book?.Title}", href: null, disabled: true)
         };
     }
 }

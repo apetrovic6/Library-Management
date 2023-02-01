@@ -1,14 +1,10 @@
 @page "/book/{bookId:int}/edit"
 @inherits EditBookBase
 
-<div class="d-flex">
-    <MudText Typo="Typo.h3" GutterBottom="true" Class="mt-2">@Book?.Title</MudText>
-    <MudSpacer />
-    <div class="mx-5">
-    <MudButton @onclick="@(e => GoToEditPage(Book))" Size="Size.Medium" Variant="Variant.Filled" Color="Color.Secondary" Class="mt-2" Style="width: 100px; height: 50px;">Update</MudButton>
-        <MudButton @onclick="@(e => GoToEditPage(Book))" Size="Size.Medium" Variant="Variant.Filled" Color="Color.Secondary" Class="mt-2" Style="width: 100px; height: 50px;">Cancel</MudButton>
-        </div>
-</div>
+<MudBreadcrumbs Items="_breadcrumbItems" Separator=">"/>
+
+<MudText Typo="Typo.h3" GutterBottom="true" Class="mt-2">@Book?.Title</MudText>
+
 <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator/>
     <MudTextField T="string" Label="Title" HelperText="Book Title" @bind-value="model.Title" @bind-text="model.Title" For="@(() => model.Title)"/>
@@ -19,6 +15,9 @@
     <MudTextField T="int" Label="Stock" HelperText="Books in stock" @bind-value="model.Stock" For="@(() => model.Stock)"/>
     <MudTextField T="string" Label="Imagelink" HelperText="Cover image" @bind-value="model.ImageLink" @bind-text="model.ImageLink" For="@(() => model.ImageLink)"/>
     <MudCardActions>
-        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Add new Book</MudButton>
+        <div class="ml-auto">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="mr-3">Update Book</MudButton>
+            <MudButton ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Info" @onclick="CancelUpdate">Cancel </MudButton>
+        </div>
     </MudCardActions>
 </EditForm>
