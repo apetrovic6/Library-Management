@@ -16,7 +16,7 @@ public class EditBookBase : ComponentBase
     [Inject] ISnackbar Snackbar { get; set; }
     [Parameter] public int BookId { get; set; }
 
-    protected IGetBookById_BookById_Book? Book { get; set; }
+    protected Book? Book { get; set; }
 
     protected List<BreadcrumbItem> _breadcrumbItems;
     
@@ -46,7 +46,9 @@ public class EditBookBase : ComponentBase
 
     protected override async Task OnInitializedAsync()
     {
-        var res = await client.GetBookById.ExecuteAsync(BookId);
+        var res = await _bookService.GetById(BookId);
+        Book = res;
+        model =  _mapper.Map<Book, UpdateBookDto>(Book);
 
         _breadcrumbItems = new()
         {
