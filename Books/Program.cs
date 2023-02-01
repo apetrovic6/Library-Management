@@ -20,7 +20,6 @@ var app = builder.Build();
 
 
 // Configure the GRPC request pipeline.
-app.MapGrpcService<GreeterService>();
 app.MapGrpcService<BookService>();
 
 using (var scope = app.Services.CreateScope())
