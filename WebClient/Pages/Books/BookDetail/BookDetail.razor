@@ -1,7 +1,7 @@
 ﻿@page "/book/{bookId:int}"
 @inherits BookDetailBase
 
-
+<MudBreadcrumbs Items="_breadcrumbItems" Separator=">"/>
 <MudText Typo="Typo.h3" GutterBottom="true" Class="mt-2">@Book?.Title</MudText>
 
 <MudText Typo="Typo.h6">@Book?.Author</MudText>
