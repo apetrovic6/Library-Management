@@ -2,12 +2,12 @@
 @inherits BookDetailBase
 
 <MudBreadcrumbs Items="_breadcrumbItems" Separator=">"/>
-<MudText Typo="Typo.h3" GutterBottom="true" Class="mt-2">@Book?.Title</MudText>
+<MudText Typo="Typo.h3" GutterBottom="true" Class="mt-2">@book?.Title</MudText>
 
-<MudText Typo="Typo.h6">@Book?.Author</MudText>
+<MudText Typo="Typo.h6">@book?.Author</MudText>
 <MudGrid Spacing="5" Class="mt-5">
     <MudItem xs="12" lg="3" Class="justify-left ">
-        <MudImage Fluid="true" Src="@Book?.Imagelink" Alt="@Book?.Title" Elevation="25" Class="rounded-lg"/>
+        <MudImage Fluid="true" Src="@book?.ImageLink" Alt="@book?.Title" Elevation="25" Class="rounded-lg"/>
     </MudItem>
     <MudItem xs="12" lg="6" Class="align-self-start align-content-start justify-start mud-width-full">
         <MudText Typo="Typo.subtitle1">Language: @book?.Language</MudText>
@@ -19,17 +19,12 @@
 </MudGrid>
 
 <div class="d-flex mt-5">
-    <MudButton @onclick="GoToEditPage"
-               Size="Size.Medium"
-               Variant="Variant.Filled"
-               Color="Color.Secondary"
-               Class="mt-2" Style="width: 100px; height: 50px; margin-right: 50px">
+    <MudButton @onclick="GoToEditPage" Size="Size.Medium" Variant="Variant.Filled" Color="Color.Secondary"
+               Class="mt-2"
+               Style="width: 100px; height: 50px; margin-right: 50px">
         Edit
     </MudButton>
-    <MudButton @onclick="ShowDeleteDialog"
-               Size="Size.Medium"
-               Variant="Variant.Outlined"
-               Color="Color.Warning"
+    <MudButton @onclick="ShowDeleteDialog" Size="Size.Medium" Variant="Variant.Outlined" Color="Color.Warning"
                Class="mt-2"
                Style="width: 100px; height: 50px;">
         Delete
