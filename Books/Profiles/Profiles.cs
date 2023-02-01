@@ -10,7 +10,7 @@ public class Profiles : Profile
         CreateMap<Book, BookModel>()
             .ForMember(dest => dest.Description, opt => opt.NullSubstitute(""));
         CreateMap<List<Book>, GetBooksResponse>()
-            .ForMember(dest => dest.Books,
+            .ForMember(dest => dest.Data,
                 src => src.MapFrom(
                     x => x
                 ));
@@ -31,5 +31,12 @@ public class Profiles : Profile
             .ForMember(dest => dest.Book, src => src.MapFrom(
                 b => b
             ));
+        CreateMap<PagedResult<Book>, GetBooksResponse>()
+            .ForMember(dest => dest.Data, src => src.MapFrom(
+                x => x.Data
+                ))
+            .ForMember(dest => dest.PageInfo, src => src.MapFrom(
+                x => x.PageInfo
+                ));
     }
 }
