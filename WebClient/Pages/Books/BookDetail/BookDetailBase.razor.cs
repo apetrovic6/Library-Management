@@ -12,7 +12,7 @@ public class BookDetailBase : ComponentBase
     [Inject] private ISnackbar Snackbar { get; set; }
     [Parameter] public int BookId { get; set; }
 
-
+    protected List<BreadcrumbItem> _breadcrumbItems;
     protected IGetBookById_BookById_Book? Book { get; set; }
 
     protected void GoToEditPage()
@@ -42,5 +42,11 @@ public class BookDetailBase : ComponentBase
         var res = await client.GetBookById.ExecuteAsync(BookId);
 
         Book = res.Data?.BookById.Book;
+        
+        _breadcrumbItems = new()
+        {
+            new BreadcrumbItem("Books", href: "/books"),
+            new BreadcrumbItem(Book?.Title, href: null, disabled: true),
+        };
     }
 }
