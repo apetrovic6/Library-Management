@@ -7,7 +7,8 @@
     "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
     "pages": 209,
     "title": "Things Fall Apart",
-    "year": 1958
+    "year": 1958,
+    "description": "Things Fall Apart is the first of three novels in Chinua Achebe's critically acclaimed African Trilogy. It is a classic narrative about Africa's cataclysmic encounter with Europe as it establishes a colonial presence on the continent. Told through the fictional experiences of Okonkwo, a wealthy and fearless Igbo warrior of Umuofia in the late 1800s, Things Fall Apart explores one man's futile resistance to the devaluing of his Igbo traditions by British political andreligious forces and his despair as his community capitulates to the powerful new order."
   },
   {
     "author": "Hans Christian Andersen",
@@ -17,7 +18,8 @@
     "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
     "pages": 784,
     "title": "Fairy tales",
-    "year": 1836
+    "year": 1836,
+    "description": "Hans Christian Andersen's classic tales of foolish emperors, lonely mermaids, icy queens and clever princesses have delighted children and adults alike for nearly two centuries. The stories' unique magic and wonder make them essential reading for any childhood. This beautifully illustrated collection of Andersen's best-loved fairy tales includes The Little Mermaid, The Snow Queen, Thumbelina, The Princess and the Pea and The Emperor's New Clothes. Each story is brought to life with charming illustrations by Anastasiya Archipova, illustrator of dozens of children's books. This gift edition of Andersen's tales is designed for little hands and will make a beautiful addition to any bookshelf."
   },
   {
     "author": "Dante Alighieri",
@@ -27,7 +29,8 @@
     "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
     "pages": 928,
     "title": "The Divine Comedy",
-    "year": 1315
+    "year": 1315,
+    "description": "In Dante Alighieris world famous classic The Divine Comedy the roman poet Vergil guides through Inferno and Purgatorio and ultimately it’s his childhood friend Beatrice who guides through Paradise. The journey describes the symbolic path to God on a deeper level, while the reader is meeting the soules of countless decedents‘ like Horaz, Barbarossa and Ovid.Dante Alighieri and his epic drama The Divine Comedy helped the italian to it's breakthrough as literary language."
   },
   {
     "author": "Unknown",
@@ -37,7 +40,8 @@
     "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
     "pages": 160,
     "title": "The Epic Of Gilgamesh",
-    "year": -1700
+    "year": -1700,
+    "description": "Gilgamesh, King of Uruk, and his companion Enkidu are the only heroes to have survived from the ancient literature of Babylon, immortalized in this epic poem that dates back to the third millennium BC. Together they journey to the Spring of Youth, defeat the Bull of Heaven and slay the monster Humbaba. When Enkidu dies, Gilgamesh’s grief and fear of death are such that they lead him to undertake a quest for eternal life. A timeless tale of morality, tragedy and pure adventure, The Epic of Gilgamesh is a landmark literary exploration of man’s search for immortality. N. K. Sandars’s lucid, accessible translation is prefaced by a detailed introduction that examines the narrative and historical context of the work. In addition, there is a glossary of names and a map of the Ancient Orient."
   },
   {
     "author": "Unknown",
@@ -47,7 +51,8 @@
     "link": "https://en.wikipedia.org/wiki/Book_of_Job\n",
     "pages": 176,
     "title": "The Book Of Job",
-    "year": -600
+    "year": -600,
+    "description": "One of the most powerful and unsettling Bible stories, The Book of Job undermines the claim that our world is governed by justice and meaning. It does so through a poetry of unsurpassed beauty captured in Raymond Scheindlin's superb new translation. Scheindlin's Job is not a patient sufferer but a defiant man who eloquently demands an argument with God. Job's words land like a fist, but he is left speechless by God's reply from the storm ― a commanding survey of creation and a challenge to man's place in it. Job's acceptance of God's power comes with a dignity and freshness that makes it compelling even today. In Scheindlin's vivid translation an ancient text speaks to us directly of timeless questions and passions. A selection of the Book-of-the-Month Club, History Book Club, Quality Paperback Book Club, and Jewish Book Club"
   },
   {
     "author": "Unknown",
@@ -57,7 +62,8 @@
     "link": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\n",
     "pages": 288,
     "title": "One Thousand and One Nights",
-    "year": 1200
+    "year": 1200,
+    "description": "King Shahryar kills a new wife every night, because he is afraid she will stop loving him. But his new bride Shahrazad has a clever plan to save herself. Her nightly stories--of Sinbad the Sailor, Ali Baba, and many other heroes and villains--are so engrossing that King Shahryar has to postpone her execution again and again... This illustrated edition brings together all the Arabian Nights tales in an original retelling by award-winning author Geraldine McCaughrean."
   },
   {
     "author": "Unknown",
@@ -67,7 +73,8 @@
     "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\n",
     "pages": 384,
     "title": "Njál's Saga",
-    "year": 1350
+    "year": 1350,
+    "description": "Written in the thirteenth century, Njal's Saga is a story that explores perennial human problems-from failed marriages to divided loyalties, from the law's inability to curb human passions to the terrible consequences when decent men and women are swept up in a tide of violence beyond their control. It is populated by memorable and complex characters like Gunnar of Hlidarendi, a powerful warrior with an aversion to killing, and the not-so-villainous Mord Valgardsson. Full of dreams, strange prophecies, violent power struggles, and fragile peace agreements, Njal's Saga tells the compelling story of a fifty-year blood feud that, despite its distance from us in time and place, is driven by passions familiar to us all. This Penguin Classics edition includes an introduction, chronology, index of characters, plot summary, explanatory notes, maps, and suggestions for further reading."
   },
   {
     "author": "Jane Austen",
@@ -667,341 +674,375 @@
   {
     "author": "Murasaki Shikibu",
     "country": "Japan",
-    "imageLink": "images/the-tale-of-genji.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41GBrhKB29L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Japanese",
     "link": "https://en.wikipedia.org/wiki/The_Tale_of_Genji\n",
     "pages": 1360,
     "title": "The Tale of Genji",
-    "year": 1006
+    "year": 1006,
+    "description": "The world’s first novel, in a translation that is “likely to be the definitive edition . . . for many years to come” (The Wall Street Journal) The inspiration behind The Metropolitan Museum of Art's \"The Tale of Genji: A Japanese Classic Illuminated\" -- Now through June 16 at The Met Fifth Avenue A Penguin Classics Deluxe Edition, with flaps and deckle-edged paper Written in the eleventh century, this exquisite portrait of courtly life in medieval Japan is widely celebrated as the world’s first novel. Genji, the Shining Prince, is the son of an emperor. He is a passionate character whose tempestuous nature, family circumstances, love affairs, alliances, and shifting political fortunes form the core of this magnificent epic. Royall Tyler’s superior translation is detailed, poetic, and superbly true to the Japanese original while allowing the modern reader to appreciate it as a contemporary treasure. Supplemented with detailed notes, glossaries, character lists, and chronologies to help the reader navigate the multigenerational narrative, this comprehensive edition presents this ancient tale in the grand style that it deserves."
   },
   {
     "author": "Robert Musil",
     "country": "Austria",
-    "imageLink": "images/the-man-without-qualities.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51MALBME72L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities\n",
     "pages": 365,
     "title": "The Man Without Qualities",
-    "year": 1931
+    "year": 1931,
+    "description": "Set in Vienna on the eve of World War I, this great novel of ideas tells the story of Ulrich, ex-soldier and scientist, seducer and skeptic, who finds himself drafted into the grandiose plans for the 70th jubilee of the Emperor Franz Josef. This new translation--published in two elegant volumes--is the first to present Musil's complete text, including material that remained unpublished during his lifetime."
   },
   {
     "author": "Vladimir Nabokov",
     "country": "Russia/United States",
-    "imageLink": "images/lolita.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51EUW-Oqh9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Lolita\n",
     "pages": 317,
     "title": "Lolita",
-    "year": 1955
+    "year": 1955,
+    "description": "The annotated text of this modern classic. It assiduously illuminates the extravagant wordplay and the frequent literary allusions, parodies, and cross-references. Edited with a preface, introduction and notes by Alfred Appel, Jr."
   },
   {
     "author": "George Orwell",
     "country": "United Kingdom",
-    "imageLink": "images/nineteen-eighty-four.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41aM4xOZxaL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four\n",
     "pages": 272,
-    "title": "Nineteen Eighty-Four",
-    "year": 1949
+    "title": "1984",
+    "year": 1949,
+    "description": "Written more than 70 years ago, 1984 was George Orwell’s chilling prophecy about the future. And while 1984 has come and gone, his dystopian vision of a government that will do anything to control the narrative is timelier than ever... • Nominated as one of America’s best-loved novels by PBS’s The Great American Read • “The Party told you to reject the evidence of your eyes and ears. It was their final, most essential command. Winston Smith toes the Party line, rewriting history to satisfy the demands of the Ministry of Truth. With each lie he writes, Winston grows to hate the Party that seeks power for its own sake and persecutes those who dare to commit thoughtcrimes. But as he starts to think for himself, Winston can’t escape the fact that Big Brother is always watching... A startling and haunting novel, 1984 creates an imaginary world that is completely convincing from start to finish. No one can deny the novel’s hold on the imaginations of whole generations, or the power of its admonitions—a power that seems to grow, not lessen, with the passage of time."
   },
   {
     "author": "Ovid",
     "country": "Roman Empire",
-    "imageLink": "images/the-metamorphoses-of-ovid.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41Og7iFBRtL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Classical Latin",
     "link": "https://en.wikipedia.org/wiki/Metamorphoses\n",
     "pages": 576,
     "title": "Metamorphoses",
-    "year": 100
+    "year": 100,
+    "description": "In Metamophoses, Ovid brings together a dazzling array of mythological tales, ingeniously linked by the idea of transformation—often as a result of love or lust—where men and women find themselves magically changed into new and sometimes extraordinary beings. Beginning with the creation of the world and ending with the deification of Augustus, Ovid interweaves many of the best-known myths and legends of ancient Greece and Rome, including Daedalus and Icarus, Pyramus and Thisbe, Pygmalion, Perseus and Andromeda, and the fall of Troy. Erudite but light-hearted, dramatic and yet playful, Metamorphoses has influenced writers and artists throughout the centuries from Shakespeare and Titian to Picasso and Ted Hughes. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators."
   },
   {
     "author": "Fernando Pessoa",
     "country": "Portugal",
-    "imageLink": "images/the-book-of-disquiet.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51NazBbAxAL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/The_Book_of_Disquiet\n",
     "pages": 272,
     "title": "The Book of Disquiet",
-    "year": 1928
+    "year": 1928,
+    "description" : "\"Readers with a particular interest in modernism will find this work indispensable.\"—Publishers Weekly \"Pessoa's amazing personality is as beguiling and mysterious as his unique poetic output.\"—William Boyd A self-deprecating reflection on the sheer distance between the loftiness of feelings and the humdrum reality of life, The Book of Disquiet is a classic of existentialist literature. Fernando Pessoa, one of the founders of modernism, was born in Lisbon in 1888. Most of Pessoa's writing was not published during his lifetime: The Book of Disquiet was first published in Portugal in 1982."
   },
   {
     "author": "Edgar Allan Poe",
     "country": "United States",
-    "imageLink": "images/tales-and-poems-of-edgar-allan-poe.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51R7O9v50CL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe_bibliography#Tales\n",
     "pages": 842,
     "title": "Tales",
-    "year": 1950
+    "year": 1950,
+    "description": "Masterful Genius Work Historical Spooky From Edgar Allan Poe - \"Those who dream by day are cognizant of many things which escape those who dream only by night.\" The Essential Edgar Allan Poe Collection Contains 76 Poems Written by Poe from 1824 - 1849, as well as 23 of his most Popular and Well-Loved Stories and Tales. Tales In This Collection Includes: Morella The Devil in the Belfry The Fall of the House of Usher,The Murders in the Rue Morgue ,The Masque of the Red Death ,The Pit and the Pendulum ,The Black Cat ,The Tell-Tale Heart ,The Purloined Letter ,Plus Others!, Poetry In This Collection Includes: ,The Raven ,Annabel Lee ,Tamerlane And MANY More!"
   },
   {
     "author": "Marcel Proust",
     "country": "France",
-    "imageLink": "images/a-la-recherche-du-temps-perdu.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51-JSZSLqjL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time\n",
     "pages": 2408,
     "title": "In Search of Lost Time",
-    "year": 1920
+    "year": 1920,
+    "description": "For this authoritative English-language edition, D. J. Enright has revised the late Terence Kilmartin’s acclaimed reworking of C. K. Scott Moncrieff’s translation to take into account the new definitive French editions of À la recherche du temps perdu (the final volume of these new editions was published by the Bibliothèque de la Pléiade in 1989)."
   },
   {
     "author": "François Rabelais",
     "country": "France",
-    "imageLink": "images/gargantua-and-pantagruel.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/31fVq9yjVzL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Gargantua_and_Pantagruel\n",
     "pages": 623,
     "title": "Gargantua and Pantagruel",
-    "year": 1533
+    "year": 1533,
+    "description": "The unfettered exuberance of Gargantua and Pantagruel, the storms of phenomenal life it offers for our inspection, the honor it gives to the deformed, the cloacal, and the profane aspects of existence are at the very heart of Rabelais' genius. But the author of this fantasia on the lives of a father-and-son pair of giants was one of the most magnificent and magnificently learned products of the Renaissance; and he also represents, as well as any of its other great figures, that era's love of the human body and its exaltation of the human in the face of the divine."
   },
   {
     "author": "Juan Rulfo",
     "country": "Mexico",
-    "imageLink": "images/pedro-paramo.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41kI1Ika+jL._SY344_BO1,204,203,200_.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Pedro_P%C3%A1ramo\n",
     "pages": 124,
     "title": "Pedro Páramo",
-    "year": 1955
+    "year": 1955,
+    "description": "A masterpiece of the surreal, this stunning novel from Mexico depicts a man’s strange quest for his heritage. Beseeched by his dying mother to locate his father, Pedro Páramo, whom they fled from years ago, Juan Preciado sets out for Comala. Comala is a town alive with whispers and shadows—a place seemingly populated only by memory and hallucinations. Built on the tyranny of the Páramo family, its barren and broken-down streets echo the voices of tormented spirits sharing the secrets of the past. First published to both critical and popular acclaim in 1955, Pedro Páramo represented a distinct break with earlier, largely \"realist\" novels from Latin America. Rulfo’s entrancing mixture of vivid sensory images, violent passions, and inexplicable sorcery—a style that has come to be known as ‘magical realism”—has exerted a profound influence on subsequent Latin American writers, from Jos’ Donoso and Carlos Fuentes to Mario Vargas Llosa and Gabriel Garcia Márquez."
   },
   {
     "author": "Rumi",
     "country": "Sultanate of Rum",
-    "imageLink": "images/the-masnavi.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51h2hHBH70L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Persian",
     "link": "https://en.wikipedia.org/wiki/Masnavi\n",
     "pages": 438,
     "title": "The Masnavi",
-    "year": 1236
+    "year": 1236,
+    "description": "Rumi's Masnavi is widely recognized as the greatest Sufi poem ever written, and has been called \"the Koran in Persian.\" The thirteenth-century Muslim mystic Rumi composed his work for the benefit of his disciples in the Sufi order named after him, better known as the whirling dervishes. In order to convey his message of divine love and unity he threaded together entertaining stories and penetrating homilies. Drawing from folk tales as well as sacred history, Rumi's poem is often funny as well as spiritually profound. Jawid Mojaddedi's sparkling new verse translation of Book One is consistent with the aims of the original work in presenting Rumi's most mature mystical teachings in simple and attractive rhyming couplets. About the Series: For over 100 years Oxford World's Classics has made available the broadest spectrum of literature from around the globe. Each affordable volume reflects Oxford's commitment to scholarship, providing the most accurate text plus a wealth of other valuable features, including expert introductions by leading authorities, voluminous notes to clarify the text, up-to-date bibliographies for further study, and much more."
   },
   {
     "author": "Salman Rushdie",
     "country": "United Kingdom, India",
-    "imageLink": "images/midnights-children.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51ZcYIraD9L._SX319_BO1,204,203,200_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Midnight%27s_Children\n",
     "pages": 536,
     "title": "Midnight's Children",
-    "year": 1981
+    "year": 1981,
+    "description": "The iconic masterpiece of India that introduced the world to “a glittering novelist—one with startling imaginative and intellectual resources, a master of perpetual storytelling” (The New Yorker) WINNER OF THE BEST OF THE BOOKERS • SOON TO BE A NETFLIX ORIGINAL SERIES Selected by the Modern Library as one of the 100 best novels of all time • The fortieth anniversary edition, featuring a new introduction by the author Saleem Sinai is born at the stroke of midnight on August 15, 1947, the very moment of India’s independence. Greeted by fireworks displays, cheering crowds, and Prime Minister Nehru himself, Saleem grows up to learn the ominous consequences of this coincidence. His every act is mirrored and magnified in events that sway the course of national affairs; his health and well-being are inextricably bound to those of his nation; his life is inseparable, at times indistinguishable, from the history of his country. Perhaps most remarkable are the telepathic powers linking him with India’s 1,000 other “midnight’s children,” all born in that initial hour and endowed with magical gifts. This novel is at once a fascinating family saga and an astonishing evocation of a vast land and its people–a brilliant incarnation of the universal human comedy. Forty years after its publication, Midnight’s Children stands apart as both an epochal work of fiction and a brilliant performance by one of the great literary voices of our time."
   },
   {
     "author": "Saadi",
     "country": "Persia, Persian Empire",
-    "imageLink": "images/bostan.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51evRePufCL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Persian",
     "link": "https://en.wikipedia.org/wiki/Bustan_(book)\n",
     "pages": 298,
     "title": "Bostan",
-    "year": 1257
+    "year": 1257,
+    "description": "Born in Shiraz, Iran, in 1184, Saadi is considered one of the greatest Persian poets of all time. Saadi's two books, the poetic Bostan, or Orchard (in 1257), and the prose Gulistan, the Rose Garden (in 1258), are regarded as supreme accomplishments of Persian literature. The Persian literature and culture are deeply indebted to Saadi's publications. The Gulistan (The Rose Garden) is a landmark of Persian literature, and one of the most influential works of prose in Persian. Written in 1258 CE, it is considered as one of the greatest medieval Persian poets. The Gulistan is a collection of stories and poems, just as a rose-garden is a collection of roses. The translation appearing in this book is provided by Edward Rehatsek in 1888. This bilingual book can be useful for students and enjoyable for poetry lovers of any age. Not only will poems and stories improve your Persian language, but they'll help your understanding of Persian culture. Students will have ample opportunities to enrich their Persian learning experience and extend a range of language abilities through exploring these poems. The English - Persian Glossary at the end of the book can help Persian students better understand keywords in the poems."
   },
   {
     "author": "Tayeb Salih",
     "country": "Sudan",
-    "imageLink": "images/season-of-migration-to-the-north.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51A-PV41UBL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/Season_of_Migration_to_the_North\n",
     "pages": 139,
     "title": "Season of Migration to the North",
-    "year": 1966
+    "year": 1966,
+    "description": "After years of study in Europe, the young narrator of Season of Migration to the North returns to his village along the Nile in the Sudan. It is the 1960s, and he is eager to make a contribution to the new postcolonial life of his country. Back home, he discovers a stranger among the familiar faces of childhood—the enigmatic Mustafa Sa’eed. Mustafa takes the young man into his confidence, telling him the story of his own years in London, of his brilliant career as an economist, and of the series of fraught and deadly relationships with European women that led to a terrible public reckoning and his return to his native land. But what is the meaning of Mustafa’s shocking confession? Mustafa disappears without explanation, leaving the young man—whom he has asked to look after his wife—in an unsettled and violent no-man’s-land between Europe and Africa, tradition and innovation, holiness and defilement, and man and woman, from which no one will escape unaltered or unharmed. Season of Migration to the North is a rich and sensual work of deep honesty and incandescent lyricism. In 2001 it was selected by a panel of Arab writers and critics as the most important Arab novel of the twentieth century."
   },
   {
     "author": "José Saramago",
     "country": "Portugal",
-    "imageLink": "images/blindness.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51wRrhMbhTL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/Blindness_(novel)\n",
     "pages": 352,
     "title": "Blindness",
-    "year": 1995
+    "year": 1995,
+    "description": "A stunningly powerful novel of humanity's will to survive against all odds during an epidemic by a winner of the Nobel Prize for Literature. An International Bestseller  • \"This is a shattering work by a literary master.”—Boston Globe A city is hit by an epidemic of \"white blindness\" which spares no one. Authorities confine the blind to an empty mental hospital, but there the criminal element holds everyone captive, stealing food rations and raping women. There is one eyewitness to this nightmare who guides seven strangers—among them a boy with no mother, a girl with dark glasses, a dog of tears—through the barren streets, and the procession becomes as uncanny as the surroundings are harrowing. A magnificent parable of loss and disorientation, Blindness has swept the reading public with its powerful portrayal of our worst appetites and weaknesses—and humanity's ultimately exhilarating spirit. \"This is a an important book, one that is unafraid to face all of the horror of the century.\"—Washington Post"
   },
   {
     "author": "William Shakespeare",
     "country": "England",
-    "imageLink": "images/hamlet.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/513mu30Xy7L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Hamlet\n",
     "pages": 432,
     "title": "Hamlet",
-    "year": 1603
+    "year": 1603,
+    "description": "Hamlet is Shakespeare's most popular, and most puzzling, play. It follows the form of a \"revenge tragedy,\" in which the hero, Hamlet, seeks vengeance against his father's murderer, his uncle Claudius, now the king of Denmark. Much of its fascination, however, lies in its uncertainties. Among them: What is the Ghost--Hamlet's father demanding justice, a tempting demon, an angelic messenger? Does Hamlet go mad, or merely pretend to? Once he is sure that Claudius is a murderer, why does he not act? Was his mother, Gertrude, unfaithful to her husband or complicit in his murder?"
   },
   {
     "author": "William Shakespeare",
     "country": "England",
-    "imageLink": "images/king-lear.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61KuNDfGqNL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/King_Lear\n",
     "pages": 384,
     "title": "King Lear",
-    "year": 1608
+    "year": 1608,
+    "description": "Shakespeare’s King Lear challenges us with the magnitude, intensity, and sheer duration of the pain that it represents. Its figures harden their hearts, engage in violence, or try to alleviate the suffering of others. Lear himself rages until his sanity cracks. What, then, keeps bringing us back to King Lear? For all the force of its language, King Lear is almost equally powerful when translated, suggesting that it is the story, in large part, that draws us to the play. The play tells us about families struggling between greed and cruelty, on the one hand, and support and consolation, on the other. Emotions are extreme, magnified to gigantic proportions. We also see old age portrayed in all its vulnerability, pride, and, perhaps, wisdom—one reason this most devastating of Shakespeare’s tragedies is also perhaps his most moving."
   },
   {
     "author": "William Shakespeare",
     "country": "England",
-    "imageLink": "images/othello.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51wi9CKnEcL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Othello\n",
     "pages": 314,
     "title": "Othello",
-    "year": 1609
+    "year": 1609,
+    "description": "In Othello, Shakespeare creates powerful drama from a marriage between the exotic Moor Othello and the Venetian lady Desdemona that begins with elopement and mutual devotion and ends with jealous rage and death. Shakespeare builds many differences into his hero and heroine, including race, age, and cultural background. Yet most readers and audiences believe the couple’s strong love would overcome these differences were it not for Iago, who sets out to destroy Othello. Iago’s false insinuations about Desdemona’s infidelity draw Othello into his schemes, and Desdemona is subjected to Othello’s horrifying verbal and physical assaults."
   },
   {
     "author": "Sophocles",
     "country": "Greece",
-    "imageLink": "images/oedipus-the-king.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/31IhDqF0+FL._SY344_BO1,204,203,200_.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Oedipus_the_King\n",
     "pages": 88,
     "title": "Oedipus the King",
-    "year": -430
+    "year": -430,
+    "description": "Available for the first time as an independent work, David Grene’s legendary translation of Oedipus the King renders Sophocles’ Greek into cogent, vivid, and poetic English for a new generation to savor. Over the years, Grene and Lattimore’s Complete Greek Tragedies have been the preferred choice of millions of readers—for personal libraries, individual study, and classroom use.  This new, stand-alone edition of Sophocles’ searing tale of jealousy, rage, and revenge will continue the tradition of the University of Chicago Press’s classic series."
   },
   {
     "author": "Stendhal",
     "country": "France",
-    "imageLink": "images/le-rouge-et-le-noir.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51tJTqiIubL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/The_Red_and_the_Black\n",
     "pages": 576,
     "title": "The Red and the Black",
-    "year": 1830
+    "year": 1830,
+    "description": "Handsome, ambitious Julien Sorel is determined to rise above his humble provincial origins. Soon realizing that success can only be achieved by adopting the subtle code of hypocrisy by which society operates, he begins to achieve advancement through deceit and self-interest. His triumphant career takes him into the heart of glamorous Parisian society, along the way conquering the gentle, married Madame de Rênal, and the haughty Mathilde. But then Julien commits an unexpected, devastating crime—and brings about his own downfall. The Red and the Black is a lively, satirical portrayal of French society after Waterloo, riddled with corruption, greed and ennui, and Julien—the cold exploiter whose Machiavellian campaign is undercut by his own emotions—is one of the most intriguing characters in European literature. Roger Gard's fine translation remains faithful to the natural, conversational tone of the original, while his introduction elucidates the complexities of Julien's character. This edition also contains a chronology, further reading and an appendix on Stendhal's use of epigraphs. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators."
   },
   {
     "author": "Laurence Sterne",
     "country": "England",
-    "imageLink": "images/the-life-and-opinions-of-tristram-shandy.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51F4RAswFQL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Life_and_Opinions_of_Tristram_Shandy,_Gentleman\n",
     "pages": 640,
     "title": "The Life And Opinions of Tristram Shandy",
-    "year": 1760
+    "year": 1760,
+    "description": "Laurence Sterne's great masterpiece of bawdy humour and rich satire defies any attempt to categorize it, with a rich metafictional narrative that might classify it as the first 'postmodern' novel. Part novel, part digression, its gloriously disordered narrative interweaves the birth and life of the unfortunate 'hero' Tristram Shandy, the eccentric philosophy of his father Walter, the amours and military obsessions of Uncle Toby, and a host of other characters, including Dr Slop, Corporal Trim and the parson Yorick. A joyful celebration of the endless possibilities of the art of fiction, Tristram Shandy is also a wry demonstration of its limitations. The text and notes of this volume are based on the acclaimed Florida Edition, with a critical introduction by Melvyn New and Christopher Ricks's introductory essay from the first Penguin Classics edition. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators."
   },
   {
     "author": "Italo Svevo",
     "country": "Italy",
-    "imageLink": "images/confessions-of-zeno.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/31kdvZ2q0iL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/Zeno%27s_Conscience\n",
     "pages": 412,
     "title": "Confessions of Zeno",
-    "year": 1923
+    "year": 1923,
+    "description": "The cult classic discovered and championed by James Joyce, Confessions of Zeno is a miracle of psychological realism from one of the most important figures in modern Italian literary history. A hymn to self-delusion and procrastination, long hailed as a seminal work of modernism in the tradition of Joyce, Musil, Proust and Kafka. When the vain, obsessive and guilt-ridden Zeno seeks help for his neuroses, his psychoanalyst suggests he writes his memoirs as a form of therapy. Zeno's account is an alternative reality, a series of elliptical episodes dealing with the death of his father, his career, his marriage and affairs, and, above all, his passion for smoking and his spectacular failure to resist the promise of that last cigarette. Zeno's adventures rise to antic heights in this pioneering psychoanalytic novel, as his restlessly self-preserving commentary inevitably embroiders the truth. Absorbing and devilishly entertaining, Confessions of Zeno is at once a comedy of errors, a sly testimonial to the joys of procrastination, and a surpassingly lucid vision of human nature by one of the most important Italian literary figures of the twentieth century."
   },
   {
     "author": "Jonathan Swift",
     "country": "Ireland",
-    "imageLink": "images/gullivers-travels.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/61TNd4Ta8NL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Gulliver%27s_Travels\n",
     "pages": 178,
     "title": "Gulliver's Travels",
-    "year": 1726
+    "year": 1726,
+    "description": "Regarded as the preeminent prose satirist in the English language, Jonathan Swift (1667–1745) intended this masterpiece, as he once wrote Alexander Pope, to \"vex the world rather than divert it.\" Savagely ironic, it portrays man as foolish at best, and at worst, not much more than an ape. The direct and unadorned narrative describes four remarkable journies of ship's surgeon Lemuel Gulliver, among them, one to the land of Lilliput, where six-inch-high inhabitants bicker over trivialities; and another to Brobdingnag, a land where giants reduce man to insignificance. Written with disarming simplicity and careful attention to detail, this classic is diverse in its appeal: for children, it remains an enchanting fantasy. For adults, it is a witty parody of political life in Swift's time and a scathing send-up of manners and morals in 18th-century England."
   },
   {
     "author": "Leo Tolstoy",
     "country": "Russia",
-    "imageLink": "images/war-and-peace.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51J1nb00FLL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/War_and_Peace\n",
     "pages": 1296,
     "title": "War and Peace",
-    "year": 1867
+    "year": 1867,
+    "description": "War and Peacebroadly focuses on Napoleon’s invasion of Russia in 1812 and follows three of the most well-known characters in literature: Pierre Bezukhov, the illegitimate son of a count who is fighting for his inheritance and yearning for spiritual fulfillment; Prince Andrei Bolkonsky, who leaves his family behind to fight in the war against Napoleon; and Natasha Rostov, the beautiful young daughter of a nobleman who intrigues both men. A s Napoleon’s army invades, Tolstoy brilliantly follows characters from diverse backgrounds—peasants and nobility, civilians and soldiers—as they struggle with the problems unique to their era, their history, and their culture. And as the novel progresses, these characters transcend their specificity, becoming some of the most moving—and human—figures in world literature."
   },
   {
     "author": "Leo Tolstoy",
     "country": "Russia",
-    "imageLink": "images/anna-karenina.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41saaX4ObJL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Anna_Karenina\n",
     "pages": 864,
     "title": "Anna Karenina",
-    "year": 1877
+    "year": 1877,
+    "description": "Anna Karenina by Leo Tolstoy. Anna Karenina is one of the most loved and memorable heroines of literature. Her overwhelming charm dominates a novel of unparalleled richness and density. Tolstoy considered this book to be his first real attempt at a novel form, and it addresses the very nature of society at all levels,- of destiny, death, human relationships and the irreconcilable contradictions of existence. It ends tragically, and there is much that evokes despair, yet set beside this is an abounding joy in life's many ephemeral pleasures, and a profusion of comic relief."
   },
   {
     "author": "Leo Tolstoy",
     "country": "Russia",
-    "imageLink": "images/the-death-of-ivan-ilyich.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51LOskK-3VL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich\n",
     "pages": 92,
     "title": "The Death of Ivan Ilyich",
-    "year": 1886
+    "year": 1886,
+    "description": "Here are some of Tolstoy's extraordinary short stories, from \"The Death of Ivan Ilyich.\" in a masterly new translation, to \"The Raid,\" \"The Wood-felling,\" \"Three Deaths,\" \"Polikushka,\" \"After the Ball,\" and \"The Forged Coupon,\" all gripping and eloquent lessons on two of Tolstoy's most persistent themes: life and death. More experimental than his novels, Tolstoy's stories are essential reading for anyone interested in his development as one of the major writers and thinkers of his time. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators."
   },
   {
     "author": "Mark Twain",
     "country": "United States",
-    "imageLink": "images/the-adventures-of-huckleberry-finn.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41GwKsFFnbL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn\n",
     "pages": 224,
     "title": "The Adventures of Huckleberry Finn",
-    "year": 1884
+    "year": 1884,
+    "description": "SeaWolf Press is proud to offer another book in its Mark Twain 100th Anniversary Collection. Each book in the collection contains the text, illustrations, and cover from the first edition (but it is not a photocopy.) Use Amazon's Lookinside feature to compare this edition with others, and make sure you don't buy a large 8 x 11 inch edition. You'll be impressed by the differences. Our version has: All 174 original illustrations. Text that has been proofread to avoid errors common in other versions. A beautiful cover that replicates the first edition cover. The complete text in an easy-to-read font similar to the original. Look for other Mark Twain books in our 100th Anniversary Collection. Mark Twain created the memorable characters Tom Sawyer and Huckleberry Finn drawing from the experiences of boys he grew up with in Missouri. Set by the Mississippi River in the 1840’s, this tale is a follow-up to his original book, The Adventures of Tom Sawyer. Huckleberry takes off on a raft down the Mississippi with Jim, a slave seeking his freedom. They run into two con artists, the Duke and the King, as they drift southward, and Huck reunites with Tom Sawyer near the end of the book. The book exposes attitudes prevalent at the times, especially racism, and includes coarse language."
   },
   {
     "author": "Valmiki",
     "country": "India",
-    "imageLink": "images/ramayana.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51XrAZQjXvS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Ramayana\n",
     "pages": 152,
     "title": "Ramayana",
-    "year": -450
+    "year": -450,
+    "description": "The Rāmāyaṇa of Vālmīki, the monumental Sanskrit epic of the life of Rama, ideal man and incarnation of the great god Visnu, has profoundly affected the literature, art, religions, and cultures of South and Southeast Asia from antiquity to the present. Filled with thrilling battles, flying monkeys, and ten-headed demons, the work, composed almost 3,000 years ago, recounts Prince Rama’s exile and his odyssey to recover his abducted wife, Sita, and establish a utopian kingdom. Now, the definitive English translation of the critical edition of this classic is available in a single volume. Based on the authoritative seven-volume translation edited by Robert Goldman and Sally Sutherland Goldman, this volume presents the unabridged translated text in contemporary English, revised and reformatted into paragraph form. The book includes a new introduction providing important historical and literary contexts, as well as a glossary, pronunciation guide, and index. Ideal for students and general readers, this edition of the Rāmāyaṇa of Vālmīki introduces an extraordinary work of world literature to a new generation of readers."
   },
   {
     "author": "Virgil",
     "country": "Roman Empire",
-    "imageLink": "images/the-aeneid.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51-t-cSP76L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "Classical Latin",
     "link": "https://en.wikipedia.org/wiki/Aeneid\n",
     "pages": 442,
     "title": "The Aeneid",
-    "year": -23
+    "year": -23,
+    "description": "Fleeing the ashes of Troy, Aeneas, Achilles’ mighty foe in the Iliad, begins an incredible journey to fulfill his destiny as the founder of Rome. His voyage will take him through stormy seas, entangle him in a tragic love affair, and lure him into the world of the dead itself--all the way tormented by the vengeful Juno, Queen of the Gods. Ultimately, he reaches the promised land of Italy where, after bloody battles and with high hopes, he founds what will become the Roman empire. An unsparing portrait of a man caught between love, duty, and fate, the Aeneid redefines passion, nobility, and courage for our times. Robert Fagles, whose acclaimed translations of Homer’s Iliad and Odyssey were welcomed as major publishing events, brings the Aeneid to a new generation of readers, retaining all of the gravitas and humanity of the original Latin as well as its powerful blend of poetry and myth. Featuring an illuminating introduction to Virgil’s world by esteemed scholar Bernard Knox, this volume lends a vibrant new voice to one of the seminal literary achievements of the ancient world. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators."
   },
   {
     "author": "Vyasa",
     "country": "India",
-    "imageLink": "images/the-mahab-harata.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51xi0MMRq3L._SX322_BO1,204,203,200_.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Mahabharata\n",
     "pages": 276,
     "title": "Mahabharata",
-    "year": -700
+    "year": -700,
+    "description": "Originally composed in Sanskrit sometime between 400 BC and 400 AD, The Mahabharata-with one hundred thousand stanzas of verse-is one of the longest poems in existence. At the heart of the saga is a conflict between two branches of a royal family whose feud culminates in a titanic eighteen-day battle. Exploring such timeless subjects as dharma (duty), artha (purpose), and kama (pleasure) in a mythic world of warfare, magic, and beauty, this is a magnificent and legendary Hindu text of immense importance to the culture of the Indian subcontinent. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators."
   },
   {
     "author": "Walt Whitman",
     "country": "United States",
-    "imageLink": "images/leaves-of-grass.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51pK2v8oYNL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Leaves_of_Grass\n",
     "pages": 152,
     "title": "Leaves of Grass",
-    "year": 1855
+    "year": 1855,
+    "description": "This is a copy of the first self-published copy of Leaves of Grass, published on July 4, 1855 in Brooklyn, NY. 795 copies were printed, although only 200 copies were bound with the green cover. The author's name did not appear on the cover, although it does appear in the poem on page 31 in this edition. Walt Whitman continued to work on this masterwork until his death. Six more versions appeared during his lifetime, and after his death a “death-bed” version appeared. History buffs will know that the 1855 edition was printed six years before Abraham Lincoln became president. Later editions are important because of the poems Whitman wrote about the Civil War and Abraham Lincoln. This 1855 edition is a favorite of many poets because of the fresh energy in the presentation and language. This edition was gone over line by line to be sure the text is readable, and the line breaks closely represent Whitman's original intention. Also, the full 1855 introduction by Walt Whitman is included in this edition."
   },
   {
     "author": "Virginia Woolf",
     "country": "United Kingdom",
-    "imageLink": "images/mrs-dalloway.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/513CLZXvQ-L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Mrs_Dalloway\n",
     "pages": 216,
     "title": "Mrs Dalloway",
-    "year": 1925
+    "year": 1925,
+    "description": "Mrs. Dalloway takes place over the course of a single day in a woman’s life in 1920’s London. There are flowers to buy, outfits to choose, but also a visit from a past lover, and the tragic fate of a young war veteran who cannot adjust to life in post-war London. Virginia Woolf’s supple and mesmerizing account of an ordinary day draws the reader into the minds, perceptions, and emotions of an astonishingly varied and vivid cast of characters. Woolf reminds us that each day, hour, and even minute of our lives harbors the potential to transform us and those around us. The novel ranks among those rare, timeless books that speak to us anew with each reading. Includes Woolf’s short story, “Mrs. Dalloway in Bond Street,” a uniquely insightful new afterword, and a detailed biographical timeline. Virginia Woolf (1882–1941) ranks among the major literary figures of all time. With her novels, including To the Lighthouse, Mrs. Dalloway, and The Waves, she reinvented the art of story-telling and shaped modern culture’s self-understanding to the present day. In landmark essays, letters, and diaries, Woolf insisted on a woman’s right to tell her story on her own terms."
   },
   {
     "author": "Virginia Woolf",
     "country": "United Kingdom",
-    "imageLink": "images/to-the-lighthouse.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/51ZgbCg2YLL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/To_the_Lighthouse\n",
     "pages": 209,
     "title": "To the Lighthouse",
-    "year": 1927
+    "year": 1927,
+    "description":"“Radiant as [To the Lighthouse] is in its beauty, there could never be a mistake about it: here is a novel to the last degree severe and uncompromising. I think that beyond being about the very nature of reality, it is itself a vision of reality.”—Eudora Welty, from the Introduction.The serene and maternal Mrs. Ramsay, the tragic yet absurd Mr. Ramsay, and their children and assorted guests are on holiday on the Isle of Skye. From the seemingly trivial postponement of a visit to a nearby lighthouse, Woolf constructs a remarkable, moving examination of the complex tensions and allegiances of family life and the conflict between men and women."
   },
   {
     "author": "Marguerite Yourcenar",
     "country": "France/Belgium",
-    "imageLink": "images/memoirs-of-hadrian.jpg",
+    "imageLink": "https://m.media-amazon.com/images/I/41rteb+Fz2L._SY344_BO1,204,203,200_.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\n",
     "pages": 408,
     "title": "Memoirs of Hadrian",
-    "year": 1951
+    "year": 1951,
+    "description": "Both an exploration of character and a reflection on the meaning of history, Memoirs of Hadrian has received international acclaim since its first publication in France in 1951. In it, Marguerite Yourcenar reimagines the Emperor Hadrian's arduous boyhood, his triumphs and reversals, and finally, as emperor, his gradual reordering of a war-torn world, writing with the imaginative insight of a great writer of the twentieth century while crafting a prose style as elegant and precise as those of the Latin stylists of Hadrian's own era."
   }
 ]
