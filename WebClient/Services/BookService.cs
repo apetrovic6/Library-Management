@@ -57,8 +57,9 @@ public class BookService : IGenericService<Book>
         }
     }
 
-    public Task<(bool,IReadOnlyList<IClientError>)> Delete(int id)
+    public async Task<(bool,IReadOnlyList<IClientError>)> Delete(int id)
     {
-        throw new NotImplementedException();
+        var res = await _client.DeleteBook.ExecuteAsync(id);
+        return (res.Data.DeleteBook.Deleted, res.Errors);
     }
 }
