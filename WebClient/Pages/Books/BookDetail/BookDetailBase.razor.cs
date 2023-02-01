@@ -1,25 +1,26 @@
 ﻿using BooksGQL;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
-using StrawberryShake;
 using WebClient.Components;
+using WebClient.DTO;
+using WebClient.Services.Interfaces;
 
-namespace WebClient.Pages.Books;
+namespace WebClient.Pages.Books.BookDetail;
 
 public class BookDetailBase : ComponentBase
 {
-    [Inject] private BooksClient client { get; set; }
+    [Inject] private IGenericService<Book> _bookService { get; set; }
     [Inject] private NavigationManager Navigation { get; set; }
     [Inject] private ISnackbar Snackbar { get; set; }
     [Inject] private IDialogService _dialogService { get; set; }
     [Parameter] public int BookId { get; set; }
 
     protected List<BreadcrumbItem> _breadcrumbItems;
-    protected IGetBookById_BookById_Book? Book { get; set; }
+    protected Book book { get; set; }
 
     protected void GoToEditPage()
     {
-        Navigation.NavigateTo($"/book/{Book?.Id}/edit");
+        Navigation.NavigateTo($"/book/{book?.Id}/edit");
     }
 
     protected void ShowDeleteDialog()
@@ -34,17 +35,18 @@ public class BookDetailBase : ComponentBase
             var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
             _dialogService.Show<DeleteConfirmDialog>("Delete", parameters, options);
     }
-    protected async void DeleteBook()
+
+    private async void DeleteBook()
     {
-        var res = await client.DeleteBook.ExecuteAsync(Book.Id);
-        if (res.IsSuccessResult())
+        var (deleted, errors) = await _bookService.Delete(book.Id);
+        if (deleted)
         {
-            Snackbar.Add($"Book {Book.Title} deleted successfully", Severity.Success);
+            Snackbar.Add($"Book {book.Title} deleted successfully", Severity.Success);
             Navigation.NavigateTo("/books");
         }
         else
         {
-            foreach (var err in res.Errors)
+            foreach (var err in errors)
             {
                 Snackbar.Add($"Error: {err.Message}", Severity.Error);
             }
@@ -53,14 +55,14 @@ public class BookDetailBase : ComponentBase
 
     protected override async Task OnInitializedAsync()
     {
-        var res = await client.GetBookById.ExecuteAsync(BookId);
+        var res = await _bookService.GetById(BookId);
 
-        Book = res.Data?.BookById.Book;
+        book = res;
         
         _breadcrumbItems = new()
         {
             new BreadcrumbItem("Books", href: "/books"),
-            new BreadcrumbItem(Book?.Title, href: null, disabled: true),
+            new BreadcrumbItem(book?.Title, href: null, disabled: true),
         };
     }
 }
