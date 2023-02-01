@@ -11,4 +11,5 @@ public class SampleDataModel
     public string title { get; set; }
     public int year { get; set; }
     public string description { get; set; }
+    public int authorId { get; set; }
 }
