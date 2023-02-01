@@ -19,7 +19,7 @@ public class BookService : IGenericService<Book>
 
     public async Task<List<Book>> GetAll()
     {
-        var res= await _client.GetBooks.ExecuteAsync();
+        var res = await _client.GetBooks.ExecuteAsync();
         return _mapper.Map<IReadOnlyList<IGetBooks_Books?>, List<Book>>(res?.Data?.Books);
     }
 
@@ -27,25 +27,37 @@ public class BookService : IGenericService<Book>
     {
         var res = await _client.GetBookById.ExecuteAsync(id);
         return _mapper.Map<Book>(res.Data.BookById.Book);
-
     }
     
 
-    public async Task<(Book,IReadOnlyList<IClientError>, bool IsSuccess)> Create<K>(K createDto)
+    public async Task<(Book, IReadOnlyList<IClientError>, bool IsSuccess)> Create<K>(K createDto)
     {
         var createBookInput = _mapper.Map<CreateBookInput>(createDto);
         var res = await _client.CreateBook.ExecuteAsync(createBookInput);
         var createdBook = _mapper.Map<Book>(res.Data.CreateBook.Book);
-        
+
         return (createdBook, res.Errors, res.IsSuccessResult());
     }
 
-    public Task<Book> Update<K>(int id, K updateDto)
+    public async Task<(Book, IReadOnlyList<IClientError>, bool IsSuccess)> Update<K>(int id, K updateDto)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var updateInput = _mapper.Map<UpdateBookInput>(updateDto);
+
+            var res = await _client.UpdateBook.ExecuteAsync(id, updateInput);
+            var updatedBook = _mapper.Map<IUpdateBook_UpdateBook_Book, Book>(res.Data.UpdateBook.Book);
+            var a = res.Data.UpdateBook.Book;
+            return (updatedBook, res.Errors, res.IsSuccessResult());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            throw;
+        }
     }
 
-    public Task<Book> Delete(int id)
+    public Task<(bool,IReadOnlyList<IClientError>)> Delete(int id)
     {
         throw new NotImplementedException();
     }
