@@ -15,7 +15,7 @@ service Books {
 message BookModel{
   int32 id = 1;
   string title = 2;
-  string author =3;
+  string author = 3;
   int32 year = 4;
   string country = 5;
   string language = 6;
@@ -24,15 +24,25 @@ message BookModel{
   string description = 9;
 }
 
-message GetBooksRequest{}
+message GetBooksRequest{
+  PageInfo pageinfo = 1;
+}
+
+message PageInfo {
+  int32 page = 1;
+  int32 page_size = 2;
+  int32 skip = 3;
+  int32 total = 4;
+}
 
 message GetBooksResponse {
-  repeated  BookModel books = 1;
+  repeated BookModel data = 1;
+  PageInfo PageInfo = 2;
 }
 
 message CreateBookRequest {
   string title = 1;
-  string author =2;
+  string author = 2;
   int32 year = 3;
   string country = 4;
   string language = 5;
@@ -56,7 +66,7 @@ message CreateBookResponse {
 message UpdateBookRequest {
   int32 id = 1;
   string title = 2;
-  string author =3;
+  string author = 3;
   int32 year = 4;
   string country = 5;
   string language = 6;
