@@ -19,11 +19,6 @@ public class EditBookBase : ComponentBase
     protected Book? Book { get; set; }
 
     protected List<BreadcrumbItem> _breadcrumbItems;
-    
-    protected void GoToEditPage()
-    {
-        Navigation.NavigateTo($"/book/{book?.Id}/edit");
-    }
 
     protected UpdateBookDto model { get; set; } = new();
 
@@ -32,8 +27,8 @@ public class EditBookBase : ComponentBase
         var (book, errors, isSuccess) = await _bookService.Update(Book.Id, model);
         if (isSuccess)
         {
-            Snackbar.Add($"Book {res?.Data?.UpdateBook?.Book?.Title} Updated Successfully", Severity.Success);
-            Navigation.NavigateTo($"/book/{res?.Data?.UpdateBook?.Book?.Id}");
+            Snackbar.Add($"Book {book?.Title} Updated Successfully", Severity.Success);
+            Navigation.NavigateTo($"/book/{book?.Id}");
         }
         else
         {
