@@ -27,4 +27,6 @@ public class Book
     public int Stock { get; set; }
     
     public string? Description { get; set; }
+    
+    public int authorId { get; set; } 
 }
