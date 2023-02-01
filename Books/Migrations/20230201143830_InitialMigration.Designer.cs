@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Books.Migrations
 {
     [DbContext(typeof(BooksDbContext))]
-    [Migration("20230130085130_InitialMigration")]
+    [Migration("20230201143830_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -38,6 +38,9 @@ namespace Books.Migrations
 
                     b.Property<string>("Country")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Description")
                         .HasColumnType("text");
 
                     b.Property<string>("ImageLink")

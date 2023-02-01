@@ -37,6 +37,9 @@ namespace Books.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
                     b.Property<string>("ImageLink")
                         .IsRequired()
                         .HasColumnType("text");
