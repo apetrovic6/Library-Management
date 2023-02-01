@@ -26,8 +26,8 @@ public static class InitDB
                 Country = book.country,
                 Language = book.language,
                 Year = book.year,
-                ImageLink = book.imageLink
-                
+                ImageLink = book.imageLink,
+                Description = book?.description
             };
             books.Add(bookToAdd);
         }

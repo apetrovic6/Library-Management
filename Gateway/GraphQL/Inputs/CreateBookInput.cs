@@ -9,4 +9,5 @@ public class CreateBookInput
     public string Language { get; set; }
     public string ImageLink { get; set; }
     public int Stock { get; set; }
+    public string Description { get; set; }
 }

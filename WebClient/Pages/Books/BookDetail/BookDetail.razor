@@ -10,9 +10,10 @@
         <MudImage Fluid="true" Src="@Book?.Imagelink" Alt="@Book?.Title" Elevation="25" Class="rounded-lg"/>
     </MudItem>
     <MudItem xs="12" lg="6" Class="align-self-start align-content-start justify-start mud-width-full">
-        <MudText Typo="Typo.subtitle1">Language: @Book?.Language</MudText>
-        <MudText Typo="Typo.subtitle1">Country of Origin: @Book?.Country</MudText>
-        <MudText Typo="Typo.subtitle1"> Published: @Book?.Year</MudText>
+        <MudText Typo="Typo.subtitle1">Language: @book?.Language</MudText>
+        <MudText Typo="Typo.subtitle1">Country of Origin: @book?.Country</MudText>
+        <MudText Typo="Typo.subtitle1"> Published: @book?.Year</MudText>
+        <MudText GutterBottom="true"  Class="mt-5" Typo="Typo.body1">@book?.Description</MudText>
     </MudItem>
 
 </MudGrid>

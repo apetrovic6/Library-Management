@@ -24,5 +24,7 @@ public class CreateBookDto
 
     [Required, Range(0, int.MaxValue, ErrorMessage = "Can't be a negative number")]
     public int Stock { get; set; }
+    
+    public string Description { get; set; }
 }
 

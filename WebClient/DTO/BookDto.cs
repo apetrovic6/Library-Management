@@ -20,4 +20,5 @@ public class Book
     public string ImageLink { get; set; }
     [Required]
     public int Stock { get; set; }
+    public string? Description { get; set; }
 }

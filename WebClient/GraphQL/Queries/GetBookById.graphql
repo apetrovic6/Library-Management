@@ -9,6 +9,7 @@ query GetBookById($id: Int!) {
           language
           imagelink
           stock
+          description
         }
     }
 }

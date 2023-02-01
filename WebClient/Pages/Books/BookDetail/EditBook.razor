@@ -14,6 +14,7 @@
     <MudTextField T="string" Label="Language" HelperText="Books language" @bind-value="model.Language" @bind-text="model.Language" For="@(() => model.Language)"/>
     <MudTextField T="int" Label="Stock" HelperText="Books in stock" @bind-value="model.Stock" For="@(() => model.Stock)"/>
     <MudTextField T="string" Label="Imagelink" HelperText="Cover image" @bind-value="model.ImageLink" @bind-text="model.ImageLink" For="@(() => model.ImageLink)"/>
+    <MudTextField FullWidth="true" Lines="5" T="string" Label="Description" HelperText="Book Description" @bind-value="model.Description" @bind-text="model.Description" For="@(() => model.Description)" />
     <MudCardActions>
         <div class="ml-auto">
             <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="mr-3">Update Book</MudButton>

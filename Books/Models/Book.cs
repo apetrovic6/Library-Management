@@ -25,4 +25,6 @@ public class Book
     
     [Required]
     public int Stock { get; set; }
+    
+    public string? Description { get; set; }
 }
