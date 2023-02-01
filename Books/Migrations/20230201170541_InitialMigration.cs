@@ -24,7 +24,8 @@ namespace Books.Migrations
                     Language = table.Column<string>(type: "text", nullable: false),
                     ImageLink = table.Column<string>(type: "text", nullable: false),
                     Stock = table.Column<int>(type: "integer", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: true)
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    authorId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {

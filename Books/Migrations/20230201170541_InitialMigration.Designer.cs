@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Books.Migrations
 {
     [DbContext(typeof(BooksDbContext))]
-    [Migration("20230201143830_InitialMigration")]
+    [Migration("20230201170541_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -59,6 +59,9 @@ namespace Books.Migrations
                         .HasColumnType("text");
 
                     b.Property<int>("Year")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("authorId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");

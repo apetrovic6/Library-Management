@@ -58,6 +58,9 @@ namespace Books.Migrations
                     b.Property<int>("Year")
                         .HasColumnType("integer");
 
+                    b.Property<int>("authorId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.ToTable("Books");
