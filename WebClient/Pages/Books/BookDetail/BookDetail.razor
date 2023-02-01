@@ -6,30 +6,31 @@
 
 <MudText Typo="Typo.h6">@Book?.Author</MudText>
 <MudGrid Spacing="5" Class="mt-5">
-    <MudItem xs="12" lg="6" Class="align-center justify-center mud-width-full">
+    <MudItem xs="12" lg="3" Class="justify-left ">
+        <MudImage Fluid="true" Src="@Book?.Imagelink" Alt="@Book?.Title" Elevation="25" Class="rounded-lg"/>
+    </MudItem>
+    <MudItem xs="12" lg="6" Class="align-self-start align-content-start justify-start mud-width-full">
         <MudText Typo="Typo.subtitle1">Language: @Book?.Language</MudText>
         <MudText Typo="Typo.subtitle1">Country of Origin: @Book?.Country</MudText>
         <MudText Typo="Typo.subtitle1"> Published: @Book?.Year</MudText>
+    </MudItem>
 
-        <div class="d-flex">
-            <MudButton @onclick="GoToEditPage"
-                       Size="Size.Medium"
-                       Variant="Variant.Filled"
-                       Color="Color.Secondary"
-                       Class="mt-2" Style="width: 100px; height: 50px; margin-right: 50px">
-                Edit
-            </MudButton>
-            <MudButton @onclick="DeleteBook"
-                       Size="Size.Medium"
-                       Variant="Variant.Filled"
-                       Color="Color.Secondary"
-                       Class="mt-2"
-                       Style="width: 100px; height: 50px;">
-                Delete
-            </MudButton>
-        </div>
-    </MudItem>
-    <MudItem xs="12" lg="6" Class="justify-center mud-width-full">
-        <MudImage Fluid="true" Src="@Book?.Imagelink" Alt="@Book?.Title" Elevation="25" Class="rounded-lg"/>
-    </MudItem>
 </MudGrid>
+
+<div class="d-flex mt-5">
+    <MudButton @onclick="GoToEditPage"
+               Size="Size.Medium"
+               Variant="Variant.Filled"
+               Color="Color.Secondary"
+               Class="mt-2" Style="width: 100px; height: 50px; margin-right: 50px">
+        Edit
+    </MudButton>
+    <MudButton @onclick="ShowDeleteDialog"
+               Size="Size.Medium"
+               Variant="Variant.Outlined"
+               Color="Color.Warning"
+               Class="mt-2"
+               Style="width: 100px; height: 50px;">
+        Delete
+    </MudButton>
+</div>
