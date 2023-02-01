@@ -20,11 +20,20 @@ public class BookService : Books.BooksBase
 
     public override async Task<GetBooksResponse> GetBooks(GetBooksRequest request, ServerCallContext context)
     {
+        var pageInfo = new Paging(request.Pageinfo.Page, request.Pageinfo.PageSize);
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
-        var books = await dbContext.Books.ToListAsync();
+        var books = await dbContext.Books
+            .Skip(pageInfo.Skip)
+            .Take(pageInfo.PageSize)
+            .ToListAsync();
 
+        var totalCount = await dbContext.Books.CountAsync();
+
+        var info = new PageInfo { Total = totalCount };
+        
+        var result = new PagedResult<Book>(books, info);
         await dbContext.DisposeAsync();
-        return _mapper.Map<GetBooksResponse>(books);
+        return _mapper.Map<GetBooksResponse>(result);
     }
 
     public override async Task<GetBookByIdResponse> GetBookById(GetBookByIdRequest request, ServerCallContext context)
