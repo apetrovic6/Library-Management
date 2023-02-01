@@ -1,17 +1,17 @@
 ﻿using AutoMapper;
-using BooksGQL;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using MudBlazor;
 using StrawberryShake;
 using WebClient.DTO;
+using WebClient.Services.Interfaces;
 
 namespace WebClient.Pages.Books.BookDetail;
 
 public class EditBookBase : ComponentBase
 {
     [Inject] private IMapper _mapper { get; set; }
-    [Inject] private BooksClient client { get; set; }
+    [Inject] private IGenericService<Book> _bookService { get; set; }
     [Inject] private NavigationManager Navigation { get; set; }
     [Inject] ISnackbar Snackbar { get; set; }
     [Parameter] public int BookId { get; set; }
@@ -29,15 +29,15 @@ public class EditBookBase : ComponentBase
 
     protected async void OnValidSubmit(EditContext context)
     {
-        var res = await client.UpdateBook.ExecuteAsync(BookId, _mapper.Map<UpdateBookInput>(model));
-        if (res.IsSuccessResult())
+        var (book, errors, isSuccess) = await _bookService.Update(Book.Id, model);
+        if (isSuccess)
         {
             Snackbar.Add($"Book {res?.Data?.UpdateBook?.Book?.Title} Updated Successfully", Severity.Success);
             Navigation.NavigateTo($"/book/{res?.Data?.UpdateBook?.Book?.Id}");
         }
         else
         {
-            foreach (var err in res.Errors)
+            foreach (var err in errors)
             {
                 Snackbar.Add($"Error: {err.Message}", Severity.Error);
             }
