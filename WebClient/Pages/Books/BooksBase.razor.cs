@@ -1,5 +1,4 @@
-﻿using BooksGQL;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using WebClient.DTO;
 using WebClient.Services.Interfaces;
 
