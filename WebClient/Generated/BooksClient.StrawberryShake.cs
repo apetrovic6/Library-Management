@@ -4,6 +4,145 @@
 namespace BooksGQL
 {
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class DeleteBookResult : global::System.IEquatable<DeleteBookResult>, IDeleteBookResult
+    {
+        public DeleteBookResult(global::BooksGQL.IDeleteBook_DeleteBook deleteBook)
+        {
+            DeleteBook = deleteBook;
+        }
+
+        public global::BooksGQL.IDeleteBook_DeleteBook DeleteBook { get; }
+
+        public virtual global::System.Boolean Equals(DeleteBookResult? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (DeleteBook.Equals(other.DeleteBook));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((DeleteBookResult)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                hash ^= 397 * DeleteBook.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class DeleteBook_DeleteBook_DeleteBookResponse : global::System.IEquatable<DeleteBook_DeleteBook_DeleteBookResponse>, IDeleteBook_DeleteBook_DeleteBookResponse
+    {
+        public DeleteBook_DeleteBook_DeleteBookResponse(global::System.Boolean deleted)
+        {
+            Deleted = deleted;
+        }
+
+        public global::System.Boolean Deleted { get; }
+
+        public virtual global::System.Boolean Equals(DeleteBook_DeleteBook_DeleteBookResponse? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (Deleted == other.Deleted);
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((DeleteBook_DeleteBook_DeleteBookResponse)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                hash ^= 397 * Deleted.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IDeleteBookResult
+    {
+        public global::BooksGQL.IDeleteBook_DeleteBook DeleteBook { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IDeleteBook_DeleteBook
+    {
+        public global::System.Boolean Deleted { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IDeleteBook_DeleteBook_DeleteBookResponse : IDeleteBook_DeleteBook
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial class CreateBookResult : global::System.IEquatable<CreateBookResult>, ICreateBookResult
     {
         public CreateBookResult(global::BooksGQL.ICreateBook_CreateBook createBook)
@@ -225,145 +364,6 @@ namespace BooksGQL
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial interface ICreateBook_CreateBook_Book_BookModel : ICreateBook_CreateBook_Book
-    {
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class DeleteBookResult : global::System.IEquatable<DeleteBookResult>, IDeleteBookResult
-    {
-        public DeleteBookResult(global::BooksGQL.IDeleteBook_DeleteBook deleteBook)
-        {
-            DeleteBook = deleteBook;
-        }
-
-        public global::BooksGQL.IDeleteBook_DeleteBook DeleteBook { get; }
-
-        public virtual global::System.Boolean Equals(DeleteBookResult? other)
-        {
-            if (ReferenceEquals(null, other))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, other))
-            {
-                return true;
-            }
-
-            if (other.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return (DeleteBook.Equals(other.DeleteBook));
-        }
-
-        public override global::System.Boolean Equals(global::System.Object? obj)
-        {
-            if (ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return Equals((DeleteBookResult)obj);
-        }
-
-        public override global::System.Int32 GetHashCode()
-        {
-            unchecked
-            {
-                int hash = 5;
-                hash ^= 397 * DeleteBook.GetHashCode();
-                return hash;
-            }
-        }
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class DeleteBook_DeleteBook_DeleteBookResponse : global::System.IEquatable<DeleteBook_DeleteBook_DeleteBookResponse>, IDeleteBook_DeleteBook_DeleteBookResponse
-    {
-        public DeleteBook_DeleteBook_DeleteBookResponse(global::System.Boolean deleted)
-        {
-            Deleted = deleted;
-        }
-
-        public global::System.Boolean Deleted { get; }
-
-        public virtual global::System.Boolean Equals(DeleteBook_DeleteBook_DeleteBookResponse? other)
-        {
-            if (ReferenceEquals(null, other))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, other))
-            {
-                return true;
-            }
-
-            if (other.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return (Deleted == other.Deleted);
-        }
-
-        public override global::System.Boolean Equals(global::System.Object? obj)
-        {
-            if (ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return Equals((DeleteBook_DeleteBook_DeleteBookResponse)obj);
-        }
-
-        public override global::System.Int32 GetHashCode()
-        {
-            unchecked
-            {
-                int hash = 5;
-                hash ^= 397 * Deleted.GetHashCode();
-                return hash;
-            }
-        }
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial interface IDeleteBookResult
-    {
-        public global::BooksGQL.IDeleteBook_DeleteBook DeleteBook { get; }
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial interface IDeleteBook_DeleteBook
-    {
-        public global::System.Boolean Deleted { get; }
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial interface IDeleteBook_DeleteBook_DeleteBookResponse : IDeleteBook_DeleteBook
     {
     }
 
@@ -882,12 +882,12 @@ namespace BooksGQL
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial class GetBooksResult : global::System.IEquatable<GetBooksResult>, IGetBooksResult
     {
-        public GetBooksResult(global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books> books)
+        public GetBooksResult(global::BooksGQL.IGetBooks_Books books)
         {
             Books = books;
         }
 
-        public global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books> Books { get; }
+        public global::BooksGQL.IGetBooks_Books Books { get; }
 
         public virtual global::System.Boolean Equals(GetBooksResult? other)
         {
@@ -906,7 +906,7 @@ namespace BooksGQL
                 return false;
             }
 
-            return (global::StrawberryShake.Helper.ComparisonHelper.SequenceEqual(Books, other.Books));
+            return (Books.Equals(other.Books));
         }
 
         public override global::System.Boolean Equals(global::System.Object? obj)
@@ -934,45 +934,26 @@ namespace BooksGQL
             unchecked
             {
                 int hash = 5;
-                foreach (var Books_elm in Books)
-                {
-                    hash ^= 397 * Books_elm.GetHashCode();
-                }
-
+                hash ^= 397 * Books.GetHashCode();
                 return hash;
             }
         }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class GetBooks_Books_BookType : global::System.IEquatable<GetBooks_Books_BookType>, IGetBooks_Books_BookType
+    public partial class GetBooks_Books_GetBooksResponse : global::System.IEquatable<GetBooks_Books_GetBooksResponse>, IGetBooks_Books_GetBooksResponse
     {
-        public GetBooks_Books_BookType(global::System.Int32 id, global::System.String title, global::System.String author, global::System.Int32 year, global::System.String country, global::System.String imageLink, global::System.Int32 stock)
+        public GetBooks_Books_GetBooksResponse(global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books_Data?>? data, global::BooksGQL.IGetBooks_Books_PageInfo? pageInfo)
         {
-            Id = id;
-            Title = title;
-            Author = author;
-            Year = year;
-            Country = country;
-            ImageLink = imageLink;
-            Stock = stock;
+            Data = data;
+            PageInfo = pageInfo;
         }
 
-        public global::System.Int32 Id { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books_Data?>? Data { get; }
 
-        public global::System.String Title { get; }
+        public global::BooksGQL.IGetBooks_Books_PageInfo? PageInfo { get; }
 
-        public global::System.String Author { get; }
-
-        public global::System.Int32 Year { get; }
-
-        public global::System.String Country { get; }
-
-        public global::System.String ImageLink { get; }
-
-        public global::System.Int32 Stock { get; }
-
-        public virtual global::System.Boolean Equals(GetBooks_Books_BookType? other)
+        public virtual global::System.Boolean Equals(GetBooks_Books_GetBooksResponse? other)
         {
             if (ReferenceEquals(null, other))
             {
@@ -989,7 +970,7 @@ namespace BooksGQL
                 return false;
             }
 
-            return (Id == other.Id) && Title.Equals(other.Title) && Author.Equals(other.Author) && Year == other.Year && Country.Equals(other.Country) && ImageLink.Equals(other.ImageLink) && Stock == other.Stock;
+            return (global::StrawberryShake.Helper.ComparisonHelper.SequenceEqual(Data, other.Data)) && ((PageInfo is null && other.PageInfo is null) || PageInfo != null && PageInfo.Equals(other.PageInfo));
         }
 
         public override global::System.Boolean Equals(global::System.Object? obj)
@@ -1009,7 +990,95 @@ namespace BooksGQL
                 return false;
             }
 
-            return Equals((GetBooks_Books_BookType)obj);
+            return Equals((GetBooks_Books_GetBooksResponse)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (Data != null)
+                {
+                    foreach (var Data_elm in Data)
+                    {
+                        if (Data_elm != null)
+                        {
+                            hash ^= 397 * Data_elm.GetHashCode();
+                        }
+                    }
+                }
+
+                if (PageInfo != null)
+                {
+                    hash ^= 397 * PageInfo.GetHashCode();
+                }
+
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class GetBooks_Books_Data_BookModel : global::System.IEquatable<GetBooks_Books_Data_BookModel>, IGetBooks_Books_Data_BookModel
+    {
+        public GetBooks_Books_Data_BookModel(global::System.Int32 id, global::System.String? title, global::System.String? author, global::System.String? imagelink, global::System.Int32 stock)
+        {
+            Id = id;
+            Title = title;
+            Author = author;
+            Imagelink = imagelink;
+            Stock = stock;
+        }
+
+        public global::System.Int32 Id { get; }
+
+        public global::System.String? Title { get; }
+
+        public global::System.String? Author { get; }
+
+        public global::System.String? Imagelink { get; }
+
+        public global::System.Int32 Stock { get; }
+
+        public virtual global::System.Boolean Equals(GetBooks_Books_Data_BookModel? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (Id == other.Id) && ((Title is null && other.Title is null) || Title != null && Title.Equals(other.Title)) && ((Author is null && other.Author is null) || Author != null && Author.Equals(other.Author)) && ((Imagelink is null && other.Imagelink is null) || Imagelink != null && Imagelink.Equals(other.Imagelink)) && Stock == other.Stock;
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetBooks_Books_Data_BookModel)obj);
         }
 
         public override global::System.Int32 GetHashCode()
@@ -1018,12 +1087,83 @@ namespace BooksGQL
             {
                 int hash = 5;
                 hash ^= 397 * Id.GetHashCode();
-                hash ^= 397 * Title.GetHashCode();
-                hash ^= 397 * Author.GetHashCode();
-                hash ^= 397 * Year.GetHashCode();
-                hash ^= 397 * Country.GetHashCode();
-                hash ^= 397 * ImageLink.GetHashCode();
+                if (Title != null)
+                {
+                    hash ^= 397 * Title.GetHashCode();
+                }
+
+                if (Author != null)
+                {
+                    hash ^= 397 * Author.GetHashCode();
+                }
+
+                if (Imagelink != null)
+                {
+                    hash ^= 397 * Imagelink.GetHashCode();
+                }
+
                 hash ^= 397 * Stock.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class GetBooks_Books_PageInfo_PageInfo : global::System.IEquatable<GetBooks_Books_PageInfo_PageInfo>, IGetBooks_Books_PageInfo_PageInfo
+    {
+        public GetBooks_Books_PageInfo_PageInfo(global::System.Int32 total)
+        {
+            Total = total;
+        }
+
+        public global::System.Int32 Total { get; }
+
+        public virtual global::System.Boolean Equals(GetBooks_Books_PageInfo_PageInfo? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (Total == other.Total);
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetBooks_Books_PageInfo_PageInfo)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                hash ^= 397 * Total.GetHashCode();
                 return hash;
             }
         }
@@ -1032,29 +1172,49 @@ namespace BooksGQL
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial interface IGetBooksResult
     {
-        public global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books> Books { get; }
+        public global::BooksGQL.IGetBooks_Books Books { get; }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial interface IGetBooks_Books
     {
+        public global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books_Data?>? Data { get; }
+
+        public global::BooksGQL.IGetBooks_Books_PageInfo? PageInfo { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IGetBooks_Books_GetBooksResponse : IGetBooks_Books
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IGetBooks_Books_Data
+    {
         public global::System.Int32 Id { get; }
 
-        public global::System.String Title { get; }
+        public global::System.String? Title { get; }
 
-        public global::System.String Author { get; }
+        public global::System.String? Author { get; }
 
-        public global::System.Int32 Year { get; }
-
-        public global::System.String Country { get; }
-
-        public global::System.String ImageLink { get; }
+        public global::System.String? Imagelink { get; }
 
         public global::System.Int32 Stock { get; }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial interface IGetBooks_Books_BookType : IGetBooks_Books
+    public partial interface IGetBooks_Books_Data_BookModel : IGetBooks_Books_Data
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IGetBooks_Books_PageInfo
+    {
+        public global::System.Int32 Total { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IGetBooks_Books_PageInfo_PageInfo : IGetBooks_Books_PageInfo
     {
     }
 
@@ -1696,6 +1856,245 @@ namespace BooksGQL
         global::System.Boolean global::BooksGQL.State.IUpdateBookInputInfo.IsDescriptionSet => _set_description;
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class PagingInputInputValueFormatter : global::StrawberryShake.Serialization.IInputObjectFormatter
+    {
+        private global::StrawberryShake.Serialization.IInputValueFormatter _intFormatter = default !;
+        public global::System.String TypeName => "PagingInput";
+        public void Initialize(global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        {
+            _intFormatter = serializerResolver.GetInputValueFormatter("Int");
+        }
+
+        public global::System.Object? Format(global::System.Object? runtimeValue)
+        {
+            if (runtimeValue is null)
+            {
+                return null;
+            }
+
+            var input = runtimeValue as global::BooksGQL.PagingInput;
+            var inputInfo = runtimeValue as global::BooksGQL.State.IPagingInputInfo;
+            if (input is null || inputInfo is null)
+            {
+                throw new global::System.ArgumentException(nameof(runtimeValue));
+            }
+
+            var fields = new global::System.Collections.Generic.List<global::System.Collections.Generic.KeyValuePair<global::System.String, global::System.Object?>>();
+            if (inputInfo.IsPageSet)
+            {
+                fields.Add(new global::System.Collections.Generic.KeyValuePair<global::System.String, global::System.Object?>("page", FormatPage(input.Page)));
+            }
+
+            if (inputInfo.IsPageSizeSet)
+            {
+                fields.Add(new global::System.Collections.Generic.KeyValuePair<global::System.String, global::System.Object?>("pageSize", FormatPageSize(input.PageSize)));
+            }
+
+            return fields;
+        }
+
+        private global::System.Object? FormatPage(global::System.Int32 input)
+        {
+            return _intFormatter.Format(input);
+        }
+
+        private global::System.Object? FormatPageSize(global::System.Int32 input)
+        {
+            return _intFormatter.Format(input);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class PagingInput : global::BooksGQL.State.IPagingInputInfo, global::System.IEquatable<PagingInput>
+    {
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((PagingInput)obj);
+        }
+
+        public virtual global::System.Boolean Equals(PagingInput? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (Page == other.Page) && PageSize == other.PageSize;
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                hash ^= 397 * Page.GetHashCode();
+                hash ^= 397 * PageSize.GetHashCode();
+                return hash;
+            }
+        }
+
+        private global::System.Int32 _value_page;
+        private global::System.Boolean _set_page;
+        private global::System.Int32 _value_pageSize;
+        private global::System.Boolean _set_pageSize;
+        public global::System.Int32 Page
+        {
+            get => _value_page;
+            set
+            {
+                _set_page = true;
+                _value_page = value;
+            }
+        }
+
+        global::System.Boolean global::BooksGQL.State.IPagingInputInfo.IsPageSet => _set_page;
+        public global::System.Int32 PageSize
+        {
+            get => _value_pageSize;
+            set
+            {
+                _set_pageSize = true;
+                _value_pageSize = value;
+            }
+        }
+
+        global::System.Boolean global::BooksGQL.State.IPagingInputInfo.IsPageSizeSet => _set_pageSize;
+    }
+
+    /// <summary>
+    /// Represents the operation service of the DeleteBook GraphQL operation
+    /// <code>
+    /// mutation DeleteBook($id: Int!) {
+    ///   deleteBook(id: $id) {
+    ///     __typename
+    ///     deleted
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class DeleteBookMutationDocument : global::StrawberryShake.IDocument
+    {
+        private DeleteBookMutationDocument()
+        {
+        }
+
+        public static DeleteBookMutationDocument Instance { get; } = new DeleteBookMutationDocument();
+        public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Mutation;
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x6d, 0x75, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x42, 0x6f, 0x6f, 0x6b, 0x28, 0x24, 0x69, 0x64, 0x3a, 0x20, 0x49, 0x6e, 0x74, 0x21, 0x29, 0x20, 0x7b, 0x20, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x42, 0x6f, 0x6f, 0x6b, 0x28, 0x69, 0x64, 0x3a, 0x20, 0x24, 0x69, 0x64, 0x29, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x64, 0x20, 0x7d, 0x20, 0x7d};
+        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "2cca55ab69087eedbe298335adf6dad8");
+        public override global::System.String ToString()
+        {
+#if NETSTANDARD2_0
+        return global::System.Text.Encoding.UTF8.GetString(Body.ToArray());
+#else
+            return global::System.Text.Encoding.UTF8.GetString(Body);
+#endif
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the DeleteBook GraphQL operation
+    /// <code>
+    /// mutation DeleteBook($id: Int!) {
+    ///   deleteBook(id: $id) {
+    ///     __typename
+    ///     deleted
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class DeleteBookMutation : global::BooksGQL.IDeleteBookMutation
+    {
+        private readonly global::StrawberryShake.IOperationExecutor<IDeleteBookResult> _operationExecutor;
+        private readonly global::StrawberryShake.Serialization.IInputValueFormatter _intFormatter;
+        public DeleteBookMutation(global::StrawberryShake.IOperationExecutor<IDeleteBookResult> operationExecutor, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        {
+            _operationExecutor = operationExecutor ?? throw new global::System.ArgumentNullException(nameof(operationExecutor));
+            _intFormatter = serializerResolver.GetInputValueFormatter("Int");
+        }
+
+        global::System.Type global::StrawberryShake.IOperationRequestFactory.ResultType => typeof(IDeleteBookResult);
+        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IDeleteBookResult>> ExecuteAsync(global::System.Int32 id, global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = CreateRequest(id);
+            return await _operationExecutor.ExecuteAsync(request, cancellationToken).ConfigureAwait(false);
+        }
+
+        public global::System.IObservable<global::StrawberryShake.IOperationResult<IDeleteBookResult>> Watch(global::System.Int32 id, global::StrawberryShake.ExecutionStrategy? strategy = null)
+        {
+            var request = CreateRequest(id);
+            return _operationExecutor.Watch(request, strategy);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Int32 id)
+        {
+            var variables = new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>();
+            variables.Add("id", FormatId(id));
+            return CreateRequest(variables);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return new global::StrawberryShake.OperationRequest(id: DeleteBookMutationDocument.Instance.Hash.Value, name: "DeleteBook", document: DeleteBookMutationDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default, variables: variables);
+        }
+
+        private global::System.Object? FormatId(global::System.Int32 value)
+        {
+            return _intFormatter.Format(value);
+        }
+
+        global::StrawberryShake.OperationRequest global::StrawberryShake.IOperationRequestFactory.Create(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return CreateRequest(variables!);
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the DeleteBook GraphQL operation
+    /// <code>
+    /// mutation DeleteBook($id: Int!) {
+    ///   deleteBook(id: $id) {
+    ///     __typename
+    ///     deleted
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial interface IDeleteBookMutation : global::StrawberryShake.IOperationRequestFactory
+    {
+        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IDeleteBookResult>> ExecuteAsync(global::System.Int32 id, global::System.Threading.CancellationToken cancellationToken = default);
+        global::System.IObservable<global::StrawberryShake.IOperationResult<IDeleteBookResult>> Watch(global::System.Int32 id, global::StrawberryShake.ExecutionStrategy? strategy = null);
+    }
+
     /// <summary>
     /// Represents the operation service of the CreateBook GraphQL operation
     /// <code>
@@ -1828,114 +2227,6 @@ namespace BooksGQL
     {
         global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<ICreateBookResult>> ExecuteAsync(global::BooksGQL.CreateBookInput createBookInput, global::System.Threading.CancellationToken cancellationToken = default);
         global::System.IObservable<global::StrawberryShake.IOperationResult<ICreateBookResult>> Watch(global::BooksGQL.CreateBookInput createBookInput, global::StrawberryShake.ExecutionStrategy? strategy = null);
-    }
-
-    /// <summary>
-    /// Represents the operation service of the DeleteBook GraphQL operation
-    /// <code>
-    /// mutation DeleteBook($id: Int!) {
-    ///   deleteBook(id: $id) {
-    ///     __typename
-    ///     deleted
-    ///   }
-    /// }
-    /// </code>
-    /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class DeleteBookMutationDocument : global::StrawberryShake.IDocument
-    {
-        private DeleteBookMutationDocument()
-        {
-        }
-
-        public static DeleteBookMutationDocument Instance { get; } = new DeleteBookMutationDocument();
-        public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Mutation;
-        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x6d, 0x75, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x42, 0x6f, 0x6f, 0x6b, 0x28, 0x24, 0x69, 0x64, 0x3a, 0x20, 0x49, 0x6e, 0x74, 0x21, 0x29, 0x20, 0x7b, 0x20, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x42, 0x6f, 0x6f, 0x6b, 0x28, 0x69, 0x64, 0x3a, 0x20, 0x24, 0x69, 0x64, 0x29, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x64, 0x20, 0x7d, 0x20, 0x7d};
-        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "2cca55ab69087eedbe298335adf6dad8");
-        public override global::System.String ToString()
-        {
-#if NETSTANDARD2_0
-        return global::System.Text.Encoding.UTF8.GetString(Body.ToArray());
-#else
-            return global::System.Text.Encoding.UTF8.GetString(Body);
-#endif
-        }
-    }
-
-    /// <summary>
-    /// Represents the operation service of the DeleteBook GraphQL operation
-    /// <code>
-    /// mutation DeleteBook($id: Int!) {
-    ///   deleteBook(id: $id) {
-    ///     __typename
-    ///     deleted
-    ///   }
-    /// }
-    /// </code>
-    /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class DeleteBookMutation : global::BooksGQL.IDeleteBookMutation
-    {
-        private readonly global::StrawberryShake.IOperationExecutor<IDeleteBookResult> _operationExecutor;
-        private readonly global::StrawberryShake.Serialization.IInputValueFormatter _intFormatter;
-        public DeleteBookMutation(global::StrawberryShake.IOperationExecutor<IDeleteBookResult> operationExecutor, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
-        {
-            _operationExecutor = operationExecutor ?? throw new global::System.ArgumentNullException(nameof(operationExecutor));
-            _intFormatter = serializerResolver.GetInputValueFormatter("Int");
-        }
-
-        global::System.Type global::StrawberryShake.IOperationRequestFactory.ResultType => typeof(IDeleteBookResult);
-        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IDeleteBookResult>> ExecuteAsync(global::System.Int32 id, global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var request = CreateRequest(id);
-            return await _operationExecutor.ExecuteAsync(request, cancellationToken).ConfigureAwait(false);
-        }
-
-        public global::System.IObservable<global::StrawberryShake.IOperationResult<IDeleteBookResult>> Watch(global::System.Int32 id, global::StrawberryShake.ExecutionStrategy? strategy = null)
-        {
-            var request = CreateRequest(id);
-            return _operationExecutor.Watch(request, strategy);
-        }
-
-        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Int32 id)
-        {
-            var variables = new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>();
-            variables.Add("id", FormatId(id));
-            return CreateRequest(variables);
-        }
-
-        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
-        {
-            return new global::StrawberryShake.OperationRequest(id: DeleteBookMutationDocument.Instance.Hash.Value, name: "DeleteBook", document: DeleteBookMutationDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default, variables: variables);
-        }
-
-        private global::System.Object? FormatId(global::System.Int32 value)
-        {
-            return _intFormatter.Format(value);
-        }
-
-        global::StrawberryShake.OperationRequest global::StrawberryShake.IOperationRequestFactory.Create(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
-        {
-            return CreateRequest(variables!);
-        }
-    }
-
-    /// <summary>
-    /// Represents the operation service of the DeleteBook GraphQL operation
-    /// <code>
-    /// mutation DeleteBook($id: Int!) {
-    ///   deleteBook(id: $id) {
-    ///     __typename
-    ///     deleted
-    ///   }
-    /// }
-    /// </code>
-    /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial interface IDeleteBookMutation : global::StrawberryShake.IOperationRequestFactory
-    {
-        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IDeleteBookResult>> ExecuteAsync(global::System.Int32 id, global::System.Threading.CancellationToken cancellationToken = default);
-        global::System.IObservable<global::StrawberryShake.IOperationResult<IDeleteBookResult>> Watch(global::System.Int32 id, global::StrawberryShake.ExecutionStrategy? strategy = null);
     }
 
     /// <summary>
@@ -2233,18 +2524,23 @@ namespace BooksGQL
     /// <summary>
     /// Represents the operation service of the GetBooks GraphQL operation
     /// <code>
-    /// query GetBooks {
-    ///   books {
+    /// query GetBooks($paging: PagingInput!) {
+    ///   books(paging: $paging) {
     ///     __typename
-    ///     id
-    ///     title
-    ///     author
-    ///     year
-    ///     country
-    ///     imageLink
-    ///     stock
-    ///     ... on BookType {
+    ///     data {
+    ///       __typename
     ///       id
+    ///       title
+    ///       author
+    ///       imagelink
+    ///       stock
+    ///       ... on BookModel {
+    ///         id
+    ///       }
+    ///     }
+    ///     pageInfo {
+    ///       __typename
+    ///       total
     ///     }
     ///   }
     /// }
@@ -2259,8 +2555,8 @@ namespace BooksGQL
 
         public static GetBooksQueryDocument Instance { get; } = new GetBooksQueryDocument();
         public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Query;
-        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f, 0x6b, 0x73, 0x20, 0x7b, 0x20, 0x62, 0x6f, 0x6f, 0x6b, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x20, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x20, 0x79, 0x65, 0x61, 0x72, 0x20, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x79, 0x20, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x4c, 0x69, 0x6e, 0x6b, 0x20, 0x73, 0x74, 0x6f, 0x63, 0x6b, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x42, 0x6f, 0x6f, 0x6b, 0x54, 0x79, 0x70, 0x65, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
-        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "38eb43d545331922a61094d1e8527e12");
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f, 0x6b, 0x73, 0x28, 0x24, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x67, 0x3a, 0x20, 0x50, 0x61, 0x67, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x70, 0x75, 0x74, 0x21, 0x29, 0x20, 0x7b, 0x20, 0x62, 0x6f, 0x6f, 0x6b, 0x73, 0x28, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x67, 0x3a, 0x20, 0x24, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x67, 0x29, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x20, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x20, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x6c, 0x69, 0x6e, 0x6b, 0x20, 0x73, 0x74, 0x6f, 0x63, 0x6b, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x42, 0x6f, 0x6f, 0x6b, 0x4d, 0x6f, 0x64, 0x65, 0x6c, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x70, 0x61, 0x67, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
+        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "f4bbd5e8776f06cc891046d9d8da5040");
         public override global::System.String ToString()
         {
 #if NETSTANDARD2_0
@@ -2274,18 +2570,23 @@ namespace BooksGQL
     /// <summary>
     /// Represents the operation service of the GetBooks GraphQL operation
     /// <code>
-    /// query GetBooks {
-    ///   books {
+    /// query GetBooks($paging: PagingInput!) {
+    ///   books(paging: $paging) {
     ///     __typename
-    ///     id
-    ///     title
-    ///     author
-    ///     year
-    ///     country
-    ///     imageLink
-    ///     stock
-    ///     ... on BookType {
+    ///     data {
+    ///       __typename
     ///       id
+    ///       title
+    ///       author
+    ///       imagelink
+    ///       stock
+    ///       ... on BookModel {
+    ///         id
+    ///       }
+    ///     }
+    ///     pageInfo {
+    ///       __typename
+    ///       total
     ///     }
     ///   }
     /// }
@@ -2295,55 +2596,74 @@ namespace BooksGQL
     public partial class GetBooksQuery : global::BooksGQL.IGetBooksQuery
     {
         private readonly global::StrawberryShake.IOperationExecutor<IGetBooksResult> _operationExecutor;
-        public GetBooksQuery(global::StrawberryShake.IOperationExecutor<IGetBooksResult> operationExecutor)
+        private readonly global::StrawberryShake.Serialization.IInputValueFormatter _pagingInputFormatter;
+        public GetBooksQuery(global::StrawberryShake.IOperationExecutor<IGetBooksResult> operationExecutor, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
         {
             _operationExecutor = operationExecutor ?? throw new global::System.ArgumentNullException(nameof(operationExecutor));
+            _pagingInputFormatter = serializerResolver.GetInputValueFormatter("PagingInput");
         }
 
         global::System.Type global::StrawberryShake.IOperationRequestFactory.ResultType => typeof(IGetBooksResult);
-        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetBooksResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default)
+        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetBooksResult>> ExecuteAsync(global::BooksGQL.PagingInput paging, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = CreateRequest();
+            var request = CreateRequest(paging);
             return await _operationExecutor.ExecuteAsync(request, cancellationToken).ConfigureAwait(false);
         }
 
-        public global::System.IObservable<global::StrawberryShake.IOperationResult<IGetBooksResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null)
+        public global::System.IObservable<global::StrawberryShake.IOperationResult<IGetBooksResult>> Watch(global::BooksGQL.PagingInput paging, global::StrawberryShake.ExecutionStrategy? strategy = null)
         {
-            var request = CreateRequest();
+            var request = CreateRequest(paging);
             return _operationExecutor.Watch(request, strategy);
         }
 
-        private global::StrawberryShake.OperationRequest CreateRequest()
+        private global::StrawberryShake.OperationRequest CreateRequest(global::BooksGQL.PagingInput paging)
         {
-            return CreateRequest(null);
+            var variables = new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>();
+            variables.Add("paging", FormatPaging(paging));
+            return CreateRequest(variables);
         }
 
         private global::StrawberryShake.OperationRequest CreateRequest(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
         {
-            return new global::StrawberryShake.OperationRequest(id: GetBooksQueryDocument.Instance.Hash.Value, name: "GetBooks", document: GetBooksQueryDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default);
+            return new global::StrawberryShake.OperationRequest(id: GetBooksQueryDocument.Instance.Hash.Value, name: "GetBooks", document: GetBooksQueryDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default, variables: variables);
+        }
+
+        private global::System.Object? FormatPaging(global::BooksGQL.PagingInput value)
+        {
+            if (value is null)
+            {
+                throw new global::System.ArgumentNullException(nameof(value));
+            }
+
+            return _pagingInputFormatter.Format(value);
         }
 
         global::StrawberryShake.OperationRequest global::StrawberryShake.IOperationRequestFactory.Create(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
         {
-            return CreateRequest();
+            return CreateRequest(variables!);
         }
     }
 
     /// <summary>
     /// Represents the operation service of the GetBooks GraphQL operation
     /// <code>
-    /// query GetBooks {
-    ///   books {
+    /// query GetBooks($paging: PagingInput!) {
+    ///   books(paging: $paging) {
     ///     __typename
-    ///     id
-    ///     title
-    ///     author
-    ///     year
-    ///     country
-    ///     imageLink
-    ///     stock
-    ///     ... on BookType {
+    ///     data {
+    ///       __typename
     ///       id
+    ///       title
+    ///       author
+    ///       imagelink
+    ///       stock
+    ///       ... on BookModel {
+    ///         id
+    ///       }
+    ///     }
+    ///     pageInfo {
+    ///       __typename
+    ///       total
     ///     }
     ///   }
     /// }
@@ -2352,8 +2672,8 @@ namespace BooksGQL
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial interface IGetBooksQuery : global::StrawberryShake.IOperationRequestFactory
     {
-        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetBooksResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default);
-        global::System.IObservable<global::StrawberryShake.IOperationResult<IGetBooksResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null);
+        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetBooksResult>> ExecuteAsync(global::BooksGQL.PagingInput paging, global::System.Threading.CancellationToken cancellationToken = default);
+        global::System.IObservable<global::StrawberryShake.IOperationResult<IGetBooksResult>> Watch(global::BooksGQL.PagingInput paging, global::StrawberryShake.ExecutionStrategy? strategy = null);
     }
 
     /// <summary>
@@ -2362,23 +2682,23 @@ namespace BooksGQL
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial class BooksClient : global::BooksGQL.IBooksClient
     {
-        private readonly global::BooksGQL.ICreateBookMutation _createBook;
         private readonly global::BooksGQL.IDeleteBookMutation _deleteBook;
+        private readonly global::BooksGQL.ICreateBookMutation _createBook;
         private readonly global::BooksGQL.IUpdateBookMutation _updateBook;
         private readonly global::BooksGQL.IGetBookByIdQuery _getBookById;
         private readonly global::BooksGQL.IGetBooksQuery _getBooks;
-        public BooksClient(global::BooksGQL.ICreateBookMutation createBook, global::BooksGQL.IDeleteBookMutation deleteBook, global::BooksGQL.IUpdateBookMutation updateBook, global::BooksGQL.IGetBookByIdQuery getBookById, global::BooksGQL.IGetBooksQuery getBooks)
+        public BooksClient(global::BooksGQL.IDeleteBookMutation deleteBook, global::BooksGQL.ICreateBookMutation createBook, global::BooksGQL.IUpdateBookMutation updateBook, global::BooksGQL.IGetBookByIdQuery getBookById, global::BooksGQL.IGetBooksQuery getBooks)
         {
-            _createBook = createBook ?? throw new global::System.ArgumentNullException(nameof(createBook));
             _deleteBook = deleteBook ?? throw new global::System.ArgumentNullException(nameof(deleteBook));
+            _createBook = createBook ?? throw new global::System.ArgumentNullException(nameof(createBook));
             _updateBook = updateBook ?? throw new global::System.ArgumentNullException(nameof(updateBook));
             _getBookById = getBookById ?? throw new global::System.ArgumentNullException(nameof(getBookById));
             _getBooks = getBooks ?? throw new global::System.ArgumentNullException(nameof(getBooks));
         }
 
         public static global::System.String ClientName => "BooksClient";
-        public global::BooksGQL.ICreateBookMutation CreateBook => _createBook;
         public global::BooksGQL.IDeleteBookMutation DeleteBook => _deleteBook;
+        public global::BooksGQL.ICreateBookMutation CreateBook => _createBook;
         public global::BooksGQL.IUpdateBookMutation UpdateBook => _updateBook;
         public global::BooksGQL.IGetBookByIdQuery GetBookById => _getBookById;
         public global::BooksGQL.IGetBooksQuery GetBooks => _getBooks;
@@ -2390,9 +2710,9 @@ namespace BooksGQL
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial interface IBooksClient
     {
-        global::BooksGQL.ICreateBookMutation CreateBook { get; }
-
         global::BooksGQL.IDeleteBookMutation DeleteBook { get; }
+
+        global::BooksGQL.ICreateBookMutation CreateBook { get; }
 
         global::BooksGQL.IUpdateBookMutation UpdateBook { get; }
 
@@ -2440,32 +2760,71 @@ namespace BooksGQL.State
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class BookTypeEntity
+    public partial class DeleteBookResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.DeleteBookResult>
     {
-        public BookTypeEntity(global::System.Int32 id = default !, global::System.String title = default !, global::System.String author = default !, global::System.Int32 year = default !, global::System.String country = default !, global::System.String imageLink = default !, global::System.Int32 stock = default !)
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        public DeleteBookResultFactory(global::StrawberryShake.IEntityStore entityStore)
         {
-            Id = id;
-            Title = title;
-            Author = author;
-            Year = year;
-            Country = country;
-            ImageLink = imageLink;
-            Stock = stock;
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
         }
 
-        public global::System.Int32 Id { get; }
+        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::BooksGQL.IDeleteBookResult);
+        public DeleteBookResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
 
-        public global::System.String Title { get; }
+            if (dataInfo is DeleteBookResultInfo info)
+            {
+                return new DeleteBookResult(MapNonNullableIDeleteBook_DeleteBook(info.DeleteBook, snapshot));
+            }
 
-        public global::System.String Author { get; }
+            throw new global::System.ArgumentException("DeleteBookResultInfo expected.");
+        }
 
-        public global::System.Int32 Year { get; }
+        private global::BooksGQL.IDeleteBook_DeleteBook MapNonNullableIDeleteBook_DeleteBook(global::BooksGQL.State.DeleteBookResponseData data, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            IDeleteBook_DeleteBook returnValue = default !;
+            if (data.__typename.Equals("DeleteBookResponse", global::System.StringComparison.Ordinal))
+            {
+                returnValue = new DeleteBook_DeleteBook_DeleteBookResponse(data.Deleted ?? throw new global::System.ArgumentNullException());
+            }
+            else
+            {
+                throw new global::System.NotSupportedException();
+            }
 
-        public global::System.String Country { get; }
+            return returnValue;
+        }
 
-        public global::System.String ImageLink { get; }
+        global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
+        {
+            return Create(dataInfo, snapshot);
+        }
+    }
 
-        public global::System.Int32 Stock { get; }
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class DeleteBookResultInfo : global::StrawberryShake.IOperationResultDataInfo
+    {
+        private readonly global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> _entityIds;
+        private readonly global::System.UInt64 _version;
+        public DeleteBookResultInfo(global::BooksGQL.State.DeleteBookResponseData deleteBook, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
+        {
+            DeleteBook = deleteBook;
+            _entityIds = entityIds ?? throw new global::System.ArgumentNullException(nameof(entityIds));
+            _version = version;
+        }
+
+        public global::BooksGQL.State.DeleteBookResponseData DeleteBook { get; }
+
+        public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
+        public global::System.UInt64 Version => _version;
+        public global::StrawberryShake.IOperationResultDataInfo WithVersion(global::System.UInt64 version)
+        {
+            return new DeleteBookResultInfo(DeleteBook, _entityIds, version);
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
@@ -2570,74 +2929,6 @@ namespace BooksGQL.State
             }
 
             return new CreateBook_CreateBook_Book_BookModel(entity.Id, entity.Title);
-        }
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class DeleteBookResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.DeleteBookResult>
-    {
-        private readonly global::StrawberryShake.IEntityStore _entityStore;
-        public DeleteBookResultFactory(global::StrawberryShake.IEntityStore entityStore)
-        {
-            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
-        }
-
-        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::BooksGQL.IDeleteBookResult);
-        public DeleteBookResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
-        {
-            if (snapshot is null)
-            {
-                snapshot = _entityStore.CurrentSnapshot;
-            }
-
-            if (dataInfo is DeleteBookResultInfo info)
-            {
-                return new DeleteBookResult(MapNonNullableIDeleteBook_DeleteBook(info.DeleteBook, snapshot));
-            }
-
-            throw new global::System.ArgumentException("DeleteBookResultInfo expected.");
-        }
-
-        private global::BooksGQL.IDeleteBook_DeleteBook MapNonNullableIDeleteBook_DeleteBook(global::BooksGQL.State.DeleteBookResponseData data, global::StrawberryShake.IEntityStoreSnapshot snapshot)
-        {
-            IDeleteBook_DeleteBook returnValue = default !;
-            if (data.__typename.Equals("DeleteBookResponse", global::System.StringComparison.Ordinal))
-            {
-                returnValue = new DeleteBook_DeleteBook_DeleteBookResponse(data.Deleted ?? throw new global::System.ArgumentNullException());
-            }
-            else
-            {
-                throw new global::System.NotSupportedException();
-            }
-
-            return returnValue;
-        }
-
-        global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
-        {
-            return Create(dataInfo, snapshot);
-        }
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class DeleteBookResultInfo : global::StrawberryShake.IOperationResultDataInfo
-    {
-        private readonly global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> _entityIds;
-        private readonly global::System.UInt64 _version;
-        public DeleteBookResultInfo(global::BooksGQL.State.DeleteBookResponseData deleteBook, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
-        {
-            DeleteBook = deleteBook;
-            _entityIds = entityIds ?? throw new global::System.ArgumentNullException(nameof(entityIds));
-            _version = version;
-        }
-
-        public global::BooksGQL.State.DeleteBookResponseData DeleteBook { get; }
-
-        public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
-        public global::System.UInt64 Version => _version;
-        public global::StrawberryShake.IOperationResultDataInfo WithVersion(global::System.UInt64 version)
-        {
-            return new DeleteBookResultInfo(DeleteBook, _entityIds, version);
         }
     }
 
@@ -2855,11 +3146,11 @@ namespace BooksGQL.State
     public partial class GetBooksResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.GetBooksResult>
     {
         private readonly global::StrawberryShake.IEntityStore _entityStore;
-        private readonly global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookTypeEntity, GetBooks_Books_BookType> _getBooks_Books_BookTypeFromBookTypeEntityMapper;
-        public GetBooksResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookTypeEntity, GetBooks_Books_BookType> getBooks_Books_BookTypeFromBookTypeEntityMapper)
+        private readonly global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookModelEntity, GetBooks_Books_Data_BookModel> _getBooks_Books_Data_BookModelFromBookModelEntityMapper;
+        public GetBooksResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookModelEntity, GetBooks_Books_Data_BookModel> getBooks_Books_Data_BookModelFromBookModelEntityMapper)
         {
             _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
-            _getBooks_Books_BookTypeFromBookTypeEntityMapper = getBooks_Books_BookTypeFromBookTypeEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getBooks_Books_BookTypeFromBookTypeEntityMapper));
+            _getBooks_Books_Data_BookModelFromBookModelEntityMapper = getBooks_Books_Data_BookModelFromBookModelEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getBooks_Books_Data_BookModelFromBookModelEntityMapper));
         }
 
         global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::BooksGQL.IGetBooksResult);
@@ -2872,36 +3163,76 @@ namespace BooksGQL.State
 
             if (dataInfo is GetBooksResultInfo info)
             {
-                return new GetBooksResult(MapNonNullableIGetBooks_BooksNonNullableArray(info.Books, snapshot));
+                return new GetBooksResult(MapNonNullableIGetBooks_Books(info.Books, snapshot));
             }
 
             throw new global::System.ArgumentException("GetBooksResultInfo expected.");
         }
 
-        private global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books> MapNonNullableIGetBooks_BooksNonNullableArray(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? list, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        private global::BooksGQL.IGetBooks_Books MapNonNullableIGetBooks_Books(global::BooksGQL.State.GetBooksResponseData data, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            IGetBooks_Books returnValue = default !;
+            if (data.__typename.Equals("GetBooksResponse", global::System.StringComparison.Ordinal))
+            {
+                returnValue = new GetBooks_Books_GetBooksResponse(MapIGetBooks_Books_DataArray(data.Data, snapshot), MapIGetBooks_Books_PageInfo(data.PageInfo, snapshot));
+            }
+            else
+            {
+                throw new global::System.NotSupportedException();
+            }
+
+            return returnValue;
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::BooksGQL.IGetBooks_Books_Data?>? MapIGetBooks_Books_DataArray(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? list, global::StrawberryShake.IEntityStoreSnapshot snapshot)
         {
             if (list is null)
             {
-                throw new global::System.ArgumentNullException();
+                return null;
             }
 
-            var bookTypes = new global::System.Collections.Generic.List<global::BooksGQL.IGetBooks_Books>();
-            foreach (global::StrawberryShake.EntityId child in list)
+            var bookModels = new global::System.Collections.Generic.List<global::BooksGQL.IGetBooks_Books_Data?>();
+            foreach (global::StrawberryShake.EntityId? child in list)
             {
-                bookTypes.Add(MapNonNullableIGetBooks_Books(child, snapshot));
+                bookModels.Add(MapIGetBooks_Books_Data(child, snapshot));
             }
 
-            return bookTypes;
+            return bookModels;
         }
 
-        private global::BooksGQL.IGetBooks_Books MapNonNullableIGetBooks_Books(global::StrawberryShake.EntityId entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        private global::BooksGQL.IGetBooks_Books_Data? MapIGetBooks_Books_Data(global::StrawberryShake.EntityId? entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
         {
-            if (entityId.Name.Equals("BookType", global::System.StringComparison.Ordinal))
+            if (entityId is null)
             {
-                return _getBooks_Books_BookTypeFromBookTypeEntityMapper.Map(snapshot.GetEntity<global::BooksGQL.State.BookTypeEntity>(entityId) ?? throw new global::StrawberryShake.GraphQLClientException());
+                return null;
+            }
+
+            if (entityId.Value.Name.Equals("BookModel", global::System.StringComparison.Ordinal))
+            {
+                return _getBooks_Books_Data_BookModelFromBookModelEntityMapper.Map(snapshot.GetEntity<global::BooksGQL.State.BookModelEntity>(entityId.Value) ?? throw new global::StrawberryShake.GraphQLClientException());
             }
 
             throw new global::System.NotSupportedException();
+        }
+
+        private global::BooksGQL.IGetBooks_Books_PageInfo? MapIGetBooks_Books_PageInfo(global::BooksGQL.State.PageInfoData? data, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (data is null)
+            {
+                return null;
+            }
+
+            IGetBooks_Books_PageInfo returnValue = default !;
+            if (data?.__typename.Equals("PageInfo", global::System.StringComparison.Ordinal) ?? false)
+            {
+                returnValue = new GetBooks_Books_PageInfo_PageInfo(data.Total ?? throw new global::System.ArgumentNullException());
+            }
+            else
+            {
+                throw new global::System.NotSupportedException();
+            }
+
+            return returnValue;
         }
 
         global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
@@ -2915,14 +3246,14 @@ namespace BooksGQL.State
     {
         private readonly global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> _entityIds;
         private readonly global::System.UInt64 _version;
-        public GetBooksResultInfo(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId> books, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
+        public GetBooksResultInfo(global::BooksGQL.State.GetBooksResponseData books, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
         {
             Books = books;
             _entityIds = entityIds ?? throw new global::System.ArgumentNullException(nameof(entityIds));
             _version = version;
         }
 
-        public global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId> Books { get; }
+        public global::BooksGQL.State.GetBooksResponseData Books { get; }
 
         public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
         public global::System.UInt64 Version => _version;
@@ -2933,22 +3264,22 @@ namespace BooksGQL.State
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class GetBooks_Books_BookTypeFromBookTypeEntityMapper : global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookTypeEntity, GetBooks_Books_BookType>
+    public partial class GetBooks_Books_Data_BookModelFromBookModelEntityMapper : global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookModelEntity, GetBooks_Books_Data_BookModel>
     {
         private readonly global::StrawberryShake.IEntityStore _entityStore;
-        public GetBooks_Books_BookTypeFromBookTypeEntityMapper(global::StrawberryShake.IEntityStore entityStore)
+        public GetBooks_Books_Data_BookModelFromBookModelEntityMapper(global::StrawberryShake.IEntityStore entityStore)
         {
             _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
         }
 
-        public GetBooks_Books_BookType Map(global::BooksGQL.State.BookTypeEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        public GetBooks_Books_Data_BookModel Map(global::BooksGQL.State.BookModelEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
         {
             if (snapshot is null)
             {
                 snapshot = _entityStore.CurrentSnapshot;
             }
 
-            return new GetBooks_Books_BookType(entity.Id, entity.Title, entity.Author, entity.Year, entity.Country, entity.ImageLink, entity.Stock);
+            return new GetBooks_Books_Data_BookModel(entity.Id, entity.Title, entity.Author, entity.Imagelink, entity.Stock);
         }
     }
 
@@ -2992,6 +3323,111 @@ namespace BooksGQL.State
         global::System.Boolean IsStockSet { get; }
 
         global::System.Boolean IsDescriptionSet { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    internal interface IPagingInputInfo
+    {
+        global::System.Boolean IsPageSet { get; }
+
+        global::System.Boolean IsPageSizeSet { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class DeleteBookBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::BooksGQL.IDeleteBookResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityIdSerializer _idSerializer;
+        private readonly global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IDeleteBookResult> _resultDataFactory;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Boolean, global::System.Boolean> _booleanParser;
+        public DeleteBookBuilder(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityIdSerializer idSerializer, global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IDeleteBookResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _idSerializer = idSerializer ?? throw new global::System.ArgumentNullException(nameof(idSerializer));
+            _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
+            _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
+            _booleanParser = serializerResolver.GetLeafValueParser<global::System.Boolean, global::System.Boolean>("Boolean") ?? throw new global::System.ArgumentException("No serializer for type `Boolean` found.");
+        }
+
+        public global::StrawberryShake.IOperationResult<IDeleteBookResult> Build(global::StrawberryShake.Response<global::System.Text.Json.JsonDocument> response)
+        {
+            (IDeleteBookResult Result, DeleteBookResultInfo Info)? data = null;
+            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.IClientError>? errors = null;
+            if (response.Exception is null)
+            {
+                try
+                {
+                    if (response.Body != null)
+                    {
+                        if (response.Body.RootElement.TryGetProperty("data", out global::System.Text.Json.JsonElement dataElement) && dataElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                        {
+                            data = BuildData(dataElement);
+                        }
+
+                        if (response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                        {
+                            errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                        }
+                    }
+                }
+                catch (global::System.Exception ex)
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(ex.Message, exception: ex, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+            else
+            {
+                if (response.Body != null && response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                {
+                    errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                }
+                else
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(response.Exception.Message, exception: response.Exception, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+
+            return new global::StrawberryShake.OperationResult<IDeleteBookResult>(data?.Result, data?.Info, _resultDataFactory, errors);
+        }
+
+        private (IDeleteBookResult, DeleteBookResultInfo) BuildData(global::System.Text.Json.JsonElement obj)
+        {
+            var entityIds = new global::System.Collections.Generic.HashSet<global::StrawberryShake.EntityId>();
+            global::StrawberryShake.IEntityStoreSnapshot snapshot = default !;
+            _entityStore.Update(session =>
+            {
+                snapshot = session.CurrentSnapshot;
+            });
+            var resultInfo = new DeleteBookResultInfo(DeserializeNonNullableIDeleteBook_DeleteBook(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "deleteBook")), entityIds, snapshot.Version);
+            return (_resultDataFactory.Create(resultInfo), resultInfo);
+        }
+
+        private global::BooksGQL.State.DeleteBookResponseData DeserializeNonNullableIDeleteBook_DeleteBook(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            var typename = obj.Value.GetProperty("__typename").GetString();
+            if (typename?.Equals("DeleteBookResponse", global::System.StringComparison.Ordinal) ?? false)
+            {
+                return new global::BooksGQL.State.DeleteBookResponseData(typename, deleted: DeserializeNonNullableBoolean(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "deleted")));
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        private global::System.Boolean DeserializeNonNullableBoolean(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _booleanParser.Parse(obj.Value.GetBoolean()!);
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
@@ -3126,103 +3562,6 @@ namespace BooksGQL.State
             }
 
             return _stringParser.Parse(obj.Value.GetString()!);
-        }
-    }
-
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class DeleteBookBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::BooksGQL.IDeleteBookResult>
-    {
-        private readonly global::StrawberryShake.IEntityStore _entityStore;
-        private readonly global::StrawberryShake.IEntityIdSerializer _idSerializer;
-        private readonly global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IDeleteBookResult> _resultDataFactory;
-        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
-        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Boolean, global::System.Boolean> _booleanParser;
-        public DeleteBookBuilder(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityIdSerializer idSerializer, global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IDeleteBookResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
-        {
-            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
-            _idSerializer = idSerializer ?? throw new global::System.ArgumentNullException(nameof(idSerializer));
-            _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
-            _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
-            _booleanParser = serializerResolver.GetLeafValueParser<global::System.Boolean, global::System.Boolean>("Boolean") ?? throw new global::System.ArgumentException("No serializer for type `Boolean` found.");
-        }
-
-        public global::StrawberryShake.IOperationResult<IDeleteBookResult> Build(global::StrawberryShake.Response<global::System.Text.Json.JsonDocument> response)
-        {
-            (IDeleteBookResult Result, DeleteBookResultInfo Info)? data = null;
-            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.IClientError>? errors = null;
-            if (response.Exception is null)
-            {
-                try
-                {
-                    if (response.Body != null)
-                    {
-                        if (response.Body.RootElement.TryGetProperty("data", out global::System.Text.Json.JsonElement dataElement) && dataElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
-                        {
-                            data = BuildData(dataElement);
-                        }
-
-                        if (response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
-                        {
-                            errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
-                        }
-                    }
-                }
-                catch (global::System.Exception ex)
-                {
-                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(ex.Message, exception: ex, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
-                }
-            }
-            else
-            {
-                if (response.Body != null && response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
-                {
-                    errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
-                }
-                else
-                {
-                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(response.Exception.Message, exception: response.Exception, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
-                }
-            }
-
-            return new global::StrawberryShake.OperationResult<IDeleteBookResult>(data?.Result, data?.Info, _resultDataFactory, errors);
-        }
-
-        private (IDeleteBookResult, DeleteBookResultInfo) BuildData(global::System.Text.Json.JsonElement obj)
-        {
-            var entityIds = new global::System.Collections.Generic.HashSet<global::StrawberryShake.EntityId>();
-            global::StrawberryShake.IEntityStoreSnapshot snapshot = default !;
-            _entityStore.Update(session =>
-            {
-                snapshot = session.CurrentSnapshot;
-            });
-            var resultInfo = new DeleteBookResultInfo(DeserializeNonNullableIDeleteBook_DeleteBook(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "deleteBook")), entityIds, snapshot.Version);
-            return (_resultDataFactory.Create(resultInfo), resultInfo);
-        }
-
-        private global::BooksGQL.State.DeleteBookResponseData DeserializeNonNullableIDeleteBook_DeleteBook(global::System.Text.Json.JsonElement? obj)
-        {
-            if (!obj.HasValue)
-            {
-                throw new global::System.ArgumentNullException();
-            }
-
-            var typename = obj.Value.GetProperty("__typename").GetString();
-            if (typename?.Equals("DeleteBookResponse", global::System.StringComparison.Ordinal) ?? false)
-            {
-                return new global::BooksGQL.State.DeleteBookResponseData(typename, deleted: DeserializeNonNullableBoolean(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "deleted")));
-            }
-
-            throw new global::System.NotSupportedException();
-        }
-
-        private global::System.Boolean DeserializeNonNullableBoolean(global::System.Text.Json.JsonElement? obj)
-        {
-            if (!obj.HasValue)
-            {
-                throw new global::System.ArgumentNullException();
-            }
-
-            return _booleanParser.Parse(obj.Value.GetBoolean()!);
         }
     }
 
@@ -3558,50 +3897,66 @@ namespace BooksGQL.State
         {
             var entityIds = new global::System.Collections.Generic.HashSet<global::StrawberryShake.EntityId>();
             global::StrawberryShake.IEntityStoreSnapshot snapshot = default !;
-            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId> booksId = default !;
+            global::BooksGQL.State.GetBooksResponseData booksId = default !;
             _entityStore.Update(session =>
             {
-                booksId = UpdateNonNullableIGetBooks_BooksEntityNonNullableArray(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "books"), entityIds);
+                booksId = DeserializeNonNullableIGetBooks_Books(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "books"), entityIds);
                 snapshot = session.CurrentSnapshot;
             });
             var resultInfo = new GetBooksResultInfo(booksId, entityIds, snapshot.Version);
             return (_resultDataFactory.Create(resultInfo), resultInfo);
         }
 
-        private global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId> UpdateNonNullableIGetBooks_BooksEntityNonNullableArray(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        private global::BooksGQL.State.GetBooksResponseData DeserializeNonNullableIGetBooks_Books(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
         {
             if (!obj.HasValue)
             {
                 throw new global::System.ArgumentNullException();
             }
 
-            var bookTypes = new global::System.Collections.Generic.List<global::StrawberryShake.EntityId>();
-            foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
+            var typename = obj.Value.GetProperty("__typename").GetString();
+            if (typename?.Equals("GetBooksResponse", global::System.StringComparison.Ordinal) ?? false)
             {
-                bookTypes.Add(UpdateNonNullableIGetBooks_BooksEntity(session, child, entityIds));
+                return new global::BooksGQL.State.GetBooksResponseData(typename, data: UpdateIGetBooks_Books_DataEntityArray(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "data"), entityIds), pageInfo: DeserializeIGetBooks_Books_PageInfo(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "pageInfo")));
             }
 
-            return bookTypes;
+            throw new global::System.NotSupportedException();
         }
 
-        private global::StrawberryShake.EntityId UpdateNonNullableIGetBooks_BooksEntity(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        private global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? UpdateIGetBooks_Books_DataEntityArray(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
         {
             if (!obj.HasValue)
             {
-                throw new global::System.ArgumentNullException();
+                return null;
+            }
+
+            var bookModels = new global::System.Collections.Generic.List<global::StrawberryShake.EntityId?>();
+            foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
+            {
+                bookModels.Add(UpdateIGetBooks_Books_DataEntity(session, child, entityIds));
+            }
+
+            return bookModels;
+        }
+
+        private global::StrawberryShake.EntityId? UpdateIGetBooks_Books_DataEntity(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
             }
 
             global::StrawberryShake.EntityId entityId = _idSerializer.Parse(obj.Value);
             entityIds.Add(entityId);
-            if (entityId.Name.Equals("BookType", global::System.StringComparison.Ordinal))
+            if (entityId.Name.Equals("BookModel", global::System.StringComparison.Ordinal))
             {
-                if (session.CurrentSnapshot.TryGetEntity(entityId, out global::BooksGQL.State.BookTypeEntity? entity))
+                if (session.CurrentSnapshot.TryGetEntity(entityId, out global::BooksGQL.State.BookModelEntity? entity))
                 {
-                    session.SetEntity(entityId, new global::BooksGQL.State.BookTypeEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "title")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "author")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "year")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "country")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "imageLink")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "stock"))));
+                    session.SetEntity(entityId, new global::BooksGQL.State.BookModelEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "title")), DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "author")), entity.Year, entity.Country, entity.Language, DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "imagelink")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "stock")), entity.Description));
                 }
                 else
                 {
-                    session.SetEntity(entityId, new global::BooksGQL.State.BookTypeEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "title")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "author")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "year")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "country")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "imageLink")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "stock"))));
+                    session.SetEntity(entityId, new global::BooksGQL.State.BookModelEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "title")), DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "author")), default !, default !, default !, DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "imagelink")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "stock")), default !));
                 }
 
                 return entityId;
@@ -3620,29 +3975,31 @@ namespace BooksGQL.State
             return _intParser.Parse(obj.Value.GetInt32()!);
         }
 
-        private global::System.String DeserializeNonNullableString(global::System.Text.Json.JsonElement? obj)
+        private global::System.String? DeserializeString(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
-                throw new global::System.ArgumentNullException();
+                return null;
             }
 
             return _stringParser.Parse(obj.Value.GetString()!);
         }
-    }
 
-    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
-    public partial class CreateBookResponseData
-    {
-        public CreateBookResponseData(global::System.String __typename, global::StrawberryShake.EntityId? book = default !)
+        private global::BooksGQL.State.PageInfoData? DeserializeIGetBooks_Books_PageInfo(global::System.Text.Json.JsonElement? obj)
         {
-            this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
-            Book = book;
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            var typename = obj.Value.GetProperty("__typename").GetString();
+            if (typename?.Equals("PageInfo", global::System.StringComparison.Ordinal) ?? false)
+            {
+                return new global::BooksGQL.State.PageInfoData(typename, total: DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "total")));
+            }
+
+            throw new global::System.NotSupportedException();
         }
-
-        public global::System.String __typename { get; }
-
-        public global::StrawberryShake.EntityId? Book { get; }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
@@ -3657,6 +4014,20 @@ namespace BooksGQL.State
         public global::System.String __typename { get; }
 
         public global::System.Boolean? Deleted { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class CreateBookResponseData
+    {
+        public CreateBookResponseData(global::System.String __typename, global::StrawberryShake.EntityId? book = default !)
+        {
+            this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
+            Book = book;
+        }
+
+        public global::System.String __typename { get; }
+
+        public global::StrawberryShake.EntityId? Book { get; }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
@@ -3688,6 +4059,37 @@ namespace BooksGQL.State
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class GetBooksResponseData
+    {
+        public GetBooksResponseData(global::System.String __typename, global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? data = default !, global::BooksGQL.State.PageInfoData? pageInfo = default !)
+        {
+            this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
+            Data = data;
+            PageInfo = pageInfo;
+        }
+
+        public global::System.String __typename { get; }
+
+        public global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId?>? Data { get; }
+
+        public global::BooksGQL.State.PageInfoData? PageInfo { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
+    public partial class PageInfoData
+    {
+        public PageInfoData(global::System.String __typename, global::System.Int32? total = default !)
+        {
+            this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
+            Total = total;
+        }
+
+        public global::System.String __typename { get; }
+
+        public global::System.Int32? Total { get; }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.16.0.0")]
     public partial class BooksClientEntityIdFactory : global::StrawberryShake.IEntityIdSerializer
     {
         private static readonly global::System.Text.Json.JsonWriterOptions _options = new global::System.Text.Json.JsonWriterOptions()
@@ -3698,7 +4100,6 @@ namespace BooksGQL.State
             return __typename switch
             {
                 "BookModel" => ParseBookModelEntityId(obj, __typename),
-                "BookType" => ParseBookTypeEntityId(obj, __typename),
                 _ => throw new global::System.NotSupportedException()};
         }
 
@@ -3707,7 +4108,6 @@ namespace BooksGQL.State
             return entityId.Name switch
             {
                 "BookModel" => FormatBookModelEntityId(entityId),
-                "BookType" => FormatBookTypeEntityId(entityId),
                 _ => throw new global::System.NotSupportedException()};
         }
 
@@ -3717,23 +4117,6 @@ namespace BooksGQL.State
         }
 
         private global::System.String FormatBookModelEntityId(global::StrawberryShake.EntityId entityId)
-        {
-            using var writer = new global::StrawberryShake.Internal.ArrayWriter();
-            using var jsonWriter = new global::System.Text.Json.Utf8JsonWriter(writer, _options);
-            jsonWriter.WriteStartObject();
-            jsonWriter.WriteString("__typename", entityId.Name);
-            jsonWriter.WriteNumber("id", (global::System.Int32)entityId.Value);
-            jsonWriter.WriteEndObject();
-            jsonWriter.Flush();
-            return global::System.Text.Encoding.UTF8.GetString(writer.GetInternalBuffer(), 0, writer.Length);
-        }
-
-        private global::StrawberryShake.EntityId ParseBookTypeEntityId(global::System.Text.Json.JsonElement obj, global::System.String type)
-        {
-            return new global::StrawberryShake.EntityId(type, obj.GetProperty("id").GetInt32()!);
-        }
-
-        private global::System.String FormatBookTypeEntityId(global::StrawberryShake.EntityId entityId)
         {
             using var writer = new global::StrawberryShake.Internal.ArrayWriter();
             using var jsonWriter = new global::System.Text.Json.Utf8JsonWriter(writer, _options);
@@ -3769,8 +4152,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 return new ClientServiceProvider(global::Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(serviceCollection));
             });
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => new global::BooksGQL.State.BooksClientStoreAccessor(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IEntityStore>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IEntityIdSerializer>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.IOperationRequestFactory>>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.IOperationResultDataFactory>>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp))));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.CreateBookMutation>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.DeleteBookMutation>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.CreateBookMutation>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.UpdateBookMutation>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.GetBookByIdQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.GetBooksQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
@@ -3791,7 +4174,7 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookModelEntity, global::BooksGQL.CreateBook_CreateBook_Book_BookModel>, global::BooksGQL.State.CreateBook_CreateBook_Book_BookModelFromBookModelEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookModelEntity, global::BooksGQL.UpdateBook_UpdateBook_Book_BookModel>, global::BooksGQL.State.UpdateBook_UpdateBook_Book_BookModelFromBookModelEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookModelEntity, global::BooksGQL.GetBookById_BookById_Book_BookModel>, global::BooksGQL.State.GetBookById_BookById_Book_BookModelFromBookModelEntityMapper>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookTypeEntity, global::BooksGQL.GetBooks_Books_BookType>, global::BooksGQL.State.GetBooks_Books_BookTypeFromBookTypeEntityMapper>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::BooksGQL.State.BookModelEntity, global::BooksGQL.GetBooks_Books_Data_BookModel>, global::BooksGQL.State.GetBooks_Books_Data_BookModelFromBookModelEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.StringSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.BooleanSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.ByteSerializer>(services);
@@ -3810,14 +4193,8 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.JsonSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::BooksGQL.CreateBookInputInputValueFormatter>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::BooksGQL.UpdateBookInputInputValueFormatter>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::BooksGQL.PagingInputInputValueFormatter>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializerResolver>(services, sp => new global::StrawberryShake.Serialization.SerializerResolver(global::System.Linq.Enumerable.Concat(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.Serialization.ISerializer>>(parentServices), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.Serialization.ISerializer>>(sp))));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.ICreateBookResult>, global::BooksGQL.State.CreateBookResultFactory>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.ICreateBookResult>>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.ICreateBookMutation>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::BooksGQL.ICreateBookResult>, global::BooksGQL.State.CreateBookBuilder>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::BooksGQL.ICreateBookResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::BooksGQL.ICreateBookResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::BooksGQL.ICreateBookResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::BooksGQL.CreateBookMutation>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::BooksGQL.ICreateBookMutation>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.CreateBookMutation>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IDeleteBookResult>, global::BooksGQL.State.DeleteBookResultFactory>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IDeleteBookResult>>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.IDeleteBookMutation>(sp));
@@ -3825,6 +4202,13 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::BooksGQL.IDeleteBookResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::BooksGQL.IDeleteBookResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::BooksGQL.IDeleteBookResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::BooksGQL.DeleteBookMutation>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::BooksGQL.IDeleteBookMutation>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.DeleteBookMutation>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.ICreateBookResult>, global::BooksGQL.State.CreateBookResultFactory>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.ICreateBookResult>>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.ICreateBookMutation>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::BooksGQL.ICreateBookResult>, global::BooksGQL.State.CreateBookBuilder>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::BooksGQL.ICreateBookResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::BooksGQL.ICreateBookResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::BooksGQL.ICreateBookResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::BooksGQL.CreateBookMutation>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::BooksGQL.ICreateBookMutation>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.CreateBookMutation>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IUpdateBookResult>, global::BooksGQL.State.UpdateBookResultFactory>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::BooksGQL.IUpdateBookResult>>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::BooksGQL.IUpdateBookMutation>(sp));
