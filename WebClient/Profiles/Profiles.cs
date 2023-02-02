@@ -17,5 +17,6 @@ public class Profiles : Profile
         CreateMap<IGetBookById_BookById_Book, Book>();
         CreateMap<ICreateBook_CreateBook_Book, Book>();
         CreateMap<IUpdateBook_UpdateBook_Book, Book>();
+        CreateMap<IGetBooks_Books_Data, Book>();
     }
 }
