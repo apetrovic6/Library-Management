@@ -24,8 +24,7 @@ public class EventProcessor : IEventProcessor
         switch (eventType)
         {
             case EventType.AuthorUpdated:
-                //TODO
-                
+                UpdateAuthor(message);
             break;
                 default:
                     break;
@@ -41,7 +40,6 @@ public class EventProcessor : IEventProcessor
         {
             case "Author_Updated":
                 Console.WriteLine("--> Author Updated Event Detected");
-                UpdateAuthor(notificationMessage);
                 return EventType.AuthorUpdated;
             default:
                 Console.WriteLine("--> Event type unknown");
