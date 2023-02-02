@@ -1,6 +1,11 @@
 ﻿@page "/books"
 @inherits BooksBase
 
+<div class="d-flex">
+    <MudText Typo="Typo.h1" Class="align-self-center">Books</MudText>
+    <MudSpacer/>
+    <MudText Typo="Typo.subtitle1" Class="align-self-center">Total: @PageInfo.Total</MudText>
+</div>
 
 <div class="d-flex">
     <MudSelect T="int" Label="Count" Class="w-25 my-5" FullWidth="false" Value="@PageInfo.PageSize" AnchorOrigin="Origin.BottomCenter" ValueChanged="@PageSizeChanged">
@@ -15,13 +20,13 @@
     <MudButton OnClick="@ApplyFilters" Variant="Variant.Filled" ButtonType="ButtonType.Submit" Color="Color.Primary" Class="align-self-center" Style="width: 100px; height: 50px">Search</MudButton>
 </div>
 
-<MudGrid Spacing="5"  Justify="Justify.FlexStart">
+<MudGrid Spacing="5" Justify="Justify.FlexStart">
     @{
         if (FetchedBooks.Any())
         {
             @foreach (var book in FetchedBooks)
             {
-                <MudItem xs="12" sm="6" md="4" lg="3" xl="2" @onclick="@(e => NavigateToBook(book.Id))">
+                <MudItem xs="12" sm="6" md="4" lg="3" xl="2" @onclick="@(() => NavigateToBook(book.Id))">
                     <MudCard Elevation="1">
                         <MudCardContent>
                             <MudCardMedia Image="@book?.ImageLink" Height="400" Title="@book?.Title"/>
@@ -34,7 +39,7 @@
                             <MudText Align="Align.Right" Typo="Typo.body2">In Stock: @book?.Stock pc</MudText>
                         </MudCardContent>
                     </MudCard>
-                 </MudItem>
+                </MudItem>
             }
         }
     }
