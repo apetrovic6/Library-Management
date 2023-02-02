@@ -11,11 +11,14 @@ public class AuthorService : Author.AuthorBase
 {
     private readonly IDbContextFactory<AuthorsDbContext> _contextFactory;
     private readonly IMapper _mapper;
+    private readonly IMessageBusClient _messageBusClient;
 
-    public AuthorService(IDbContextFactory<AuthorsDbContext> _contextFactory, IMapper mapper )
+    public AuthorService(IDbContextFactory<AuthorsDbContext> _contextFactory, IMapper mapper,
+        IMessageBusClient messageBusClient)
     {
         this._contextFactory = _contextFactory;
         _mapper = mapper;
+        _messageBusClient = messageBusClient;
     }
     public override async Task<GetAuthorsResponse> GetAuthors(GetAuthorsRequest request, ServerCallContext context)
     {
@@ -57,7 +60,17 @@ public class AuthorService : Author.AuthorBase
         
         dbContext.Entry(author).CurrentValues.SetValues(request);
         await dbContext.SaveChangesAsync();
-        
+
+        try
+        {
+            var published = new AuthorPublishedDto() { Name = request.Name, Id = request.Id, Event = "Author_Updated" };
+            _messageBusClient.Publish(published);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"--> Could not publish: {e.Message}");
+        }
+
         await dbContext.DisposeAsync();
         return _mapper.Map<UpdateAuthorResponse>(author);
     }
