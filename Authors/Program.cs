@@ -12,7 +12,7 @@ builder.Services.AddGrpc();
 builder.Services.AddPooledDbContextFactory<AuthorsDbContext>(
     opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection"))
 );
-
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
