@@ -17,17 +17,14 @@ public class Query
         _mapper = mapper;
     }
 
-    public async Task<List<BookType>> GetBooks(PagingInput paging)
+    public async Task<GetBooksResponse> GetBooks(PagingInput paging)
     {
         var pagingInfo = new PageInfo { Page = paging.Page, PageSize = paging.PageSize };
         var bookRequest = new GetBooksRequest { Pageinfo = pagingInfo };
         
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-        var booksRes = await client.GetBooksAsync(bookRequest);
-        var bookList = booksRes.Data.ToList();
-        
-        return _mapper.Map<List<BookType>>(bookList);
+       return await client.GetBooksAsync(bookRequest);
     }
 
     public async Task<GetBookByIdResponse> GetBookById(int id)
