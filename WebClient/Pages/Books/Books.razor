@@ -2,7 +2,18 @@
 @inherits BooksBase
 
 
-<MudText Typo="Typo.h1" Class="my-5">Books</MudText>
+<div class="d-flex">
+    <MudSelect T="int" Label="Count" Class="w-25 my-5" FullWidth="false" Value="@PageInfo.PageSize" AnchorOrigin="Origin.BottomCenter" ValueChanged="@PageSizeChanged">
+        <MudSelectItem Value="@(5)"/>
+        <MudSelectItem Value="@(10)"/>
+        <MudSelectItem Value="@(20)"/>
+        <MudSelectItem Value="@(30)"/>
+        <MudSelectItem Value="@(40)"/>
+        <MudSelectItem Value="@(50)"/>
+    </MudSelect>
+    <MudSpacer />
+    <MudButton OnClick="@ApplyFilters" Variant="Variant.Filled" ButtonType="ButtonType.Submit" Color="Color.Primary" Class="align-self-center" Style="width: 100px; height: 50px">Search</MudButton>
+</div>
 
 <MudGrid Spacing="5"  Justify="Justify.FlexStart">
     @{
@@ -28,3 +39,5 @@
         }
     }
 </MudGrid>
+
+<MudPagination Color="Color.Primary" Count="@PageCount" Class="d-flex justify-center my-5" SelectedChanged="@PageChanged"/>
