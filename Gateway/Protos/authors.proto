@@ -1,0 +1,61 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Authors";
+
+package authorsGRPC;
+
+service Author {
+  rpc GetAuthors (GetAuthorsRequest) returns (GetAuthorsResponse);
+  rpc GetAuthorById (GetAuthorByIdRequest) returns (GetAuthorByIdResponse);
+  rpc CreateAuthor (CreateAuthorRequest) returns (CreateAuthorResponse);
+  rpc UpdateAuthor (UpdateAuthorRequest) returns (UpdateAuthorResponse);
+  rpc DeleteAuthor (DeleteAuthorRequest) returns (DeleteAuthorResponse);
+}
+
+message AuthorDTO {
+  int32 id = 1;
+  string name = 2;
+}
+
+message GetAuthorsRequest {
+
+}
+
+message GetAuthorsResponse {
+  repeated AuthorDTO authors = 1;
+}
+
+message GetAuthorByIdRequest {
+  int32 id = 1;
+}
+
+message GetAuthorByIdResponse {
+  AuthorDTO author = 1;
+}
+
+message CreateAuthorRequest {
+  string name = 1;
+}
+
+message CreateAuthorResponse {
+  int32 id = 1;
+  string name = 2;
+}
+
+message UpdateAuthorRequest {
+  int32  id = 1;
+  string name = 2;
+}
+
+message UpdateAuthorResponse {
+  AuthorDTO author = 1;
+}
+
+message DeleteAuthorRequest {
+  int32 id = 1;
+}
+
+message DeleteAuthorResponse {
+  bool  deleted = 1;
+  string message = 2;
+}
