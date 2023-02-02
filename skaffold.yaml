@@ -25,6 +25,13 @@ build:
     sync:
       infer:
         - "*.cs"
+  - image: apetrovic6/authors-service
+    context: Authors
+    docker: 
+      dockerfile: Dockerfile
+    sync:
+      infer:
+        - "*.cs"
 manifests:
   rawYaml:
   - K8S/gateway-depl.yml
@@ -34,3 +41,7 @@ manifests:
   - K8S/client-depl.yml
   - K8S/books-db-depl.yml
   - K8S/ingress-srv.yml
+  - K8S/authors-pvc.yml
+  - K8S/authors-db-depl.yml
+  - K8S/authors-db-secret.yml
+  - K8S/authors-depl.yml
