@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Authors;
+using AutoMapper;
 using Books;
 using Gateway.GraphQL.Inputs;
 using Grpc.Net.Client;
@@ -40,5 +41,32 @@ public class Mutations
         var client = new Books.Books.BooksClient(channel);
         var request = new DeleteBookRequest { Id = id };
         return client.DeleteBook(request);
+    }
+
+    public async Task<CreateAuthorResponse> CreateAuthor(CreateAuthorInput authorInput)
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var client = new Author.AuthorClient(channel);
+        var request = new CreateAuthorRequest { Name = authorInput.Name };
+
+        return await client.CreateAuthorAsync(request);
+    }
+
+    public async Task<UpdateAuthorResponse> UpdateAuthor(UpdateAuthorInput authorInput)
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var client = new Author.AuthorClient(channel);
+        var request = new UpdateAuthorRequest { Name = authorInput.Name, Id = authorInput.Id };
+
+        return await client.UpdateAuthorAsync(request);
+    }
+
+    public async Task<DeleteAuthorResponse> DeleteAuthor(int id)
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var client = new Author.AuthorClient(channel);
+        var request = new DeleteAuthorRequest { Id = id };
+
+        return await client.DeleteAuthorAsync(request);
     }
 }
