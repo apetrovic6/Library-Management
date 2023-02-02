@@ -18,4 +18,29 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 app.MapGrpcService<GreeterService>();
 
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+
+    await Task.Delay(5000);
+    
+    try
+    {
+        var contextFactory = services.GetRequiredService<IDbContextFactory<AuthorsDbContext>>();
+
+        using (var context = contextFactory.CreateDbContext())
+        {
+            await context.Database.MigrateAsync();
+            await InitDB.Init(context, loggerFactory);
+        }
+    }
+    catch (Exception e)
+    {
+        var logger = loggerFactory.CreateLogger<Program>();
+        logger.LogError(e, "An Error occured during migration");
+    }
+}
+
 app.Run();
