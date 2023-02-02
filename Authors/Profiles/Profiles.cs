@@ -1,4 +1,5 @@
-﻿using Authors.Models;
+﻿using Authors.DTO;
+using Authors.Models;
 using AutoMapper;
 
 namespace Authors.Profiles;
@@ -26,5 +27,6 @@ public class Profiles : Profile
             .ForMember(dest => dest.Author,
                 src => src.MapFrom(
                     x => x));
+        CreateMap<AuthorDTO, AuthorPublishedDto>();
     }
 }
