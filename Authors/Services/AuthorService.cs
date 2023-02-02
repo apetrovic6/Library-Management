@@ -22,44 +22,48 @@ public class AuthorService : Author.AuthorBase
         _mapper = mapper;
         _messageBusClient = messageBusClient;
     }
+
     public override async Task<GetAuthorsResponse> GetAuthors(GetAuthorsRequest request, ServerCallContext context)
     {
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
         var authors = await dbContext.Authors.ToListAsync();
-    
+
         await dbContext.DisposeAsync();
         return _mapper.Map<GetAuthorsResponse>(authors);
     }
 
-    public override async Task<GetAuthorByIdResponse> GetAuthorById(GetAuthorByIdRequest request, ServerCallContext context)
+    public override async Task<GetAuthorByIdResponse> GetAuthorById(GetAuthorByIdRequest request,
+        ServerCallContext context)
     {
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
         var author = await dbContext.Authors.Where(x => x.Id == request.Id).FirstOrDefaultAsync();
-    
+
         await dbContext.DisposeAsync();
         return _mapper.Map<GetAuthorByIdResponse>(author);
     }
 
-    public override async Task<CreateAuthorResponse> CreateAuthor(CreateAuthorRequest request, ServerCallContext context)
+    public override async Task<CreateAuthorResponse> CreateAuthor(CreateAuthorRequest request,
+        ServerCallContext context)
     {
-        await using var dbContext = await  _contextFactory.CreateDbContextAsync();
+        await using var dbContext = await _contextFactory.CreateDbContextAsync();
         var author = _mapper.Map<AuthorEntity>(request);
 
         await dbContext.Authors.AddAsync(author);
         await dbContext.SaveChangesAsync();
-        
+
         await dbContext.DisposeAsync();
         return _mapper.Map<CreateAuthorResponse>(author);
     }
 
-    public override async Task<UpdateAuthorResponse> UpdateAuthor(UpdateAuthorRequest request, ServerCallContext context)
+    public override async Task<UpdateAuthorResponse> UpdateAuthor(UpdateAuthorRequest request,
+        ServerCallContext context)
     {
-        await using var dbContext = await  _contextFactory.CreateDbContextAsync();
+        await using var dbContext = await _contextFactory.CreateDbContextAsync();
 
         var author = await dbContext.Authors.Where(x => x.Id == request.Id).FirstOrDefaultAsync();
-        
+
         if (author == null) throw new GraphQLException("Author not found");
-        
+
         dbContext.Entry(author).CurrentValues.SetValues(request);
         await dbContext.SaveChangesAsync();
 
@@ -77,19 +81,20 @@ public class AuthorService : Author.AuthorBase
         return _mapper.Map<UpdateAuthorResponse>(author);
     }
 
-    public override async Task<DeleteAuthorResponse> DeleteAuthor(DeleteAuthorRequest request, ServerCallContext context)
+    public override async Task<DeleteAuthorResponse> DeleteAuthor(DeleteAuthorRequest request,
+        ServerCallContext context)
     {
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
         var authorToDelete = await dbContext.Authors.Where(x => x.Id == request.Id).FirstOrDefaultAsync();
-        
-        if (authorToDelete == null) return  new DeleteAuthorResponse { Deleted = false, Message = "Not Found"};
-        
+
+        if (authorToDelete == null) return new DeleteAuthorResponse { Deleted = false, Message = "Not Found" };
+
         if (authorToDelete == null) throw new GraphQLException(new Error("Author not found"));
-        
+
         dbContext.Authors.Remove(authorToDelete);
         var deleted = (await dbContext.SaveChangesAsync()) > 0;
-         
+
         await dbContext.DisposeAsync();
-        return new DeleteAuthorResponse { Deleted = deleted, Message = $"Deleted Author: {authorToDelete.Name}"};
+        return new DeleteAuthorResponse { Deleted = deleted, Message = $"Deleted Author: {authorToDelete.Name}" };
     }
 }
