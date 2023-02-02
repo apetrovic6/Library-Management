@@ -1,6 +1,7 @@
 using System.Reflection;
 using Authors.Data;
 using Authors.Services;
+using Authors.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,8 @@ builder.Services.AddPooledDbContextFactory<AuthorsDbContext>(
     opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection"))
 );
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,7 +28,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 
-    await Task.Delay(5000);
+    await Task.Delay(10000);
     
     try
     {
