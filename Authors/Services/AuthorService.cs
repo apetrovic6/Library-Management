@@ -1,5 +1,7 @@
 ﻿using Authors.Data;
+using Authors.DTO;
 using Authors.Models;
+using Authors.Services.Interfaces;
 using AutoMapper;
 using Grpc.Core;
 using HotChocolate;
