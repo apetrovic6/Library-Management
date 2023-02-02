@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Authors;
+using AutoMapper;
 using Books;
 using Gateway.GraphQL.Inputs;
 using Gateway.GraphQL.Types;
@@ -32,5 +33,19 @@ public class Query
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
         return await client.GetBookByIdAsync(new GetBookByIdRequest{ Id = id});
+    }
+
+    public async Task<GetAuthorsResponse> GetAuthors()
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var client = new Author.AuthorClient(channel);
+        return await client.GetAuthorsAsync(new GetAuthorsRequest());
+    }
+    
+    public async Task<GetAuthorByIdResponse> GetAuthorById(int id)
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var client = new Author.AuthorClient(channel);
+        return await client.GetAuthorByIdAsync(new GetAuthorByIdRequest {Id = id} );
     }
 }
