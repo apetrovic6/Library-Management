@@ -2,7 +2,7 @@
 
 namespace Authors.Models;
 
-public class Author
+public class AuthorEntity
 {
     public int Id { get; set; }
     

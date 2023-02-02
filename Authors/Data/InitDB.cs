@@ -13,10 +13,10 @@ public static class InitDB
         string jsonData = File.ReadAllText("./Data/SampleData.json", Encoding.UTF8);
         var data = JsonSerializer.Deserialize<List<SampleDataModel>>(jsonData);
 
-        List<Author> authors = new(); 
+        List<AuthorEntity> authors = new(); 
         foreach (var author in data)
         {
-            var a = new Author { Name = author.name };
+            var a = new AuthorEntity() { Name = author.name };
             authors.Add(a);
         }
         
