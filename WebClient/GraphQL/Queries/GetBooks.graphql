@@ -1,11 +1,14 @@
-query GetBooks {
-  books {
-    id
-    title
-    author
-    year
-    country
-    imageLink
-    stock
+query GetBooks ($paging: PagingInput!){
+  books (paging: $paging) {
+    data {
+      id
+      title
+      author
+      imagelink
+      stock
+    }
+    pageInfo {
+      total
+    }
   }
 }
