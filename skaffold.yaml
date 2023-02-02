@@ -45,3 +45,4 @@ manifests:
   - K8S/authors-db-depl.yml
   - K8S/authors-db-secret.yml
   - K8S/authors-depl.yml
+  - K8S/rabbit-mq-depl.yml
