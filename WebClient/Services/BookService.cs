@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Books.Models;
 using BooksGQL;
+using MudBlazor.Extensions;
 using StrawberryShake;
 using WebClient.DTO;
 using WebClient.Services.Interfaces;
@@ -16,11 +18,17 @@ public class BookService : IGenericService<Book>
         _client = client;
         _mapper = mapper;
     }
-
-    public async Task<List<Book>> GetAll()
+    public async Task<(PagedResult<Book>, IReadOnlyList<IClientError>, bool IsSuccess)> GetAll<PagingInput>(PagingInput pagingInput)
     {
-        var res = await _client.GetBooks.ExecuteAsync();
-        return _mapper.Map<IReadOnlyList<IGetBooks_Books?>, List<Book>>(res?.Data?.Books);
+        var input = pagingInput.As<BooksGQL.PagingInput>();
+        
+        var res = await _client.GetBooks.ExecuteAsync(input);
+        var a = res.Data.Books.Data;
+        var bookList = _mapper.Map<IReadOnlyList<IGetBooks_Books_Data>, List<Book>>(a);
+        var pagedResult = new PagedResult<Book>
+            { Data = bookList, PageInfo = new PageInfo { Total = res.Data.Books.PageInfo.Total } };
+
+        return (pagedResult, res.Errors, res.IsSuccessResult());
     }
 
     public async Task<Book> GetById(int id)
