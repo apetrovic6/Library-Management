@@ -51,4 +51,11 @@ public class Query
         var client = new Author.AuthorClient(channel);
         return await client.GetAuthorByIdAsync(new GetAuthorByIdRequest {Id = id} );
     }
+
+    public async Task<GetAuthorByNameResponse> GetAuthorByName(string name)
+    {
+        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var client = new Author.AuthorClient(channel);
+        return await client.GetAuthorByNameAsync(new GetAuthorByNameRequest { Name = name });
+    }
 }
