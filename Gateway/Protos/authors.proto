@@ -42,6 +42,14 @@ message GetAuthorByIdResponse {
   AuthorDTO author = 1;
 }
 
+message GetAuthorByNameRequest {
+  string name = 1;
+}
+
+message GetAuthorByNameResponse {
+  repeated  AuthorDTO authors = 1;
+}
+
 message CreateAuthorRequest {
   string name = 1;
 }
