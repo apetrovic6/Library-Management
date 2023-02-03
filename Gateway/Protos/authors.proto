@@ -7,9 +7,17 @@ package authorsGRPC;
 service Author {
   rpc GetAuthors (GetAuthorsRequest) returns (GetAuthorsResponse);
   rpc GetAuthorById (GetAuthorByIdRequest) returns (GetAuthorByIdResponse);
+  rpc GetAuthorByName (GetAuthorByNameRequest) returns (GetAuthorByNameResponse);
   rpc CreateAuthor (CreateAuthorRequest) returns (CreateAuthorResponse);
   rpc UpdateAuthor (UpdateAuthorRequest) returns (UpdateAuthorResponse);
   rpc DeleteAuthor (DeleteAuthorRequest) returns (DeleteAuthorResponse);
+}
+
+message AuthorPageInfo {
+  int32 page = 1;
+  int32 page_size = 2;
+  int32 skip = 3;
+  int32 total = 4;
 }
 
 message AuthorDTO {
@@ -18,11 +26,12 @@ message AuthorDTO {
 }
 
 message GetAuthorsRequest {
-
+  AuthorPageInfo page_info = 1;
 }
 
 message GetAuthorsResponse {
-  repeated AuthorDTO authors = 1;
+  repeated AuthorDTO data = 1;
+  AuthorPageInfo page_info = 2;
 }
 
 message GetAuthorByIdRequest {
