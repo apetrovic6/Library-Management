@@ -2,7 +2,6 @@
 using AutoMapper;
 using Books;
 using Gateway.GraphQL.Inputs;
-using Gateway.GraphQL.Types;
 using Grpc.Net.Client;
 
 namespace Gateway.GraphQL;
@@ -22,34 +21,34 @@ public class Query
     {
         var pagingInfo = new PageInfo { Page = paging.Page, PageSize = paging.PageSize };
         var bookRequest = new GetBooksRequest { Pageinfo = pagingInfo };
-        
+
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-       return await client.GetBooksAsync(bookRequest);
+        return await client.GetBooksAsync(bookRequest);
     }
 
     public async Task<GetBookByIdResponse> GetBookById(int id)
     {
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);
-        return await client.GetBookByIdAsync(new GetBookByIdRequest{ Id = id});
+        return await client.GetBookByIdAsync(new GetBookByIdRequest { Id = id });
     }
 
     public async Task<GetAuthorsResponse> GetAuthors(PagingInput paging)
     {
         var pagingInfo = new AuthorPageInfo() { Page = paging.Page, PageSize = paging.PageSize };
-        var authorsRequest = new GetAuthorsRequest { PageInfo = pagingInfo};
-        
+        var authorsRequest = new GetAuthorsRequest { PageInfo = pagingInfo };
+
         var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
         var client = new Author.AuthorClient(channel);
         return await client.GetAuthorsAsync(authorsRequest);
     }
-    
+
     public async Task<GetAuthorByIdResponse> GetAuthorById(int id)
     {
         var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
         var client = new Author.AuthorClient(channel);
-        return await client.GetAuthorByIdAsync(new GetAuthorByIdRequest {Id = id} );
+        return await client.GetAuthorByIdAsync(new GetAuthorByIdRequest { Id = id });
     }
 
     public async Task<GetAuthorByNameResponse> GetAuthorByName(string name)
