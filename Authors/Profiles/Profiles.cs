@@ -9,7 +9,7 @@ public class Profiles : Profile
     public Profiles()
     {
         CreateMap<List<AuthorEntity>, GetAuthorsResponse>()
-            .ForMember(dest => dest.Authors,
+            .ForMember(dest => dest.Data,
                 src => src.MapFrom(
                     x => x
                 )
@@ -28,5 +28,12 @@ public class Profiles : Profile
                 src => src.MapFrom(
                     x => x));
         CreateMap<AuthorDTO, AuthorPublishedDto>();
+        CreateMap<PagedResult<AuthorEntity>, GetAuthorsResponse>()
+            .ForMember(dest => dest.Data, src => src.MapFrom(
+                x => x.Data
+            ))
+            .ForMember(dest => dest.PageInfo, src => src.MapFrom(
+                x => x.PageInfo
+            ));
     }
 }
