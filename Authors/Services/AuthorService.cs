@@ -50,6 +50,18 @@ public class AuthorService : Author.AuthorBase
         return _mapper.Map<GetAuthorByIdResponse>(author);
     }
 
+
+    public override async Task<GetAuthorByNameResponse> GetAuthorByName(GetAuthorByNameRequest request, ServerCallContext context)
+    {
+        await using var dbContext = await _contextFactory.CreateDbContextAsync();
+        Console.WriteLine(request);
+        
+        var authors = await dbContext.Authors.Where(a => 
+            EF.Functions.Like(a.Name.ToLower(), $"%{request.Name.ToLower()}%")).ToListAsync();
+        
+        return _mapper.Map<GetAuthorByNameResponse>(authors);
+    }
+
     public override async Task<CreateAuthorResponse> CreateAuthor(CreateAuthorRequest request,
         ServerCallContext context)
     {
