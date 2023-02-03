@@ -28,7 +28,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 
-    await Task.Delay(10000);
+    await Task.Delay(5000);
     
     try
     {
