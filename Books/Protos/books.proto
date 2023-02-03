@@ -25,7 +25,7 @@ message BookModel{
 }
 
 message GetBooksRequest{
-  PageInfo pageinfo = 1;
+  PageInfo page_info = 1;
 }
 
 message PageInfo {
