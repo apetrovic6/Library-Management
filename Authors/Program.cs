@@ -34,11 +34,11 @@ using (var scope = app.Services.CreateScope())
     {
         var contextFactory = services.GetRequiredService<IDbContextFactory<AuthorsDbContext>>();
 
-        using (var context = contextFactory.CreateDbContext())
-        {
-            await context.Database.MigrateAsync();
-            await InitDB.Init(context, loggerFactory);
-        }
+        await using var context = await contextFactory.CreateDbContextAsync();
+        await context.Database.MigrateAsync();
+        await InitDB.Init(context, loggerFactory);
+
+        await context.DisposeAsync();
     }
     catch (Exception e)
     {
