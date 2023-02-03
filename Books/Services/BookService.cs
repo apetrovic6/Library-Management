@@ -20,7 +20,7 @@ public class BookService : Books.BooksBase
 
     public override async Task<GetBooksResponse> GetBooks(GetBooksRequest request, ServerCallContext context)
     {
-        var pageInfo = new Paging(request.Pageinfo.Page, request.Pageinfo.PageSize);
+        var pageInfo = new Paging(request.PageInfo.Page, request.PageInfo.PageSize);
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
         var books = await dbContext.Books
             .Skip(pageInfo.Skip)
