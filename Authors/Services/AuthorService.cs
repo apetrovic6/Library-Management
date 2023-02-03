@@ -37,7 +37,7 @@ public class AuthorService : Author.AuthorBase
         var result = new PagedResult<AuthorEntity>(authors, info);
         
         await dbContext.DisposeAsync();
-        return _mapper.Map<GetAuthorsResponse>(authors);
+        return _mapper.Map<GetAuthorsResponse>(result);
     }
 
     public override async Task<GetAuthorByIdResponse> GetAuthorById(GetAuthorByIdRequest request,
