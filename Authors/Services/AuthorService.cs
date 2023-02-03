@@ -25,9 +25,17 @@ public class AuthorService : Author.AuthorBase
 
     public override async Task<GetAuthorsResponse> GetAuthors(GetAuthorsRequest request, ServerCallContext context)
     {
+        var pageInfo = new Paging(request.PageInfo.Page, request.PageInfo.PageSize);
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
-        var authors = await dbContext.Authors.ToListAsync();
+        var authors = await dbContext.Authors
+            .Skip(pageInfo.Skip)
+            .Take(pageInfo.PageSize)
+            .OrderBy(a => a.Name).ToListAsync();
+        var totalCount = await dbContext.Authors.CountAsync();
 
+        var info = new AuthorPageInfo() { Total = totalCount };
+        var result = new PagedResult<AuthorEntity>(authors, info);
+        
         await dbContext.DisposeAsync();
         return _mapper.Map<GetAuthorsResponse>(authors);
     }
