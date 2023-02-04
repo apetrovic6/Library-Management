@@ -31,16 +31,14 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 
-    await Task.Delay(5000);
+    await Task.Delay(7000);
     try
     {
         var contextFactory = services.GetRequiredService<IDbContextFactory<BooksDbContext>>();
-        
-        using(var context = contextFactory.CreateDbContext()){
-            await context.Database.MigrateAsync();
-            await InitDB.Init(context, loggerFactory);
-        }
 
+        await using var context = await contextFactory.CreateDbContextAsync();
+        await context.Database.MigrateAsync();
+        await InitDB.Init(context, loggerFactory);
     }
     catch (Exception e)
     {

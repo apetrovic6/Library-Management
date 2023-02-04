@@ -6,12 +6,18 @@
 type Query {
   books(paging: PagingInput!): GetBooksResponse!
   bookById(id: Int!): GetBookByIdResponse!
+  authors(paging: PagingInput!): GetAuthorsResponse!
+  authorById(id: Int!): GetAuthorByIdResponse!
+  authorByName(name: String!): GetAuthorByNameResponse!
 }
 
 type Mutations {
   createBook(bookInput: CreateBookInput!): CreateBookResponse!
   updateBook(id: Int! bookInput: UpdateBookInput!): UpdateBookResponse!
   deleteBook(id: Int!): DeleteBookResponse!
+  createAuthor(authorInput: CreateAuthorInput!): CreateAuthorResponse!
+  updateAuthor(authorInput: UpdateAuthorInput!): UpdateAuthorResponse!
+  deleteAuthor(id: Int!): DeleteAuthorResponse!
 }
 
 input PagingInput {
@@ -30,6 +36,25 @@ type GetBookByIdResponse {
   clone: GetBookByIdResponse
   calculateSize: Int!
   book: BookModel
+}
+
+type GetAuthorsResponse {
+  clone: GetAuthorsResponse
+  calculateSize: Int!
+  data: [AuthorDTO]
+  pageInfo: AuthorPageInfo
+}
+
+type GetAuthorByIdResponse {
+  clone: GetAuthorByIdResponse
+  calculateSize: Int!
+  author: AuthorDTO
+}
+
+type GetAuthorByNameResponse {
+  clone: GetAuthorByNameResponse
+  calculateSize: Int!
+  authors: [AuthorDTO]
 }
 
 type CreateBookResponse {
@@ -72,6 +97,51 @@ type DeleteBookResponse {
   calculateSize: Int!
   deleted: Boolean!
   message: String
+}
+
+type CreateAuthorResponse {
+  clone: CreateAuthorResponse
+  calculateSize: Int!
+  id: Int!
+  name: String
+}
+
+input CreateAuthorInput {
+  name: String!
+}
+
+type UpdateAuthorResponse {
+  clone: UpdateAuthorResponse
+  calculateSize: Int!
+  author: AuthorDTO
+}
+
+input UpdateAuthorInput {
+  id: Int!
+  name: String!
+}
+
+type DeleteAuthorResponse {
+  clone: DeleteAuthorResponse
+  calculateSize: Int!
+  deleted: Boolean!
+  message: String
+}
+
+type AuthorPageInfo {
+  clone: AuthorPageInfo
+  calculateSize: Int!
+  page: Int!
+  pageSize: Int!
+  skip: Int!
+  total: Int!
+}
+
+type AuthorDTO {
+  clone: AuthorDTO
+  calculateSize: Int!
+  id: Int!
+  name: String
 }
 
 type PageInfo {
