@@ -4,7 +4,7 @@
 }
 
 type Query {
-  books(paging: PagingInput!): GetBooksResponse!
+  books(paging: PagingInput! bookFilterInput: BookFilterInput!): GetBooksResponse!
   bookById(id: Int!): GetBookByIdResponse!
   authors(paging: PagingInput!): GetAuthorsResponse!
   authorById(id: Int!): GetAuthorByIdResponse!
@@ -30,6 +30,10 @@ type GetBooksResponse {
   calculateSize: Int!
   data: [BookModel]
   pageInfo: PageInfo
+}
+
+input BookFilterInput {
+  authorName: String!
 }
 
 type GetBookByIdResponse {

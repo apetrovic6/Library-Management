@@ -17,10 +17,13 @@ public class Query
         _mapper = mapper;
     }
 
-    public async Task<GetBooksResponse> GetBooks(PagingInput paging)
+    public async Task<GetBooksResponse> GetBooks(PagingInput paging, BookFilterInput bookFilterInput)
     {
+        
+        var bookFilter = new BookFilters() { AuthorName = bookFilterInput.AuthorName };
         var pagingInfo = new PageInfo { Page = paging.Page, PageSize = paging.PageSize };
-        var bookRequest = new GetBooksRequest { Pageinfo = pagingInfo };
+        
+        var bookRequest = new GetBooksRequest { PageInfo = pagingInfo, Filters = bookFilter};
 
         var channel = GrpcChannel.ForAddress(_configuration["BooksService"]);
         var client = new Books.Books.BooksClient(channel);

@@ -1,5 +1,5 @@
-query GetBooks ($paging: PagingInput!){
-  books (paging: $paging) {
+query GetBooks ($paging: PagingInput!, $filter: BookFilterInput!){
+  books (paging: $paging, bookFilterInput: $filter) {
     data {
       id
       title

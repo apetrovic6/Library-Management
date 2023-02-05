@@ -18,11 +18,11 @@ public class BookService : IGenericService<Book>
         _client = client;
         _mapper = mapper;
     }
-    public async Task<(PagedResult<Book>, IReadOnlyList<IClientError>, bool IsSuccess)> GetAll<PagingInput>(PagingInput pagingInput)
+    public async Task<(PagedResult<Book>, IReadOnlyList<IClientError>, bool IsSuccess)> GetAll<PagingInput, Filterinput>(PagingInput pagingInput,Filterinput filterInput)
     {
         var input = pagingInput.As<BooksGQL.PagingInput>();
-        
-        var res = await _client.GetBooks.ExecuteAsync(input);
+        var filter = filterInput.As<BookFilterInput>();
+        var res = await _client.GetBooks.ExecuteAsync(input, filter);
         var a = res.Data.Books.Data;
         var bookList = _mapper.Map<IReadOnlyList<IGetBooks_Books_Data>, List<Book>>(a);
         var pagedResult = new PagedResult<Book>
