@@ -35,5 +35,11 @@ public class Profiles : Profile
             .ForMember(dest => dest.PageInfo, src => src.MapFrom(
                 x => x.PageInfo
             ));
+        CreateMap<List<AuthorEntity>, GetAuthorByNameResponse>()
+            .ForMember(dest => dest.Authors,
+                src => src.MapFrom(
+                    x => x
+                )
+            );
     }
 }

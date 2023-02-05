@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using BooksGQL;
+using StrawberryShake;
 using WebClient.DTO;
+using WebClient.DTO.Authors;
 
 namespace WebClient.Profiles;
 
@@ -18,5 +20,6 @@ public class Profiles : Profile
         CreateMap<ICreateBook_CreateBook_Book, Book>();
         CreateMap<IUpdateBook_UpdateBook_Book, Book>();
         CreateMap<IGetBooks_Books_Data, Book>();
+        CreateMap<IGetAuthorByName_AuthorByName_Authors, AuthorDTO>();
     }
 }
