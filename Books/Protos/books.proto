@@ -26,6 +26,7 @@ message BookModel{
 
 message GetBooksRequest{
   PageInfo page_info = 1;
+  BookFilters filters = 2;
 }
 
 message PageInfo {
@@ -33,6 +34,10 @@ message PageInfo {
   int32 page_size = 2;
   int32 skip = 3;
   int32 total = 4;
+}
+
+message BookFilters {
+  string author_name = 1;
 }
 
 message GetBooksResponse {
