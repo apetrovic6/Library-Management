@@ -1,0 +1,8 @@
+query GetAuthorByName($name: String!) {
+  authorByName (name: $name) {
+      authors {
+        id
+        name
+    }
+  }
+}
