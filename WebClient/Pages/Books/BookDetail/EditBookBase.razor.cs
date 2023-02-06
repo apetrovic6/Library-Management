@@ -10,12 +10,12 @@ namespace WebClient.Pages.Books.BookDetail;
 public class EditBookBase : ComponentBase
 {
     [Inject] private IMapper _mapper { get; set; }
-    [Inject] private IGenericService<Book> _bookService { get; set; }
+    [Inject] private IGenericService<BookDto> _bookService { get; set; }
     [Inject] private NavigationManager Navigation { get; set; }
     [Inject] ISnackbar Snackbar { get; set; }
     [Parameter] public int BookId { get; set; }
 
-    protected Book? Book { get; set; }
+    protected BookDto? Book { get; set; }
 
     protected List<BreadcrumbItem> _breadcrumbItems;
 
@@ -46,7 +46,7 @@ public class EditBookBase : ComponentBase
     {
         var res = await _bookService.GetById(BookId);
         Book = res;
-        model =  _mapper.Map<Book, UpdateBookDto>(Book);
+        model =  _mapper.Map<BookDto, UpdateBookDto>(Book);
 
         _breadcrumbItems = new()
         {
