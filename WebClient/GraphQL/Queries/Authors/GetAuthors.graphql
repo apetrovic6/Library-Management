@@ -1,0 +1,11 @@
+query GetAuthors($pagingInput: PagingInput!, $filterInput: AuthorFilterInput!){
+  authors (paging: $pagingInput, filterInput: $filterInput) {
+    data {
+      id
+      name
+    }
+    pageInfo {
+      total
+    }
+  }
+}
