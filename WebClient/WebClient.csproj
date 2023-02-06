@@ -40,6 +40,15 @@
 
     <ItemGroup>
       <GraphQL Remove="Generated\**" />
+      <GraphQL Update="GraphQL\Queries\Books\GetBookById.graphql">
+        <Generator>MSBuild:Compile</Generator>
+      </GraphQL>
+      <GraphQL Update="GraphQL\Queries\Books\GetBooks.graphql">
+        <Generator>MSBuild:Compile</Generator>
+      </GraphQL>
+      <GraphQL Update="GraphQL\Queries\Authors\GetAuthorByName.graphql">
+        <Generator>MSBuild:Compile</Generator>
+      </GraphQL>
     </ItemGroup>
 
     <ItemGroup>
