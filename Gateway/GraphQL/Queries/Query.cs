@@ -37,10 +37,11 @@ public class Query
         return await client.GetBookByIdAsync(new GetBookByIdRequest { Id = id });
     }
 
-    public async Task<GetAuthorsResponse> GetAuthors(PagingInput paging)
+    public async Task<GetAuthorsResponse> GetAuthors(PagingInput paging, AuthorFilterInput filterInput)
     {
+        var filters = new AuthorFilters { AuthorName = filterInput.AuthorName };
         var pagingInfo = new AuthorPageInfo() { Page = paging.Page, PageSize = paging.PageSize };
-        var authorsRequest = new GetAuthorsRequest { PageInfo = pagingInfo };
+        var authorsRequest = new GetAuthorsRequest { PageInfo = pagingInfo , Filters = filters};
 
         var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
         var client = new Author.AuthorClient(channel);
