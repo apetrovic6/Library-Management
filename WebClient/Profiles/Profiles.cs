@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BooksGQL;
+using LibraryGQL;
 using StrawberryShake;
 using WebClient.DTO;
 using WebClient.DTO.Authors;
@@ -13,13 +13,14 @@ public class Profiles : Profile
         CreateMap<CreateBookDto, CreateBookInput>();
         CreateMap<UpdateBookDto, UpdateBookInput>();
         CreateMap<UpdateBookInput, UpdateBookDto>();
-        CreateMap<Book, UpdateBookDto>()
+        CreateMap<BookDto, UpdateBookDto>()
             .ForMember(dest => dest.Description, opt => opt.NullSubstitute(""));
-        CreateMap<IGetBooks_Books, Book>();
-        CreateMap<IGetBookById_BookById_Book, Book>();
-        CreateMap<ICreateBook_CreateBook_Book, Book>();
-        CreateMap<IUpdateBook_UpdateBook_Book, Book>();
-        CreateMap<IGetBooks_Books_Data, Book>();
-        CreateMap<IGetAuthorByName_AuthorByName_Authors, AuthorDTO>();
+        CreateMap<IGetBooks_Books, BookDto>();
+        CreateMap<IGetBookById_BookById_Book, BookDto>();
+        CreateMap<ICreateBook_CreateBook_Book, BookDto>();
+        CreateMap<IUpdateBook_UpdateBook_Book, BookDto>();
+        CreateMap<IGetBooks_Books_Data, BookDto>();
+        CreateMap<IGetAuthorByName_AuthorByName_Authors, AuthorDto>();
+        CreateMap<IGetAuthors_Authors_Data, AuthorDto>();
     }
 }
