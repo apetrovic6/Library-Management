@@ -8,11 +8,11 @@ namespace WebClient.Pages.Books;
 
 public class BooksBase : ComponentBase
 {
-    [Inject] private IGenericService<Book> _bookService { get; set; }
+    [Inject] private IGenericService<BookDto> _bookService { get; set; }
     [Inject] private NavigationManager Navigation { get; set; }
     [Inject] private ISnackbar _snackbar { get; set; }
-    [Inject] private BooksClient _Client { get; set; }
-    protected List<Book> FetchedBooks { get; set; } = new();
+    [Inject] private LibraryClient _Client { get; set; }
+    protected List<BookDto> FetchedBooks { get; set; } = new();
     
     protected string ChosenAuthor { get; set; }
     protected string[] FetchedAuthors { get; set; } = {};
