@@ -1,5 +1,5 @@
-﻿using Books.Models;
-using StrawberryShake;
+﻿using StrawberryShake;
+using WebClient.DTO;
 
 namespace WebClient.Services.Interfaces;
 
