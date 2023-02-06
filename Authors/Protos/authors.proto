@@ -27,11 +27,16 @@ message AuthorDTO {
 
 message GetAuthorsRequest {
   AuthorPageInfo page_info = 1;
+  AuthorFilters filters = 2;
 }
 
 message GetAuthorsResponse {
   repeated AuthorDTO data = 1;
   AuthorPageInfo page_info = 2;
+}
+
+message AuthorFilters {
+  string author_name = 1;
 }
 
 message GetAuthorByIdRequest {
