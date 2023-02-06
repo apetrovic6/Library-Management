@@ -27,12 +27,30 @@ public class AuthorService : Author.AuthorBase
     {
         var pageInfo = new Paging(request.PageInfo.Page, request.PageInfo.PageSize);
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
-        var authors = await dbContext.Authors
+
+        var query = dbContext.Authors.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(request.Filters.AuthorName))
+        {
+            query = query.Where(x => x.Name == request.Filters.AuthorName);
+        }
+        
+        var authors = await query
             .Skip(pageInfo.Skip)
             .Take(pageInfo.PageSize)
             .OrderBy(a => a.Name).ToListAsync();
-        var totalCount = await dbContext.Authors.CountAsync();
+        
+        int totalCount;
 
+        if (!string.IsNullOrWhiteSpace(request.Filters.AuthorName))
+        {
+            totalCount = authors.Count;
+        }
+        else
+        {
+            totalCount = await dbContext.Authors.CountAsync();
+        }
+        
         var info = new AuthorPageInfo() { Total = totalCount };
         var result = new PagedResult<AuthorEntity>(authors, info);
         
