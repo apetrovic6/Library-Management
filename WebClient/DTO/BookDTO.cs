@@ -2,7 +2,7 @@
 
 namespace WebClient.DTO;
 
-public class Book
+public class BookDto
 {
     [Required]
     public int Id { get; set; }
