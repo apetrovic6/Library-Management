@@ -1,10 +1,10 @@
 ﻿@page "/add-book"
-@using BooksGQL
+@using LibraryGQL
 @using WebClient.DTO
 @using AutoMapper
 @using WebClient.Services.Interfaces
 @inject ISnackbar Snackbar
-@inject IGenericService<Book> _bookService
+@inject IGenericService<BookDto> _bookService
 @inject IMapper mapper
 @inject NavigationManager Navigation
 
