@@ -1,6 +1,4 @@
-using WebClient.DTO;
-
-namespace Books.Models;
+namespace WebClient.DTO;
 
 public class PagedResult<T>
 {
