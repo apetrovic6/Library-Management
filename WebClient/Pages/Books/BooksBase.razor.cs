@@ -1,4 +1,4 @@
-﻿using BooksGQL;
+﻿using LibraryGQL;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using WebClient.DTO;
@@ -60,6 +60,7 @@ public class BooksBase : ComponentBase
 
     private async void GetAuthors(string name)
     {
+        // TODO refactor to use the Author Service
         var res =await _Client.GetAuthorByName.ExecuteAsync(name);
         var authors = res?.Data?.AuthorByName.Authors;
         
@@ -76,7 +77,7 @@ public class BooksBase : ComponentBase
     protected Task<IEnumerable<string>> AuthorFilterFunction(string arg)
     {
         
-        
+        // TODO Refactor to get all authors and get next page when scrolled to end of the list
         if (string.IsNullOrEmpty(arg))
             return Task.FromResult<IEnumerable<string>>(Array.Empty<string>());
         
