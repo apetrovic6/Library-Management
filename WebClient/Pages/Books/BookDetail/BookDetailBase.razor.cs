@@ -1,4 +1,4 @@
-﻿using BooksGQL;
+﻿using LibraryGQL;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using WebClient.Components;
@@ -9,18 +9,18 @@ namespace WebClient.Pages.Books.BookDetail;
 
 public class BookDetailBase : ComponentBase
 {
-    [Inject] private IGenericService<Book> _bookService { get; set; }
+    [Inject] private IGenericService<BookDto> _bookService { get; set; }
     [Inject] private NavigationManager Navigation { get; set; }
     [Inject] private ISnackbar Snackbar { get; set; }
     [Inject] private IDialogService _dialogService { get; set; }
     [Parameter] public int BookId { get; set; }
 
     protected List<BreadcrumbItem> _breadcrumbItems;
-    protected Book book { get; set; }
+    protected BookDto Book { get; set; }
 
     protected void GoToEditPage()
     {
-        Navigation.NavigateTo($"/book/{book?.Id}/edit");
+        Navigation.NavigateTo($"/book/{Book?.Id}/edit");
     }
 
     protected void ShowDeleteDialog()
@@ -38,10 +38,10 @@ public class BookDetailBase : ComponentBase
 
     private async void DeleteBook()
     {
-        var (deleted, errors) = await _bookService.Delete(book.Id);
+        var (deleted, errors) = await _bookService.Delete(Book.Id);
         if (deleted)
         {
-            Snackbar.Add($"Book {book.Title} deleted successfully", Severity.Success);
+            Snackbar.Add($"Book {Book.Title} deleted successfully", Severity.Success);
             Navigation.NavigateTo("/books");
         }
         else
@@ -57,12 +57,12 @@ public class BookDetailBase : ComponentBase
     {
         var res = await _bookService.GetById(BookId);
 
-        book = res;
+        Book = res;
         
         _breadcrumbItems = new()
         {
             new BreadcrumbItem("Books", href: "/books"),
-            new BreadcrumbItem(book?.Title, href: null, disabled: true),
+            new BreadcrumbItem(Book?.Title, href: null, disabled: true),
         };
     }
 }
