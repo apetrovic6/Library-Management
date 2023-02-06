@@ -1,0 +1,13 @@
+@page "/Authors"
+@inherits AuthorsBase
+
+<h3>Authors</h3>
+@{
+    if (FetchedAuthors.Any())
+    {
+        @foreach (var author in FetchedAuthors)
+        {
+            <p>@author.Name</p>
+        }
+    }
+}
