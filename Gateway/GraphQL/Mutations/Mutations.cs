@@ -52,11 +52,13 @@ public class Mutations
         return await client.CreateAuthorAsync(request);
     }
 
-    public async Task<UpdateAuthorResponse> UpdateAuthor(UpdateAuthorInput authorInput)
+    public async Task<UpdateAuthorResponse> UpdateAuthor(int id, UpdateAuthorInput authorInput)
     {
+        authorInput.Id = id;
+        
         var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
         var client = new Author.AuthorClient(channel);
-        var request = new UpdateAuthorRequest { Name = authorInput.Name, Id = authorInput.Id };
+        var request = new UpdateAuthorRequest { Id = authorInput.Id, Name = authorInput.Name};
 
         return await client.UpdateAuthorAsync(request);
     }
