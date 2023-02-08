@@ -75,7 +75,9 @@ public class AuthorService : Author.AuthorBase
         Console.WriteLine(request);
         
         var authors = await dbContext.Authors.Where(a => 
-            EF.Functions.Like(a.Name.ToLower(), $"%{request.Name.ToLower()}%")).ToListAsync();
+            EF.Functions.Like(a.Name.ToLower(), $"%{request.Name.ToLower()}%"))
+            .OrderBy(x => x.Name)
+            .ToListAsync();
         
         return _mapper.Map<GetAuthorByNameResponse>(authors);
     }
