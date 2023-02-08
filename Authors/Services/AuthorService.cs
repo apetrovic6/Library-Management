@@ -72,8 +72,7 @@ public class AuthorService : Author.AuthorBase
     public override async Task<GetAuthorByNameResponse> GetAuthorByName(GetAuthorByNameRequest request, ServerCallContext context)
     {
         await using var dbContext = await _contextFactory.CreateDbContextAsync();
-        Console.WriteLine(request);
-        
+
         var authors = await dbContext.Authors.Where(a => 
             EF.Functions.Like(a.Name.ToLower(), $"%{request.Name.ToLower()}%"))
             .OrderBy(x => x.Name)
