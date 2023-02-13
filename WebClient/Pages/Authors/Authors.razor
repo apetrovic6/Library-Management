@@ -1,13 +1,30 @@
 @page "/Authors"
 @inherits AuthorsBase
 
-<h3>Authors</h3>
-@{
-    if (FetchedAuthors.Any())
-    {
-        @foreach (var author in FetchedAuthors)
+<div class="d-flex">
+    <MudText Typo="Typo.h1" Class="align-self-center">Books</MudText>
+    <MudSpacer/>
+    <MudText Typo="Typo.subtitle1" Class="align-self-center">Total: Total</MudText>
+</div>
+
+<MudGrid Spacing="5" Justify="Justify.FlexStart">
+    @{
+        if (FetchedAuthors.Any())
         {
-            <p>@author.Name</p>
+            @foreach (var author in FetchedAuthors)
+            {
+                <MudItem xs="12" sm="6" md="4" lg="3" xl="2" >
+                    <MudCard Elevation="1">
+                        <MudCardContent>
+                            <MudCardHeader >
+                                <CardHeaderContent>
+                                    <MudText Align="Align.Start" Typo="Typo.h6">@author.Name</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader >
+                        </MudCardContent>
+                    </MudCard>
+                </MudItem>
+            }
         }
     }
-}
+</MudGrid>
