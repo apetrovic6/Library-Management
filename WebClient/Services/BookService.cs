@@ -22,10 +22,10 @@ public class BookService : IGenericService<BookDto>
         var input = pagingInput.As<LibraryGQL.PagingInput>();
         var filter = filterInput.As<BookFilterInput>();
         var res = await _client.GetBooks.ExecuteAsync(input, filter);
-        var data = res.Data.Books.Data;
+        var data = res.Data?.Books.Data;
         var bookList = _mapper.Map<IReadOnlyList<IGetBooks_Books_Data>, List<BookDto>>(data);
         var pagedResult = new PagedResult<BookDto>
-            { Data = bookList, PageInfo = new PageInfo { Total = res.Data.Books.PageInfo.Total } };
+            { Data = bookList, PageInfo = new PageInfo { Total = res.Data?.Books?.PageInfo?.Total } };
 
         return (pagedResult, res.Errors, res.IsSuccessResult());
     }
