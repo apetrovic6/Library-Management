@@ -89,8 +89,8 @@ public class BooksBase : ComponentBase
         return Task.FromResult(res);
     }
     
-    protected void NavigateToBook(int Id)
+    protected void NavigateToBook(int id)
     {
-        Navigation.NavigateTo($"book/{Id}");
+        Navigation.NavigateTo($"book/{id}");
     }
 }
