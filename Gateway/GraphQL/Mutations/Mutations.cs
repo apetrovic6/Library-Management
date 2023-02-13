@@ -45,7 +45,7 @@ public class Mutations
 
     public async Task<CreateAuthorResponse> CreateAuthor(CreateAuthorInput authorInput)
     {
-        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var channel = GrpcChannel.ForAddress(_configuration.GetConnectionString("AuthorService"));
         var client = new Author.AuthorClient(channel);
         var request = new CreateAuthorRequest { Name = authorInput.Name };
 
@@ -56,7 +56,7 @@ public class Mutations
     {
         authorInput.Id = id;
         
-        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var channel = GrpcChannel.ForAddress(_configuration.GetConnectionString("AuthorService"));
         var client = new Author.AuthorClient(channel);
         var request = new UpdateAuthorRequest { Id = authorInput.Id, Name = authorInput.Name};
 
@@ -65,7 +65,7 @@ public class Mutations
 
     public async Task<DeleteAuthorResponse> DeleteAuthor(int id)
     {
-        var channel = GrpcChannel.ForAddress(_configuration["AuthorService"]);
+        var channel = GrpcChannel.ForAddress(_configuration.GetConnectionString("AuthorService"));
         var client = new Author.AuthorClient(channel);
         var request = new DeleteAuthorRequest { Id = id };
 
